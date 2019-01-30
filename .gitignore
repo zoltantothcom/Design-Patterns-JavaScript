@@ -9,6 +9,9 @@
 # production
 /build
 
+# analyzer
+/stats
+
 # misc
 .DS_Store
 .env.local
