@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
-import railscasts from 'react-syntax-highlighter/dist/styles/hljs/railscasts';
+import style from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
@@ -18,45 +18,42 @@ const Title = styled.h1`
   margin: 0;
 `;
 
-const codeString = `
-module.exports = {
-  devtool: 'inline-source-map',
-  entry: './src/index.js',
-  output: {
-    path: path.join(__dirname, '/build'),
-    publicPath: '/',
-    filename: 'bundle.js'
+const codeES6 = `
+class Pattern {
+  constructor(el) {
+      this.index = 0;
+      this.elements = el;
+  }
+
+  next() {
+      return this.elements[this.index++];
+  }
+
+  hasNext() {
+      return this.index < this.elements.length;
+  }
+}
+
+export default Pattern;
+
+`;
+
+const code = `
+function Pattern(el) {
+  this.index = 0;
+  this.elements = el;
+}
+
+Pattern.prototype = {
+  next: function() {
+      return this.elements[this.index++];
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    }
-  },
-  devServer: {
-    contentBase: './build'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
-      }
-    ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve('./index.html')
-    }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'disabled',
-      generateStatsFile: true,
-      statsOptions: { source: false },
-      statsFilename: path.join(__dirname, 'stats/stats.json')
-    })
-  ],
-  performance: { hints: false }
+  hasNext: function() {
+      return this.index < this.elements.length;
+  }
 };
+
+module.exports = Pattern;
 
 `;
 
@@ -65,8 +62,12 @@ class Welcome extends React.Component {
     return (
       <React.Fragment>
         <Title>JavaScript</Title>
-        <SyntaxHighlighter language="javascript" style={railscasts} customStyle={{ fontSize: '1.25rem' }}>
-          {codeString}
+        <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+          {code}
+        </SyntaxHighlighter>
+        ES6
+        <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+          {codeES6}
         </SyntaxHighlighter>
       </React.Fragment>
     );
