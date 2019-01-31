@@ -1,12 +1,3 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
-  "plugins": [
-    [
-      "prismjs",
-      {
-        "languages": ["javascript"],
-        "theme": "twilight"
-      }
-    ]
-  ]
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
