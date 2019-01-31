@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -57,7 +56,7 @@ module.exports = Pattern;
 
 `;
 
-class Welcome extends React.Component {
+class Layout extends React.Component {
   render() {
     return (
       <React.Fragment>
@@ -74,4 +73,4 @@ class Welcome extends React.Component {
   }
 }
 
-ReactDOM.render(<Welcome />, document.getElementById('root'));
+export default Layout;

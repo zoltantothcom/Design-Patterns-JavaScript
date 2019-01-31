@@ -3,12 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
+  mode: 'development',
   devtool: 'inline-source-map',
-  entry: './src/index.js',
+  entry: './index.js',
   output: {
     path: path.join(__dirname, '/build'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   optimization: {
     splitChunks: {
@@ -21,7 +22,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader']
       }
@@ -29,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('./index.html')
+      template: 'index.html'
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'disabled',
@@ -38,5 +39,8 @@ module.exports = {
       statsFilename: path.join(__dirname, 'stats/stats.json')
     })
   ],
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   performance: { hints: false }
 };
