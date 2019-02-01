@@ -22,16 +22,16 @@ const Title = styled.h1`
 const codeES6 = `
 class Pattern {
   constructor(el) {
-      this.index = 0;
-      this.elements = el;
+    this.index = 0;
+    this.elements = el;
   }
 
   next() {
-      return this.elements[this.index++];
+    return this.elements[this.index++];
   }
 
   hasNext() {
-      return this.index < this.elements.length;
+    return this.index < this.elements.length;
   }
 }
 
@@ -47,10 +47,10 @@ function Pattern(el) {
 
 Pattern.prototype = {
   next: function() {
-      return this.elements[this.index++];
+    return this.elements[this.index++];
   },
   hasNext: function() {
-      return this.index < this.elements.length;
+    return this.index < this.elements.length;
   }
 };
 
