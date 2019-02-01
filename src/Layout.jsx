@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
-
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
 import style from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark';
+import ToggleButton from './components/ToggleButton';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
@@ -56,21 +58,28 @@ module.exports = Pattern;
 
 `;
 
-class Layout extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <Title>JavaScript</Title>
-        <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
-          {code}
-        </SyntaxHighlighter>
-        ES6
-        <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
-          {codeES6}
-        </SyntaxHighlighter>
-      </React.Fragment>
-    );
-  }
-}
+const Layout = props => (
+  <React.Fragment>
+    <Title>JavaScript</Title>
+    <ToggleButton />
+    {props.js === 'es5' && (
+      <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+        {code}
+      </SyntaxHighlighter>
+    )}
 
-export default Layout;
+    {props.js === 'es6' && (
+      <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+        {codeES6}
+      </SyntaxHighlighter>
+    )}
+  </React.Fragment>
+);
+
+Layout.propTypes = {
+  js: PropTypes.string.isRequired
+};
+
+const mapStateToProps = ({ js }) => ({ js });
+
+export default connect(mapStateToProps)(Layout);
