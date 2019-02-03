@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button custom style 1`] = `
+.c0 {
+  height: 36px;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.c0.primary {
+  background-color: #1585d8;
+}
+
+.c0.primary span {
+  color: white;
+}
+
+.c0.secondary {
+  background-color: #eff3f6;
+}
+
+.c0.secondary span {
+  color: grey;
+}
+
+<button
+  className="primary c0"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "orange",
+      "border": "2px solid crimson",
+    }
+  }
+>
+  <span>
+    Custom style
+  </span>
+</button>
+`;
+
+exports[`Storyshots Button playground 1`] = `
+.c0 {
+  height: 46px;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.c0.primary {
+  background-color: #1585d8;
+}
+
+.c0.primary span {
+  color: white;
+}
+
+.c0.secondary {
+  background-color: #eff3f6;
+}
+
+.c0.secondary span {
+  color: grey;
+}
+
+<button
+  className="primary c0"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span>
+    Hello Button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Button with big 1`] = `
+.c0 {
+  height: 46px;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.c0.primary {
+  background-color: #1585d8;
+}
+
+.c0.primary span {
+  color: white;
+}
+
+.c0.secondary {
+  background-color: #eff3f6;
+}
+
+.c0.secondary span {
+  color: grey;
+}
+
+<button
+  className="primary c0"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span>
+    Big Button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Button with label 1`] = `
+.c0 {
+  height: 36px;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.c0.primary {
+  background-color: #1585d8;
+}
+
+.c0.primary span {
+  color: white;
+}
+
+.c0.secondary {
+  background-color: #eff3f6;
+}
+
+.c0.secondary span {
+  color: grey;
+}
+
+<button
+  className="primary c0"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span>
+    Hello Button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Button with no prop 1`] = `
+.c0 {
+  height: 36px;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.c0.primary {
+  background-color: #1585d8;
+}
+
+.c0.primary span {
+  color: white;
+}
+
+.c0.secondary {
+  background-color: #eff3f6;
+}
+
+.c0.secondary span {
+  color: grey;
+}
+
+<button
+  className="primary c0"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span>
+    Save
+  </span>
+</button>
+`;
+
+exports[`Storyshots Button with theme 1`] = `
+Array [
+  .c0 {
+  height: 36px;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.c0.primary {
+  background-color: #1585d8;
+}
+
+.c0.primary span {
+  color: white;
+}
+
+.c0.secondary {
+  background-color: #eff3f6;
+}
+
+.c0.secondary span {
+  color: grey;
+}
+
+<button
+    className="primary c0"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <span>
+      Button with primary theme
+    </span>
+  </button>,
+  .c0 {
+  height: 36px;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.c0.primary {
+  background-color: #1585d8;
+}
+
+.c0.primary span {
+  color: white;
+}
+
+.c0.secondary {
+  background-color: #eff3f6;
+}
+
+.c0.secondary span {
+  color: grey;
+}
+
+<button
+    className="secondary c0"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <span>
+      Button with secondary theme
+    </span>
+  </button>,
+]
+`;
