@@ -1,5 +1,6 @@
 const initialState = {
   js: 'es5',
+  theme: 'dark',
   answers: []
 };
 
@@ -9,6 +10,8 @@ const rootReducer = (state = initialState, action) => {
     return { ...state, answers: [...state.answers, action.payload] };
   case 'TOGGLE_JS':
     return { ...state, js: action.payload };
+  case 'TOGGLE_THEME':
+    return { ...state, theme: action.payload };
   default:
     return state;
   }

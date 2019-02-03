@@ -1,23 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
-import style from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark';
+import lightStyle from 'react-syntax-highlighter/dist/styles/hljs/atom-one-light';
+import darkStyle from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark';
 import ToggleButton from './components/ToggleButton';
+import Title from './components/Title';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
-
-const Title = styled.h1`
-  font-family: sans-serif;
-  padding: 2em;
-  background: papayawhip;
-  font-size: 2em;
-  text-align: center;
-  color: palevioletred;
-  margin: 0;
-`;
 
 const codeES6 = `
 class Pattern {
@@ -58,28 +49,33 @@ module.exports = Pattern;
 
 `;
 
-const Layout = props => (
-  <React.Fragment>
-    <Title>JavaScript</Title>
-    <ToggleButton />
-    {props.js === 'es5' && (
-      <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
-        {code}
-      </SyntaxHighlighter>
-    )}
+const Layout = props => {
+  const style = props.theme === 'dark' ? darkStyle : lightStyle;
 
-    {props.js === 'es6' && (
-      <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
-        {codeES6}
-      </SyntaxHighlighter>
-    )}
-  </React.Fragment>
-);
+  return (
+    <React.Fragment>
+      <Title />
+      <ToggleButton />
+      {props.js === 'es5' && (
+        <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+          {code}
+        </SyntaxHighlighter>
+      )}
 
-Layout.propTypes = {
-  js: PropTypes.string.isRequired
+      {props.js === 'es6' && (
+        <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+          {codeES6}
+        </SyntaxHighlighter>
+      )}
+    </React.Fragment>
+  );
 };
 
-const mapStateToProps = ({ js }) => ({ js });
+Layout.propTypes = {
+  js: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired
+};
+
+const mapStateToProps = ({ js, theme }) => ({ js, theme });
 
 export default connect(mapStateToProps)(Layout);

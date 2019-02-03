@@ -20,7 +20,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:build": "build-storybook"
   },
   "jest": {
     "setupFiles": [
