@@ -1,10 +1,4 @@
-const initialState = {
-  js: 'es5',
-  theme: 'dark',
-  answers: []
-};
-
-const rootReducer = (state = initialState, action) => {
+const rootReducer = (state, action) => {
   switch (action.type) {
   case 'ADD_ANSWER':
     return { ...state, answers: [...state.answers, action.payload] };
