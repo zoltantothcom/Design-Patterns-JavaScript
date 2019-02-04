@@ -12,3 +12,8 @@ export const toggleJS = payload => ({
   type: 'TOGGLE_JS',
   payload
 });
+
+export const toggleTheme = payload => ({
+  type: 'TOGGLE_THEME',
+  payload
+});
