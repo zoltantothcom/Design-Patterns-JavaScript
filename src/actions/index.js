@@ -3,6 +3,11 @@ export const addAnswer = payload => ({
   payload
 });
 
+export const toggle = payload => ({
+  type: 'TOGGLE',
+  payload
+});
+
 export const toggleJS = payload => ({
   type: 'TOGGLE_JS',
   payload

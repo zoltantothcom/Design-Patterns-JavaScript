@@ -3,26 +3,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { toggleJS } from '../actions';
+import { toggle } from '../actions';
 
 const ToggleButton = props => {
-  const toggleJS = () => {
-    const { js, toggleJS } = props;
-    toggleJS(js === 'es5' ? 'es6' : 'es5');
-  };
+  const { toggle, state, js } = props;
 
-  return <button onClick={toggleJS}>{props.js}</button>;
+  return <button onClick={() => toggle(state)}>{`Toggle ${state}`}</button>;
 };
 
 ToggleButton.propTypes = {
-  js: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
 };
 
 // const mapStateToProps = state => ({ js: state.js });
 const mapStateToProps = ({ js }) => ({ js });
 
 const mapDispatchToProps = dispatch => {
-  return { toggleJS: version => dispatch(toggleJS(version)) };
+  return { toggle: version => dispatch(toggle(version)) };
 };
 
 export default connect(

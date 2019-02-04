@@ -55,7 +55,7 @@ const Layout = props => {
   return (
     <React.Fragment>
       <Title />
-      <ToggleButton />
+      <ToggleButton state="js" />
       {props.js === 'es5' && (
         <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
           {code}
