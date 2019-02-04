@@ -1,18 +1,17 @@
-/* eslint-disable */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { toggle } from '../actions';
 
 const ToggleButton = props => {
-  const { toggle, state, js } = props;
+  const { toggle, state } = props;
 
   return <button onClick={() => toggle(state)}>{`Toggle ${state}`}</button>;
 };
 
 ToggleButton.propTypes = {
-  state: PropTypes.string.isRequired,
+  toggle: PropTypes.func.isRequired,
+  state: PropTypes.string.isRequired
 };
 
 // const mapStateToProps = state => ({ js: state.js });
