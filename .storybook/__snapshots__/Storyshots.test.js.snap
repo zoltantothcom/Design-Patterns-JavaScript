@@ -248,3 +248,57 @@ Array [
   </button>,
 ]
 `;
+
+exports[`Storyshots Title playground 1`] = `
+.c0 {
+  font-family: sans-serif;
+  padding: 2em;
+  background: rgb(60,60,60);
+  font-size: 2em;
+  text-align: center;
+  color: #E22A23;
+  margin: 0;
+}
+
+<h1
+  className="c0"
+>
+  JavaScript Patterns
+</h1>
+`;
+
+exports[`Storyshots Title with dark theme 1`] = `
+.c0 {
+  font-family: sans-serif;
+  padding: 2em;
+  background: rgb(60,60,60);
+  font-size: 2em;
+  text-align: center;
+  color: #E22A23;
+  margin: 0;
+}
+
+<h1
+  className="c0"
+>
+  Dark Theme
+</h1>
+`;
+
+exports[`Storyshots Title with light theme 1`] = `
+.c0 {
+  font-family: sans-serif;
+  padding: 2em;
+  background: rgb(255,250,228);
+  font-size: 2em;
+  text-align: center;
+  color: rgb(219,109,114);
+  margin: 0;
+}
+
+<h1
+  className="c0"
+>
+  Light Theme
+</h1>
+`;

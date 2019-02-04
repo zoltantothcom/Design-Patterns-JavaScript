@@ -13,7 +13,7 @@ const StyledTitle = styled.h1`
   margin: 0;
 `;
 
-const Title = props => {
+export const Title = props => {
   const { text, theme } = props;
 
   return <StyledTitle theme={theme}>{text}</StyledTitle>;
@@ -26,7 +26,7 @@ Title.propTypes = {
 
 Title.defaultProps = {
   text: 'JavaScript Patterns',
-  theme: 'light'
+  theme: 'dark'
 };
 
 const mapStateToProps = ({ theme }) => ({ theme });
