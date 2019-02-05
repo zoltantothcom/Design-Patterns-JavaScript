@@ -9,12 +9,12 @@ export const toggleMiddleware = ({ dispatch, getState }) => next => action => {
         payload: js === 'es5' ? 'es6' : 'es5'
       });
 
-    case 'theme':
-      const theme = getState()['theme'];
+    case 'mode':
+      const mode = getState()['mode'];
 
       return dispatch({
-        type: 'TOGGLE_THEME',
-        payload: theme === 'dark' ? 'light' : 'dark'
+        type: 'TOGGLE_MODE',
+        payload: mode === 'dark' ? 'light' : 'dark'
       });
     }
   }

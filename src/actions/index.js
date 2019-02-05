@@ -13,7 +13,7 @@ export const toggleJS = payload => ({
   payload
 });
 
-export const toggleTheme = payload => ({
-  type: 'TOGGLE_THEME',
+export const toggleMode = payload => ({
+  type: 'TOGGLE_MODE',
   payload
 });

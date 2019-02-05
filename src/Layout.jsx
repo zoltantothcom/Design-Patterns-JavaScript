@@ -50,13 +50,13 @@ module.exports = Pattern;
 `;
 
 const Layout = props => {
-  const style = props.theme === 'dark' ? darkStyle : lightStyle;
+  const style = props.mode === 'dark' ? darkStyle : lightStyle;
 
   return (
     <React.Fragment>
       <Title />
       <ToggleButton state="js" />
-      <ToggleButton state="theme" />
+      <ToggleButton state="mode" />
       {props.js === 'es5' && (
         <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
           {code}
@@ -74,9 +74,9 @@ const Layout = props => {
 
 Layout.propTypes = {
   js: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired
+  mode: PropTypes.string.isRequired
 };
 
-const mapStateToProps = ({ js, theme }) => ({ js, theme });
+const mapStateToProps = ({ js, mode }) => ({ js, mode });
 
 export default connect(mapStateToProps)(Layout);

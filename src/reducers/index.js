@@ -6,8 +6,8 @@ const rootReducer = (state, action) => {
     return state;
   case 'TOGGLE_JS':
     return { ...state, js: action.payload };
-  case 'TOGGLE_THEME':
-    return { ...state, theme: action.payload };
+  case 'TOGGLE_MODE':
+    return { ...state, mode: action.payload };
   default:
     return state;
   }
