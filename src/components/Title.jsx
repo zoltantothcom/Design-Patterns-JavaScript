@@ -8,11 +8,11 @@ import { themeDark } from '../themes/theme.dark';
 const StyledTitle = styled.h1`
   font-family: sans-serif;
   padding: 2em;
-  background: ${props => props.theme.primaryColor};
+  background: ${props => props.theme.secondaryColor};
   /* background: ${props => (props.theme === 'dark' ? 'rgb(60, 60, 60)' : 'rgb(255, 250, 228)')}; */
   font-size: 2em;
   text-align: center;
-  color: ${props => (props.theme === 'dark' ? '#E22A23' : 'rgb(219, 109, 114)')};
+  color: #E22A23;
   margin: 0;
 `;
 

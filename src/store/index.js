@@ -4,7 +4,7 @@ import { toggleMiddleware } from '../middleware';
 
 const initialState = {
   js: 'es5',
-  mode: 'dark',
+  mode: 'light',
   answers: []
 };
 
