@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import { toggle } from '../actions';
 
 const ToggleButton = props => {
-  const { toggle, state } = props;
+  const { toggle, control } = props;
 
-  return <button onClick={() => toggle(state)}>{`Toggle ${state}`}</button>;
+  return <button onClick={() => toggle(control)}>{`Toggle ${control}`}</button>;
 };
 
 ToggleButton.propTypes = {
   toggle: PropTypes.func.isRequired,
-  state: PropTypes.string.isRequired
+  control: PropTypes.string.isRequired
 };
 
 // const mapStateToProps = state => ({ js: state.js });
