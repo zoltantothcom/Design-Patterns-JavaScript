@@ -29,7 +29,7 @@ exports[`Storyshots Button custom style 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "backgroundColor": "orange",
+      "background": "orange",
       "border": "2px solid crimson",
     }
   }

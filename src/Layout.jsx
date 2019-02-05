@@ -4,18 +4,17 @@ import { ThemeProvider } from 'styled-components';
 import { connect } from 'react-redux';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
-import styleLight from 'react-syntax-highlighter/dist/styles/hljs/atom-one-light';
-import styleDark from 'react-syntax-highlighter/dist/styles/hljs/atom-one-dark';
+import styleLight from './styles/hljs/hljs.light';
+import styleDark from './styles/hljs/hljs.dark';
 import ToggleButton from './components/ToggleButton';
 import Title from './components/Title';
-import GlobalStyle from './themes/global';
-import { themeLight } from './themes/theme.light';
-import { themeDark } from './themes/theme.dark';
+import GlobalStyle from './styles/global';
+import { themeLight } from './styles/themes/theme.light';
+import { themeDark } from './styles/themes/theme.dark';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
-const codeES6 = `
-class Pattern {
+const codeES6 = `class Pattern {
   constructor(el) {
     this.index = 0;
     this.elements = el;
@@ -31,11 +30,9 @@ class Pattern {
 }
 
 export default Pattern;
-
 `;
 
-const code = `
-function Pattern(el) {
+const code = `function Pattern(el) {
   this.index = 0;
   this.elements = el;
 }
@@ -50,7 +47,6 @@ Pattern.prototype = {
 };
 
 module.exports = Pattern;
-
 `;
 
 const Layout = props => {

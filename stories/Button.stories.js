@@ -21,7 +21,7 @@ storiesOf('Button', module)
     <Button
       label="Custom style"
       style={object('style', {
-        backgroundColor: 'orange',
+        background: 'orange',
         border: '2px solid crimson'
       })}
     />
