@@ -36,6 +36,6 @@ const progressError = { answers: answersError };
 storiesOf('ProgressBar', module)
   .addDecorator(withKnobs)
 
-  .add('with unanswered questions', () => <ProgressBar progress={progressDefault} />)
-  .add('with all questions answered correctly', () => <ProgressBar progress={progressSuccess} />)
-  .add('with all questions answered wrong', () => <ProgressBar progress={progressError} />);
+  .add('unanswered questions', () => <ProgressBar progress={progressDefault} />)
+  .add('questions answered correct', () => <ProgressBar progress={progressSuccess} />)
+  .add('questions answered wrong', () => <ProgressBar progress={progressError} />);
