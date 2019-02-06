@@ -8,6 +8,8 @@ const themes = ['dark', 'light'];
 storiesOf('Title', module)
   .addDecorator(withKnobs)
 
-  .add('with dark theme', () => <Title theme="dark" text="Dark Theme" />)
-  .add('with light theme', () => <Title theme="light" text="Light Theme" />)
-  .add('playground', () => <Title theme={select('theme', themes)} text={text('text', 'JavaScript Patterns')} />);
+  .add('dark theme', () => <Title mode="dark" text="Dark Theme" />)
+  .add('light theme', () => <Title mode="light" text="Light Theme" />)
+  .add('playground', () => (
+    <Title mode={select('mode', themes)} text={text('text', 'JavaScript Patterns')} />
+  ));
