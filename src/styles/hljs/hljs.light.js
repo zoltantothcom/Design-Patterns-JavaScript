@@ -1,6 +1,6 @@
 const styles = {
   "hljs": {
-    border: '1px solid #ddd',
+    border: '1px solid #d8d8d8',
     display: 'block',
     overflowX: 'auto',
     padding: '1em',

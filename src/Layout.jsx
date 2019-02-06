@@ -8,6 +8,7 @@ import styleLight from './styles/hljs/hljs.light';
 import styleDark from './styles/hljs/hljs.dark';
 import ToggleButton from './components/ToggleButton';
 import Title from './components/Title';
+import ProgressBar from './components/ProgressBar';
 import GlobalStyle from './styles/global';
 import { themeLight } from './styles/themes/theme.light';
 import { themeDark } from './styles/themes/theme.dark';
@@ -65,6 +66,7 @@ const Layout = props => {
         <Title />
         <ToggleButton control="js" />
         <ToggleButton control="mode" />
+        <ProgressBar />
         {props.js === 'es5' && (
           <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
             {code}
