@@ -8,10 +8,10 @@ const themes = ['primary', 'secondary'];
 storiesOf('Button', module)
   .addDecorator(withKnobs)
 
-  .add('with no prop', () => <Button />)
-  .add('with label', () => <Button label={text('label', 'Hello Button')} />)
-  .add('with big', () => <Button label="Big Button" big={boolean('big', true)} />)
-  .add('with theme', () => (
+  .add('no prop', () => <Button />)
+  .add('label', () => <Button label={text('label', 'Hello Button')} />)
+  .add('big', () => <Button label="Big Button" big={boolean('big', true)} />)
+  .add('themed', () => (
     <React.Fragment>
       <Button label="Button with primary theme" theme="primary" />
       <Button label="Button with secondary theme" theme="secondary" />
