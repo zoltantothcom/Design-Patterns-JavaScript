@@ -16,7 +16,7 @@ const Step = styled.span`
   background: ${props => (props.nature ? props.theme[props.nature] : props.theme.lightGrey)};
   display: flex;
   height: 3px;
-  width: 16%; /* 4% */
+  width: 4%;
 `;
 
 // const steps = Array.from(Array(23));
