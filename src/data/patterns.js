@@ -211,50 +211,488 @@ export default Person;`
   {
     name: 'Adapter',
     type: 'structural',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function Soldier(lvl) {
+  this.lvl = lvl;
+}
+
+Soldier.prototype.attack = function() {
+  return this.lvl * 1;
+};
+
+function Jedi(lvl) {
+  this.lvl = lvl;
+}
+
+Jedi.prototype.attackWithSaber = function() {
+  return this.lvl * 100;
+};
+
+function JediAdapter(jedi) {
+  this.jedi = jedi;
+}
+
+JediAdapter.prototype.attack = function() {
+  return this.jedi.attackWithSaber();
+};
+
+module.exports = [Soldier, Jedi, JediAdapter];`,
+    codeES6: `class Soldier {
+  constructor(level) {
+    this.level = level;
+  }
+
+  attack() {
+    return this.level * 1;
+  }
+}
+
+class Jedi {
+  constructor(level) {
+    this.level = level;
+  }
+
+  attackWithSaber() {
+    return this.level * 100;
+  }
+}
+
+class JediAdapter {
+  constructor(jedi) {
+    this.jedi = jedi;
+  }
+
+  attack() {
+    return this.jedi.attackWithSaber();
+  }
+}
+
+export { Soldier, Jedi, JediAdapter };`
   },
 
   {
     name: 'Bridge',
     type: 'structural',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function EpsonPrinter(ink) {
+  this.ink = ink();
+}
+EpsonPrinter.prototype.print = function() {
+  return 'Printer: Epson, Ink: ' + this.ink;
+};
+
+function HPprinter(ink) {
+  this.ink = ink();
+}
+HPprinter.prototype.print = function() {
+  return 'Printer: HP, Ink: ' + this.ink;
+};
+
+function acrylicInk() {
+  return 'acrylic-based';
+}
+
+function alcoholInk() {
+  return 'alcohol-based';
+}
+
+module.exports = [EpsonPrinter, HPprinter, acrylicInk, alcoholInk];`,
+    codeES6: `class Printer {
+  constructor(ink) {
+    this.ink = ink;
+  }
+}
+
+class EpsonPrinter extends Printer {
+  constructor(ink) {
+    super(ink);
+  }
+
+  print() {
+    return 'Printer: Epson, Ink: ' + this.ink.get();
+  }
+}
+
+class HPprinter extends Printer {
+  constructor(ink) {
+    super(ink);
+  }
+
+  print() {
+    return 'Printer: HP, Ink: ' + this.ink.get();
+  }
+}
+
+class Ink {
+  constructor(type) {
+    this.type = type;
+  }
+  get() {
+    return this.type;
+  }
+}
+
+class AcrylicInk extends Ink {
+  constructor() {
+    super('acrylic-based');
+  }
+}
+
+class AlcoholInk extends Ink {
+  constructor() {
+    super('alcohol-based');
+  }
+}
+
+export { EpsonPrinter, HPprinter, AcrylicInk, AlcoholInk };`
   },
 
   {
     name: 'Composite',
     type: 'structural',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `// composition
+function EquipmentComposition(name) {
+  this.equipments = [];
+  this.name = name;
+}
+
+EquipmentComposition.prototype.add = function(equipment) {
+  this.equipments.push(equipment);
+};
+
+EquipmentComposition.prototype.getPrice = function() {
+  return this.equipments
+    .map(function(equipment) {
+      return equipment.getPrice();
+    })
+    .reduce(function(a, b) {
+      return a + b;
+    });
+};
+
+function Equipment() {}
+
+Equipment.prototype.getPrice = function() {
+  return this.price;
+};
+
+// -- leafs
+function FloppyDisk() {
+  this.name = 'Floppy Disk';
+  this.price = 70;
+}
+FloppyDisk.prototype = Object.create(Equipment.prototype);
+
+function HardDrive() {
+  this.name = 'Hard Drive';
+  this.price = 250;
+}
+HardDrive.prototype = Object.create(Equipment.prototype);
+
+function Memory() {
+  this.name = '8gb memomry';
+  this.price = 280;
+}
+Memory.prototype = Object.create(Equipment.prototype);
+
+module.exports = [EquipmentComposition, FloppyDisk, HardDrive, Memory];`,
+    codeES6: `//Equipment
+class Equipment {
+  getPrice() {
+    return this.price || 0;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  setName(name) {
+    this.name = name;
+  }
+}
+
+// --- composite ---
+class Composite extends Equipment {
+  constructor() {
+    super();
+    this.equipments = [];
+  }
+
+  add(equipment) {
+    this.equipments.push(equipment);
+  }
+
+  getPrice() {
+    return this.equipments
+      .map(equipment => {
+        return equipment.getPrice();
+      })
+      .reduce((a, b) => {
+        return a + b;
+      });
+  }
+}
+
+class Cabbinet extends Composite {
+  constructor() {
+    super();
+    this.setName('cabbinet');
+  }
+}
+
+// --- leafs ---
+class FloppyDisk extends Equipment {
+  constructor() {
+    super();
+    this.setName('Floppy Disk');
+    this.price = 70;
+  }
+}
+
+class HardDrive extends Equipment {
+  constructor() {
+    super();
+    this.setName('Hard Drive');
+    this.price = 250;
+  }
+}
+
+class Memory extends Equipment {
+  constructor() {
+    super();
+    this.setName('Memory');
+    this.price = 280;
+  }
+}
+
+export { Cabbinet, FloppyDisk, HardDrive, Memory };`
   },
 
   {
     name: 'Decorator',
     type: 'structural',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function Pasta() {
+  this.price = 0;
+}
+Pasta.prototype.getPrice = function() {
+  return this.price;
+};
+
+function Penne() {
+  this.price = 8;
+}
+Penne.prototype = Object.create(Pasta.prototype);
+
+function SauceDecorator(pasta) {
+  this.pasta = pasta;
+}
+
+SauceDecorator.prototype.getPrice = function() {
+  return this.pasta.getPrice() + 5;
+};
+
+function CheeseDecorator(pasta) {
+  this.pasta = pasta;
+}
+
+CheeseDecorator.prototype.getPrice = function() {
+  return this.pasta.getPrice() + 3;
+};
+
+module.exports = [Penne, SauceDecorator, CheeseDecorator];`,
+    codeES6: `class Pasta {
+  constructor() {
+    this.price = 0;
+  }
+  getPrice() {
+    return this.price;
+  }
+}
+
+class Penne extends Pasta {
+  constructor() {
+    super();
+    this.price = 8;
+  }
+}
+
+class PastaDecorator extends Pasta {
+  constructor(pasta) {
+    super();
+    this.pasta = pasta;
+  }
+
+  getPrice() {
+    return this.pasta.getPrice();
+  }
+}
+
+class SauceDecorator extends PastaDecorator {
+  constructor(pasta) {
+    super(pasta);
+  }
+
+  getPrice() {
+    return super.getPrice() + 5;
+  }
+}
+
+class CheeseDecorator extends PastaDecorator {
+  constructor(pasta) {
+    super(pasta);
+  }
+
+  getPrice() {
+    return super.getPrice() + 3;
+  }
+}
+
+export { Penne, SauceDecorator, CheeseDecorator };`
   },
 
   {
     name: 'Facade',
     type: 'structural',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `var shopFacade = {
+  calc: function(price) {
+    price = discount(price);
+    price = fees(price);
+    price += shipping();
+    return price;
+  }
+};
+
+function discount(value) {
+  return value * 0.9;
+}
+
+function shipping() {
+  return 5;
+}
+
+function fees(value) {
+  return value * 1.05;
+}
+
+module.exports = shopFacade;`,
+    codeES6: `class ShopFacade {
+  constructor() {
+    this.discount = new Discount();
+    this.shipping = new Shipping();
+    this.fees = new Fees();
+  }
+
+  calc(price) {
+    price = this.discount.calc(price);
+    price = this.fees.calc(price);
+    price += this.shipping.calc();
+    return price;
+  }
+}
+
+class Discount {
+  calc(value) {
+    return value * 0.9;
+  }
+}
+
+class Shipping {
+  calc() {
+    return 5;
+  }
+}
+
+class Fees {
+  calc(value) {
+    return value * 1.05;
+  }
+}
+
+export default ShopFacade;`
   },
 
   {
     name: 'Flyweight',
     type: 'structural',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function Color(name) {
+  this.name = name;
+}
+
+var colorFactory = {
+  colors: {},
+  create: function(name) {
+    var color = this.colors[name];
+    if (color) return color;
+
+    this.colors[name] = new Color(name);
+    return this.colors[name];
+  }
+};
+
+module.exports = colorFactory;`,
+    codeES6: `class Color {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class colorFactory {
+  constructor(name) {
+    this.colors = {};
+  }
+  create(name) {
+    let color = this.colors[name];
+    if (color) return color;
+    this.colors[name] = new Color(name);
+    return this.colors[name];
+  }
+}
+
+export { colorFactory };`
   },
 
   {
     name: 'Proxy',
     type: 'structural',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function Car() {
+  this.drive = function() {
+    return 'driving';
+  };
+}
+
+function CarProxy(driver) {
+  this.driver = driver;
+  this.drive = function() {
+    if (driver.age < 18) return 'too young to drive';
+    return new Car().drive();
+  };
+}
+
+function Driver(age) {
+  this.age = age;
+}
+
+module.exports = [Car, CarProxy, Driver];`,
+    codeES6: `class Car {
+  drive() {
+    return 'driving';
+  }
+}
+
+class CarProxy {
+  constructor(driver) {
+    this.driver = driver;
+  }
+  drive() {
+    return this.driver.age < 18 ? 'too young to drive' : new Car().drive();
+  }
+}
+
+class Driver {
+  constructor(age) {
+    this.age = age;
+  }
+}
+
+export { Car, CarProxy, Driver };`
   },
 
   {
