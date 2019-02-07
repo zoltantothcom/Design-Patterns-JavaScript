@@ -22,19 +22,13 @@ const ButtonContainer = props => (
 );
 
 ButtonContainer.propTypes = {
-  big: PropTypes.bool,
   label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  style: PropTypes.object,
-  theme: PropTypes.string
+  onClick: PropTypes.func.isRequired
 };
 
 ButtonContainer.defaultProps = {
-  big: false,
   label: 'Save',
-  onClick: () => {},
-  style: {},
-  theme: 'primary'
+  onClick: () => {}
 };
 
 export default ButtonContainer;

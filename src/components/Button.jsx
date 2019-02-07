@@ -21,8 +21,8 @@ const StyledButton = styled.button`
   }
 
   &:hover {
-    border-color: ${props => props.theme.buttonBorderHover};
     background-color: ${props => props.theme.buttonBackgroundHover};
+    border-color: ${props => props.theme.buttonBorderHover};
 
     & span {
       color: ${props => props.theme.buttonColorHover};
@@ -31,30 +31,25 @@ const StyledButton = styled.button`
 `;
 
 const Button = props => {
-  const { mode } = props;
+  const { mode, onClick, label } = props;
 
   return (
     <ThemeProvider theme={mode === 'dark' ? themeDark : themeLight}>
-      <StyledButton big={props.big} onClick={props.onClick} style={props.style}>
-        {props.label && <span>{props.label}</span>}
-      </StyledButton>
+      <StyledButton onClick={onClick}>{label && <span>{label}</span>}</StyledButton>
     </ThemeProvider>
   );
 };
 
 Button.propTypes = {
-  big: PropTypes.bool,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  style: PropTypes.object,
   mode: PropTypes.string.isRequired
 };
 
 Button.defaultProps = {
-  big: false,
-  label: 'Save',
+  label: 'Button',
   onClick: () => {},
-  style: {}
+  mode: 'light'
 };
 
 const mapStateToProps = ({ mode }) => ({ mode });
