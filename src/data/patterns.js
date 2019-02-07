@@ -2,36 +2,210 @@ const patterns = [
   {
     name: 'Abstract Factory',
     type: 'creational',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function droidProducer(kind) {
+  if (kind === 'battle') return battleDroidFactory;
+  return pilotDroidFactory;
+}
+
+function battleDroidFactory() {
+  return new B1();
+}
+
+function pilotDroidFactory() {
+  return new Rx24();
+}
+
+function B1() {}
+B1.prototype.info = function() {
+  return 'B1, Battle Droid';
+};
+
+function Rx24() {}
+Rx24.prototype.info = function() {
+  return 'Rx24, Pilot Droid';
+};
+
+module.exports = droidProducer;`,
+    codeES6: `function droidProducer(kind) {
+  if (kind === 'battle') return battleDroidFactory;
+  return pilotDroidFactory;
+}
+
+function battleDroidFactory() {
+  return new B1();
+}
+
+function pilotDroidFactory() {
+  return new Rx24();
+}
+
+class B1 {
+  info() {
+    return 'B1, Battle Droid';
+  }
+}
+
+class Rx24 {
+  info() {
+    return 'Rx24, Pilot Droid';
+  }
+}
+
+export default droidProducer;`
   },
 
   {
     name: 'Builder',
     type: 'creational',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function Request() {
+  this.url = '';
+  this.method = '';
+  this.payload = {};
+}
+
+function RequestBuilder() {
+  this.request = new Request();
+
+  this.forUrl = function(url) {
+    this.request.url = url;
+    return this;
+  };
+
+  this.useMethod = function(method) {
+    this.request.method = method;
+    return this;
+  };
+
+  this.payload = function(payload) {
+    this.request.payload = payload;
+    return this;
+  };
+
+  this.build = function() {
+    return this.request;
+  };
+}
+
+module.exports = RequestBuilder;`,
+    codeES6: `class Request {
+  constructor() {
+    this.url = '';
+    this.method = '';
+    this.payload = {};
+  }
+}
+
+class RequestBuilder {
+  constructor() {
+    this.request = new Request();
+  }
+
+  forUrl(url) {
+    this.request.url = url;
+    return this;
+  }
+
+  useMethod(method) {
+    this.request.method = method;
+    return this;
+  }
+
+  payload(payload) {
+    this.request.payload = payload;
+    return this;
+  }
+
+  build() {
+    return this.request;
+  }
+}
+
+export default RequestBuilder;`
   },
 
   {
     name: 'Factory',
     type: 'creational',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function bmwFactory(type) {
+  if (type === 'X5') return new Bmw(type, 108000, 300);
+  if (type === 'X6') return new Bmw(type, 111000, 320);
+}
+
+function Bmw(model, price, maxSpeed) {
+  this.model = model;
+  this.price = price;
+  this.maxSpeed = maxSpeed;
+}
+
+module.exports = bmwFactory;`,
+    codeES6: `class BmwFactory {
+  create(type) {
+    if (type === 'X5') return new Bmw(type, 108000, 300);
+    if (type === 'X6') return new Bmw(type, 111000, 320);
+  }
+}
+
+class Bmw {
+  constructor(model, price, maxSpeed) {
+    this.model = model;
+    this.price = price;
+    this.maxSpeed = maxSpeed;
+  }
+}
+
+export default BmwFactory;`
   },
 
   {
     name: 'Prototype',
     type: 'creational',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function Sheep(name, weight) {
+  this.name = name;
+  this.weight = weight;
+}
+
+Sheep.prototype.clone = function() {
+  return new Sheep(this.name, this.weight);
+};
+
+module.exports = Sheep;`,
+    codeES6: `class Sheep {
+  constructor(name, weight) {
+    this.name = name;
+    this.weight = weight;
+  }
+
+  clone() {
+    return new Sheep(this.name, this.weight);
+  }
+}
+
+export default Sheep;`
   },
 
   {
     name: 'Singleton',
     type: 'creational',
-    codeES5: ``,
-    codeES6: ``
+    codeES5: `function Person() {
+  if (typeof Person.instance === 'object') return Person.instance;
+
+  Person.instance = this;
+
+  return this;
+}
+
+module.exports = Person;`,
+    codeES6: `class Person {
+  constructor() {
+    if (typeof Person.instance === 'object') {
+      return Person.instance;
+    }
+    Person.instance = this;
+    return this;
+  }
+}
+
+export default Person;`
   },
 
   {
