@@ -7,6 +7,7 @@ import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
 import styleLight from './styles/hljs/hljs.light';
 import styleDark from './styles/hljs/hljs.dark';
 import ToggleButton from './components/ToggleButton';
+import ButtonContainer from './components/ButtonContainer';
 import Title from './components/Title';
 import ProgressBar from './components/ProgressBar';
 import GlobalStyle from './styles/global';
@@ -63,21 +64,30 @@ const Layout = props => {
     <ThemeProvider theme={theme}>
       <React.Fragment>
         <GlobalStyle mode={props.mode} />
-        <Title />
         <ToggleButton control="js" />
         <ToggleButton control="mode" />
+        <Title />
         <ProgressBar />
         {props.js === 'es5' && (
-          <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+          <SyntaxHighlighter
+            language="javascript"
+            style={style}
+            customStyle={{ fontSize: '1.25rem' }}
+          >
             {code}
           </SyntaxHighlighter>
         )}
 
         {props.js === 'es6' && (
-          <SyntaxHighlighter language="javascript" style={style} customStyle={{ fontSize: '1.25rem' }}>
+          <SyntaxHighlighter
+            language="javascript"
+            style={style}
+            customStyle={{ fontSize: '1.25rem' }}
+          >
             {codeES6}
           </SyntaxHighlighter>
         )}
+        <ButtonContainer />
       </React.Fragment>
     </ThemeProvider>
   );

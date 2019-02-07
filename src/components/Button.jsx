@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  height: ${props => (props.big ? 46 : 36)}px;
-  outline: none;
-  padding: 0 20px;
   border-radius: 4px;
+  cursor: pointer;
+  font: 400 1rem 'Montserrat', 'sans-serif';
+  height: 48px;
+  outline: none;
+  padding: 0 1.5rem;
+  width: 37.5%;
 
   &.primary {
     background-color: #1585d8;
@@ -16,9 +19,16 @@ const StyledButton = styled.button`
   }
 
   &.secondary {
-    background-color: #eff3f6;
+    background-color: #e22a23;
     & span {
-      color: grey;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      & span {
+        color: #222222;
+      }
     }
   }
 `;
