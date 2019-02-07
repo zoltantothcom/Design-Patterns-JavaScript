@@ -14,10 +14,10 @@ const StyledButtonContainer = styled.div`
 
 const ButtonContainer = props => (
   <StyledButtonContainer>
-    <Button label="Iterator" theme="secondary" onClick={props.onClick} />
-    <Button label="Observer" theme="secondary" onClick={props.onClick} />
-    <Button label="Mediator" theme="secondary" onClick={props.onClick} />
-    <Button label="Revealing Module" theme="secondary" onClick={props.onClick} />
+    <Button label="Iterator" onClick={props.onClick} />
+    <Button label="Observer" onClick={props.onClick} />
+    <Button label="Mediator" onClick={props.onClick} />
+    <Button label="Revealing Module" onClick={props.onClick} />
   </StyledButtonContainer>
 );
 

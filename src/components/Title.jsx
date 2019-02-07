@@ -9,19 +9,17 @@ const StyledTitle = styled.h1`
   font-family: 'Montserrat', sans-serif;
   padding: 2em;
   background: ${props => props.theme.background};
-  /* background: ${props => (props.theme === 'dark' ? 'rgb(60, 60, 60)' : 'rgb(255, 250, 228)')}; */
   font-size: 2em;
   text-align: center;
-  color: #E22A23;
+  color: #e22a23;
   margin: 0;
 `;
 
 export const Title = props => {
   const { text, mode } = props;
-  const theme = mode === 'dark' ? themeDark : themeLight;
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={mode === 'dark' ? themeDark : themeLight}>
       <StyledTitle>{text}</StyledTitle>
     </ThemeProvider>
   );

@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { connect } from 'react-redux';
+import { themeLight } from '../styles/themes/theme.light';
+import { themeDark } from '../styles/themes/theme.dark';
 
 const StyledButton = styled.button`
+  background-color: ${props => props.theme.buttonBackground};
+  border-color: ${props => props.theme.buttonBorder};
   border-radius: 4px;
   cursor: pointer;
   font: 400 1rem 'Montserrat', 'sans-serif';
@@ -11,48 +16,47 @@ const StyledButton = styled.button`
   padding: 0 1.5rem;
   width: 37.5%;
 
-  &.primary {
-    background-color: #1585d8;
-    & span {
-      color: white;
-    }
+  & span {
+    color: ${props => props.theme.buttonColor};
   }
 
-  &.secondary {
-    background-color: #e22a23;
-    & span {
-      color: #ffffff;
-    }
+  &:hover {
+    border-color: ${props => props.theme.buttonBorderHover};
+    background-color: ${props => props.theme.buttonBackgroundHover};
 
-    &:hover {
-      background-color: #ffffff;
-      & span {
-        color: #222222;
-      }
+    & span {
+      color: ${props => props.theme.buttonColorHover};
     }
   }
 `;
 
-const Button = props => (
-  <StyledButton big={props.big} className={props.theme} onClick={props.onClick} style={props.style}>
-    {props.label && <span>{props.label}</span>}
-  </StyledButton>
-);
+const Button = props => {
+  const { mode } = props;
+
+  return (
+    <ThemeProvider theme={mode === 'dark' ? themeDark : themeLight}>
+      <StyledButton big={props.big} onClick={props.onClick} style={props.style}>
+        {props.label && <span>{props.label}</span>}
+      </StyledButton>
+    </ThemeProvider>
+  );
+};
 
 Button.propTypes = {
   big: PropTypes.bool,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   style: PropTypes.object,
-  theme: PropTypes.string
+  mode: PropTypes.string.isRequired
 };
 
 Button.defaultProps = {
   big: false,
   label: 'Save',
   onClick: () => {},
-  style: {},
-  theme: 'primary'
+  style: {}
 };
 
-export default Button;
+const mapStateToProps = ({ mode }) => ({ mode });
+
+export default connect(mapStateToProps)(Button);
