@@ -12,10 +12,10 @@ const StyledToggleButton = styled.button`
   border-radius: 50%;
   color: #999999;
   cursor: pointer;
-  height: 3rem;
+  height: 2.5rem;
   margin: 1rem 0 0 1rem;
   outline: 0;
-  width: 3rem;
+  width: 2.5rem;
 
   &:hover {
     background-color: #484848;

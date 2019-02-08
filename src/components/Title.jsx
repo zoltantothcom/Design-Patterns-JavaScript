@@ -6,7 +6,7 @@ import { themeLight } from '../styles/themes/theme.light';
 import { themeDark } from '../styles/themes/theme.dark';
 
 const StyledTitle = styled.h1`
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Karla', sans-serif;
   padding: 2em;
   background: ${props => props.theme.background};
   font-size: 2em;
@@ -31,7 +31,7 @@ Title.propTypes = {
 };
 
 Title.defaultProps = {
-  text: 'JavaScript Patterns',
+  text: 'JavaScript Design Patterns',
   mode: 'dark'
 };
 

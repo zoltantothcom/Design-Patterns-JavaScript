@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   border-color: ${props => props.theme.buttonBorder};
   border-radius: 4px;
   cursor: pointer;
-  font: 400 1rem 'Montserrat', 'sans-serif';
+  font: 400 1rem 'Karla', 'sans-serif';
   height: 48px;
   outline: none;
   padding: 0 1.5rem;
