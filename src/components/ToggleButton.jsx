@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { toggle } from '../actions';
@@ -13,23 +14,60 @@ const StyledToggleButton = styled.button`
   cursor: pointer;
   height: 3rem;
   margin: 1rem 0 0 1rem;
+  outline: 0;
   width: 3rem;
 
   &:hover {
-    background-color: #484848; /* #fad934 */
+    background-color: #484848;
 
     & svg,
     & g {
       fill: #ffffff;
     }
   }
+
+  &.active {
+    background-color: #e22a23;
+    border-color: #e22a23;
+
+    & svg,
+    & g {
+      fill: #ffffff;
+    }
+  }
+
+  &.light {
+    background-color: #ffffff;
+    border-color: #d8d8d8;
+
+    & svg,
+    & g {
+      fill: #a8a8a8;
+    }
+
+    &:hover {
+      & svg,
+      & g {
+        fill: #707070;
+      }
+    }
+  }
 `;
 
 const ToggleButton = props => {
-  const { toggle, control } = props;
+  const { toggle, control, js, mode } = props;
+
+  let isActive, isLightMode;
+  if (control === 'js' && js === 'es6') isActive = 'active';
+  if (control === 'mode' && mode === 'light') isActive = 'active';
+
+  if (!isActive && mode === 'light') isLightMode = 'light';
 
   return (
-    <StyledToggleButton onClick={() => toggle(control)}>
+    <StyledToggleButton
+      onClick={() => toggle(control)}
+      className={classnames(isActive, isLightMode)}
+    >
       <SVG control={control} />
     </StyledToggleButton>
   );
@@ -37,11 +75,13 @@ const ToggleButton = props => {
 
 ToggleButton.propTypes = {
   toggle: PropTypes.func.isRequired,
-  control: PropTypes.string.isRequired
+  control: PropTypes.string.isRequired,
+  mode: PropTypes.string.isRequired,
+  js: PropTypes.string.isRequired
 };
 
 // const mapStateToProps = state => ({ js: state.js });
-const mapStateToProps = ({ js }) => ({ js });
+const mapStateToProps = ({ js, mode }) => ({ js, mode });
 
 const mapDispatchToProps = dispatch => {
   return { toggle: version => dispatch(toggle(version)) };
