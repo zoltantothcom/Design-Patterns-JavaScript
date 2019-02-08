@@ -1,4 +1,7 @@
 const patterns = [
+  /*
+   * Abstract
+   */
   {
     name: 'Abstract Factory',
     type: 'creational',
@@ -53,7 +56,9 @@ class Rx24 {
 
 export default droidProducer;`
   },
-
+  /*
+   * Builder
+   */
   {
     name: 'Builder',
     type: 'creational',
@@ -122,7 +127,9 @@ class RequestBuilder {
 
 export default RequestBuilder;`
   },
-
+  /*
+   * Factory
+   */
   {
     name: 'Factory',
     type: 'creational',
@@ -155,7 +162,9 @@ class Bmw {
 
 export default BmwFactory;`
   },
-
+  /*
+   * Prototype
+   */
   {
     name: 'Prototype',
     type: 'creational',
@@ -182,7 +191,9 @@ module.exports = Sheep;`,
 
 export default Sheep;`
   },
-
+  /*
+   * Singleton
+   */
   {
     name: 'Singleton',
     type: 'creational',
@@ -207,7 +218,9 @@ module.exports = Person;`,
 
 export default Person;`
   },
-
+  /*
+   * Adapter
+   */
   {
     name: 'Adapter',
     type: 'structural',
@@ -268,7 +281,9 @@ class JediAdapter {
 
 export { Soldier, Jedi, JediAdapter };`
   },
-
+  /*
+   * Bridge
+   */
   {
     name: 'Bridge',
     type: 'structural',
@@ -344,7 +359,9 @@ class AlcoholInk extends Ink {
 
 export { EpsonPrinter, HPprinter, AcrylicInk, AlcoholInk };`
   },
-
+  /*
+   * Composite
+   */
   {
     name: 'Composite',
     type: 'structural',
@@ -465,7 +482,9 @@ class Memory extends Equipment {
 
 export { Cabbinet, FloppyDisk, HardDrive, Memory };`
   },
-
+  /*
+   * Decorator
+   */
   {
     name: 'Decorator',
     type: 'structural',
@@ -547,7 +566,9 @@ class CheeseDecorator extends PastaDecorator {
 
 export { Penne, SauceDecorator, CheeseDecorator };`
   },
-
+  /*
+   * Facade
+   */
   {
     name: 'Facade',
     type: 'structural',
@@ -608,7 +629,9 @@ class Fees {
 
 export default ShopFacade;`
   },
-
+  /*
+   * Flyweight
+   */
   {
     name: 'Flyweight',
     type: 'structural',
@@ -648,7 +671,9 @@ class colorFactory {
 
 export { colorFactory };`
   },
-
+  /*
+   * Proxy
+   */
   {
     name: 'Proxy',
     type: 'structural',
@@ -694,7 +719,9 @@ class Driver {
 
 export { Car, CarProxy, Driver };`
   },
-
+  /*
+   * Chain of Resp
+   */
   {
     name: 'Chain of Resp',
     type: 'behavioral',
@@ -822,7 +849,9 @@ class NoneDiscount {
 
 export { ShoppingCart, Discount };`
   },
-
+  /*
+   * Command
+   */
   {
     name: 'Command',
     type: 'behavioral',
@@ -930,7 +959,9 @@ class OffCommand {
 
 export { Cockpit, Turbine, OnCommand, OffCommand };`
   },
-
+  /*
+   * Interpreter
+   */
   {
     name: 'Interpreter',
     type: 'behavioral',
@@ -995,7 +1026,9 @@ class Num {
 
 export { Num, Min, Sum };`
   },
-
+  /*
+   * Iterator
+   */
   {
     name: 'Iterator',
     type: 'behavioral',
@@ -1031,7 +1064,9 @@ module.exports = Iterator;`,
 
 export default Iterator;`
   },
-
+  /*
+   * Mediator
+   */
   {
     name: 'Mediator',
     type: 'behavioral',
@@ -1082,7 +1117,9 @@ class Airplane {
 
 export { TrafficTower, Airplane };`
   },
-
+  /*
+   * Memento
+   */
   {
     name: 'Memento',
     type: 'behavioral',
@@ -1143,7 +1180,9 @@ class Caretaker {
 
 export { originator, Caretaker };`
   },
-
+  /*
+   * Observer
+   */
   {
     name: 'Observer',
     type: 'behavioral',
@@ -1232,7 +1271,9 @@ class proft {
 
 export { Product, fees, proft };`
   },
-
+  /*
+   * State
+   */
   {
     name: 'State',
     type: 'behavioral',
@@ -1307,7 +1348,9 @@ class Order {
 
 export default Order;`
   },
-
+  /*
+   * Strategy
+   */
   {
     name: 'Strategy',
     type: 'behavioral',
@@ -1366,7 +1409,9 @@ function premiumStrategy(amount) {
 
 export { ShoppingCart, guestStrategy, regularStrategy, premiumStrategy };`
   },
-
+  /*
+   * Template
+   */
   {
     name: 'Template',
     type: 'behavioral',
@@ -1429,7 +1474,9 @@ class Tax2 extends Tax {
 
 export { Tax1, Tax2 };`
   },
-
+  /*
+   * Visitor
+   */
   {
     name: 'Visitor',
     type: 'behavioral',

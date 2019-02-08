@@ -13,43 +13,9 @@ import ProgressBar from './components/ProgressBar';
 import GlobalStyle from './styles/global';
 import { themeLight } from './styles/themes/theme.light';
 import { themeDark } from './styles/themes/theme.dark';
+import patterns from './data/patterns';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
-
-const codeES6 = `class Pattern {
-  constructor(el) {
-    this.index = 0;
-    this.elements = el;
-  }
-
-  next() {
-    return this.elements[this.index++];
-  }
-
-  hasNext() {
-    return this.index < this.elements.length;
-  }
-}
-
-export default Pattern;
-`;
-
-const code = `function Pattern(el) {
-  this.index = 0;
-  this.elements = el;
-}
-
-Pattern.prototype = {
-  next: function() {
-    return this.elements[this.index++];
-  },
-  hasNext: function() {
-    return this.index < this.elements.length;
-  }
-};
-
-module.exports = Pattern;
-`;
 
 const Layout = props => {
   let style = styleLight;
@@ -74,7 +40,7 @@ const Layout = props => {
             style={style}
             customStyle={{ fontSize: '1.25rem' }}
           >
-            {code}
+            {patterns[5].codeES5}
           </SyntaxHighlighter>
         )}
 
@@ -84,7 +50,7 @@ const Layout = props => {
             style={style}
             customStyle={{ fontSize: '1.25rem' }}
           >
-            {codeES6}
+            {patterns[5].codeES6}
           </SyntaxHighlighter>
         )}
         <ButtonContainer />
