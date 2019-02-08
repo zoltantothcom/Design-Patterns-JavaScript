@@ -35,21 +35,13 @@ const Layout = props => {
         <Title />
         <ProgressBar />
         {props.js === 'es5' && (
-          <SyntaxHighlighter
-            language="javascript"
-            style={style}
-            customStyle={{ fontSize: '1.25rem' }}
-          >
+          <SyntaxHighlighter language="javascript" style={style}>
             {patterns[5].codeES5}
           </SyntaxHighlighter>
         )}
 
         {props.js === 'es6' && (
-          <SyntaxHighlighter
-            language="javascript"
-            style={style}
-            customStyle={{ fontSize: '1.25rem' }}
-          >
+          <SyntaxHighlighter language="javascript" style={style}>
             {patterns[5].codeES6}
           </SyntaxHighlighter>
         )}
