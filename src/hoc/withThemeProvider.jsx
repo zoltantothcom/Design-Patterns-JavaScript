@@ -7,9 +7,9 @@ import { themeLight } from '../styles/themes/theme.light';
 import { themeDark } from '../styles/themes/theme.dark';
 
 const withThemeProvider = Component => {
-  const Sub = ({ mode }) => (
+  const Sub = ({ mode, ...rest }) => (
     <ThemeProvider theme={mode === 'dark' ? themeDark : themeLight}>
-      <Component />
+      <Component {...rest} />
     </ThemeProvider>
   );
 

@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
-import { connect } from 'react-redux';
-import { themeLight } from '../styles/themes/theme.light';
-import { themeDark } from '../styles/themes/theme.dark';
+import styled from 'styled-components';
+import withThemeProvider from '../hoc/withThemeProvider';
 
 const StyledButton = styled.button`
   background-color: ${props => props.theme.buttonBackground};
@@ -30,28 +28,20 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = props => {
-  const { mode, onClick, label } = props;
+export const Button = props => {
+  const { onClick, label } = props;
 
-  return (
-    <ThemeProvider theme={mode === 'dark' ? themeDark : themeLight}>
-      <StyledButton onClick={onClick}>{label && <span>{label}</span>}</StyledButton>
-    </ThemeProvider>
-  );
+  return <StyledButton onClick={onClick}>{label && <span>{label}</span>}</StyledButton>;
 };
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  mode: PropTypes.string.isRequired
+  onClick: PropTypes.func.isRequired
 };
 
 Button.defaultProps = {
   label: 'Button',
-  onClick: () => {},
-  mode: 'light'
+  onClick: () => {}
 };
 
-const mapStateToProps = ({ mode }) => ({ mode });
-
-export default connect(mapStateToProps)(Button);
+export default withThemeProvider(Button);

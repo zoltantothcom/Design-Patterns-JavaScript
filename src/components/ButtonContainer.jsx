@@ -14,7 +14,7 @@ const StyledButtonContainer = styled.div`
 
 const ButtonContainer = props => (
   <StyledButtonContainer>
-    <Button label="Iterator" onClick={props.onClick} />
+    <Button label="Iterator" onClick={() => console.log('Iterator')} />
     <Button label="Observer" onClick={props.onClick} />
     <Button label="Mediator" onClick={props.onClick} />
     <Button label="Revealing Module" onClick={props.onClick} />
