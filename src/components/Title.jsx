@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
-import { connect } from 'react-redux';
-import { themeLight } from '../styles/themes/theme.light';
-import { themeDark } from '../styles/themes/theme.dark';
+import styled from 'styled-components';
+import withThemeProvider from '../hoc/withThemeProvider';
 
 const StyledTitle = styled.h1`
   font-family: 'Karla', sans-serif;
@@ -15,26 +12,6 @@ const StyledTitle = styled.h1`
   margin: 0;
 `;
 
-export const Title = props => {
-  const { text, mode } = props;
+export const Title = () => <StyledTitle>JavaScript Design Patterns</StyledTitle>;
 
-  return (
-    <ThemeProvider theme={mode === 'dark' ? themeDark : themeLight}>
-      <StyledTitle>{text}</StyledTitle>
-    </ThemeProvider>
-  );
-};
-
-Title.propTypes = {
-  text: PropTypes.string.isRequired,
-  mode: PropTypes.string.isRequired
-};
-
-Title.defaultProps = {
-  text: 'JavaScript Design Patterns',
-  mode: 'dark'
-};
-
-const mapStateToProps = ({ mode }) => ({ mode });
-
-export default connect(mapStateToProps)(Title);
+export default withThemeProvider(Title);
