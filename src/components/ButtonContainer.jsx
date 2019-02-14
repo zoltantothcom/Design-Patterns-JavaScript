@@ -14,21 +14,18 @@ const StyledButtonContainer = styled.div`
 
 const ButtonContainer = props => (
   <StyledButtonContainer>
-    <Button label="Iterator" onClick={() => console.log('Iterator')} />
-    <Button label="Observer" onClick={props.onClick} />
-    <Button label="Mediator" onClick={props.onClick} />
-    <Button label="Revealing Module" onClick={props.onClick} />
+    {props.possibleAnswers.map(answer => (
+      <Button label={answer} id={answer} key={answer} />
+    ))}
   </StyledButtonContainer>
 );
 
 ButtonContainer.propTypes = {
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  possibleAnswers: PropTypes.array.isRequired
 };
 
 ButtonContainer.defaultProps = {
-  label: 'Save',
-  onClick: () => {}
+  possibleAnswers: ['0', '1', '2', '3']
 };
 
 export default ButtonContainer;

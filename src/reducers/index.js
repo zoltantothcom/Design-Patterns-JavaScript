@@ -1,7 +1,13 @@
 const rootReducer = (state, action) => {
   switch (action.type) {
-  case 'ADD_ANSWER':
-    return { ...state, answers: [...state.answers, action.payload] };
+  case 'SUBMIT':
+    return {
+      ...state,
+      progress: {
+        ...state.progress,
+        answers: state.progress.answers.concat(action.payload)
+      }
+    };
   case 'TOGGLE':
     return state;
   case 'TOGGLE_JS':

@@ -1,5 +1,5 @@
-export const addAnswer = payload => ({
-  type: 'ADD_ANSWER',
+export const submit = payload => ({
+  type: 'SUBMIT',
   payload
 });
 

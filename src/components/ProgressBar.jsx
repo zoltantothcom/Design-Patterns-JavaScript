@@ -19,8 +19,6 @@ const Step = styled.span`
   width: 4%;
 `;
 
-// const steps = Array.from(Array(23));
-
 export const ProgressBar = props => {
   const { answers } = props.progress;
 

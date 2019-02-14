@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import withThemeProvider from '../hoc/withThemeProvider';
+import { connect } from 'react-redux';
+import { submit } from '../actions';
 
 const StyledButton = styled.button`
   background-color: ${props => props.theme.buttonBackground};
@@ -29,19 +30,29 @@ const StyledButton = styled.button`
 `;
 
 export const Button = props => {
-  const { onClick, label } = props;
+  const { id, label, onClick } = props;
 
-  return <StyledButton onClick={onClick}>{label && <span>{label}</span>}</StyledButton>;
+  return (
+    <StyledButton id={id} onClick={onClick}>
+      {label && <span>{label}</span>}
+    </StyledButton>
+  );
 };
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 };
 
-Button.defaultProps = {
-  label: 'Button',
-  onClick: () => {}
-};
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onClick: () => {
+    const { id } = ownProps;
+    dispatch(submit(id));
+  }
+});
 
-export default withThemeProvider(Button);
+export default connect(
+  null,
+  mapDispatchToProps
+)(Button);

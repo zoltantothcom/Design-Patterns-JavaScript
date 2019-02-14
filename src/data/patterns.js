@@ -1538,4 +1538,9 @@ export { Developer, Manager, bonusVisitor };`
   }
 ];
 
+for (let i = patterns.length - 1; i > 0; i--) {
+  const rand = Math.floor(Math.random() * (i + 1));
+  [patterns[i], patterns[rand]] = [patterns[rand], patterns[i]];
+}
+
 export default patterns;
