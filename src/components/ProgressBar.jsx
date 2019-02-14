@@ -21,7 +21,7 @@ const Step = styled.span`
 `;
 
 export const ProgressBar = props => {
-  const { answers, remaining } = props.progress;
+  const { answers, remaining } = props;
 
   return (
     <ThemeProvider theme={theme}>
@@ -33,7 +33,7 @@ export const ProgressBar = props => {
             nature = pattern.correct ? 'success' : 'error';
           }
 
-          return <Step key={pattern.uuid || 'qf3f3'} nature={nature} />;
+          return <Step key={pattern.uuid} nature={nature} />;
         })}
 
         {remaining.map(pattern => (
@@ -45,12 +45,10 @@ export const ProgressBar = props => {
 };
 
 ProgressBar.propTypes = {
-  progress: PropTypes.shape({
-    answers: PropTypes.array.isRequired,
-    remaining: PropTypes.array.isRequired,
-  }),
+  answers: PropTypes.array.isRequired,
+  remaining: PropTypes.array.isRequired,
 };
 
-const mapStateToProps = ({ progress }) => ({ progress });
+const mapStateToProps = ({ progress: { answers, remaining } }) => ({ answers, remaining });
 
 export default connect(mapStateToProps)(ProgressBar);
