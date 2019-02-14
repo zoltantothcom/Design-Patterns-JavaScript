@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import reducer from '../reducers/index';
-import { toggleMiddleware } from '../middleware';
+import { toggleMiddleware } from '../middleware/toggle';
+import { submitMiddleware } from '../middleware/submit';
 import patterns from '../data/patterns';
 
 const answers = patterns.map(pattern => ({
@@ -27,7 +28,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer,
   initialState,
-  composeEnhancers(applyMiddleware(toggleMiddleware))
+  composeEnhancers(applyMiddleware(toggleMiddleware, submitMiddleware))
 );
 
 export default store;
