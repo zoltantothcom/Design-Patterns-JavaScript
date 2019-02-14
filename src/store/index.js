@@ -1,53 +1,33 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import reducer from '../reducers/index';
 import { toggleMiddleware } from '../middleware';
+import patterns from '../data/patterns';
+
+const answers = patterns.map(pattern => ({
+  ...pattern,
+  answered: false,
+  correct: null,
+  patternId: null,
+  answerId: null
+}));
 
 const initialState = {
   js: 'es5',
   mode: 'dark',
+  patterns,
   progress: {
-    current: 3,
-    answers: [
-      {
-        patternId: 'abc',
-        answerId: 'abc',
-        answered: true,
-        correct: true
-      },
-      {
-        patternId: 'abc',
-        answerId: 'xyz',
-        answered: true,
-        correct: false
-      },
-      {
-        patternId: 'abc',
-        answerId: 'abc',
-        answered: true,
-        correct: true
-      },
-      {
-        patternId: 'abc',
-        answerId: 'abc',
-        answered: true,
-        correct: true
-      },
-      {
-        patternId: 'abc',
-        answerId: null,
-        answered: false,
-        correct: false
-      },
-      {
-        patternId: 'abc',
-        answerId: null,
-        answered: false,
-        correct: false
-      }
-    ]
+    current: patterns[0],
+    answers: [],
+    remaining: answers
   }
 };
 
-const store = createStore(reducer, initialState, applyMiddleware(toggleMiddleware));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  reducer,
+  initialState,
+  composeEnhancers(applyMiddleware(toggleMiddleware))
+);
 
 export default store;
