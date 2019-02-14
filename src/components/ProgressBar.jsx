@@ -29,11 +29,11 @@ export const ProgressBar = props => {
         {answers.map(pattern => {
           let nature;
 
-          if (answer.answered) {
-            nature = answer.correct ? 'success' : 'error';
+          if (pattern.answered) {
+            nature = pattern.correct ? 'success' : 'error';
           }
 
-          return <Step key={pattern.uuid} nature={nature} />;
+          return <Step key={pattern.uuid || 'qf3f3'} nature={nature} />;
         })}
 
         {remaining.map(pattern => (

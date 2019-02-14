@@ -8,7 +8,6 @@ const answers = patterns.map(pattern => ({
   ...pattern,
   answered: false,
   correct: null,
-  patternId: null,
   answerId: null,
   uuid: uuid()
 }));
@@ -18,7 +17,7 @@ const initialState = {
   mode: 'dark',
   patterns,
   progress: {
-    current: patterns[0],
+    current: answers[0],
     answers: [],
     remaining: answers
   }
