@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+const uuid = require('uuid/v4');
 import reducer from '../reducers/index';
 import patterns from '../data/patterns';
 import middleware from '../middleware';
@@ -8,7 +9,8 @@ const answers = patterns.map(pattern => ({
   answered: false,
   correct: null,
   patternId: null,
-  answerId: null
+  answerId: null,
+  uuid: uuid()
 }));
 
 const initialState = {

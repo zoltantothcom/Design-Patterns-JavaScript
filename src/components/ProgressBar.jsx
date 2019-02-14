@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
@@ -20,20 +21,24 @@ const Step = styled.span`
 `;
 
 export const ProgressBar = props => {
-  const { answers } = props.progress;
+  const { answers, remaining } = props.progress;
 
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        {answers.map((answer, index) => {
+        {answers.map(pattern => {
           let nature;
 
           if (answer.answered) {
             nature = answer.correct ? 'success' : 'error';
           }
 
-          return <Step key={index} nature={nature} />;
+          return <Step key={pattern.uuid} nature={nature} />;
         })}
+
+        {remaining.map(pattern => (
+          <Step key={pattern.uuid} />
+        ))}
       </Container>
     </ThemeProvider>
   );
@@ -41,14 +46,9 @@ export const ProgressBar = props => {
 
 ProgressBar.propTypes = {
   progress: PropTypes.shape({
-    answers: PropTypes.array.isRequired
-  })
-};
-
-ProgressBar.defaultProps = {
-  progress: {
-    answers: []
-  }
+    answers: PropTypes.array.isRequired,
+    remaining: PropTypes.array.isRequired,
+  }),
 };
 
 const mapStateToProps = ({ progress }) => ({ progress });
