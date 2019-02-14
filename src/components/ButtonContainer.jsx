@@ -16,7 +16,7 @@ const StyledButtonContainer = styled.div`
 const possibleAnswers = [];
 
 const ButtonContainer = props => {
-  console.log(props);
+  // console.log(props);
 
   possibleAnswers.push(props.current);
 

@@ -1,8 +1,27 @@
-export const submitMiddleware = ({ dispatch, getState }) => next => action => {
+export const submitMiddleware = ({ getState }) => next => action => {
   if (action.type === 'SUBMIT') {
-    const id = 'sljabgvqaw7fquy4hebf284jwmhrd';
+    const { progress } = getState();
 
-    action.payload = id;
+    const recentlyAnswered = {
+      ...progress.current,
+      answered: true,
+      answerId: action.payload,
+      correct: action.payload === progress.current.uuid
+    };
+
+    const remainingPatterns = progress.remaining.filter(
+      pattern => pattern.uuid !== progress.current.uuid
+    );
+    console.log(remainingPatterns);
+
+    const currentIndex = Math.floor(Math.random() * remainingPatterns.length);
+    console.log(currentIndex);
+
+    action.payload = {
+      recentlyAnswered,
+      remainingPatterns,
+      currentIndex
+    };
   }
 
   next(action);

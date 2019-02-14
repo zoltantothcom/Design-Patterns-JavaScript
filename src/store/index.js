@@ -17,9 +17,9 @@ const initialState = {
   mode: 'dark',
   patterns,
   progress: {
-    current: answers[0],
     answers: [],
-    remaining: answers
+    remaining: answers,
+    current: answers[0]
   }
 };
 
