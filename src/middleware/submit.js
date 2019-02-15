@@ -12,10 +12,10 @@ export const submitMiddleware = ({ getState }) => next => action => {
     const remainingPatterns = progress.remaining.filter(
       pattern => pattern.uuid !== progress.current.uuid
     );
-    console.log(remainingPatterns);
+    // console.log(remainingPatterns);
 
     const currentIndex = Math.floor(Math.random() * remainingPatterns.length);
-    console.log(currentIndex);
+    // console.log(currentIndex);
 
     action.payload = {
       recentlyAnswered,

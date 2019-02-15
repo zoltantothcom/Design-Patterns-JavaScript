@@ -13,11 +13,12 @@ import ProgressBar from './components/ProgressBar';
 import GlobalStyle from './styles/global';
 import { themeLight } from './styles/themes/theme.light';
 import { themeDark } from './styles/themes/theme.dark';
-import patterns from './data/patterns';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
 const Layout = props => {
+  const { js, mode, current } = props;
+
   let style = styleLight;
   let theme = themeLight;
 
@@ -29,20 +30,20 @@ const Layout = props => {
   return (
     <ThemeProvider theme={theme}>
       <React.Fragment>
-        <GlobalStyle mode={props.mode} />
+        <GlobalStyle mode={mode} />
         <ToggleButton control="js" />
         <ToggleButton control="mode" />
         <Title />
         <ProgressBar />
-        {props.js === 'es5' && (
+        {js === 'es5' && (
           <SyntaxHighlighter language="javascript" style={style}>
-            {patterns[5].codeES5}
+            {current.codeES5}
           </SyntaxHighlighter>
         )}
 
-        {props.js === 'es6' && (
+        {js === 'es6' && (
           <SyntaxHighlighter language="javascript" style={style}>
-            {patterns[5].codeES6}
+            {current.codeES6}
           </SyntaxHighlighter>
         )}
         <ButtonContainer />
@@ -53,9 +54,10 @@ const Layout = props => {
 
 Layout.propTypes = {
   js: PropTypes.string.isRequired,
-  mode: PropTypes.string.isRequired
+  mode: PropTypes.string.isRequired,
+  current: PropTypes.object.isRequired
 };
 
-const mapStateToProps = ({ js, mode }) => ({ js, mode });
+const mapStateToProps = ({ js, mode, progress: { current } }) => ({ js, mode, current });
 
 export default connect(mapStateToProps)(Layout);

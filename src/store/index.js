@@ -15,7 +15,7 @@ const answers = patterns.map(pattern => ({
 const initialState = {
   js: 'es5',
   mode: 'dark',
-  patterns,
+  patterns: answers,
   progress: {
     answers: [],
     remaining: answers,

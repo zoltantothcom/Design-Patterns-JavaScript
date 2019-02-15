@@ -5,7 +5,8 @@ const styles = {
     overflowX: 'auto',
     padding: '1em',
     color: '#383a42',
-    background: '#fafafa'
+    background: '#fafafa',
+    height: 375
   },
   'hljs-comment': {
     color: '#a0a1a7',

@@ -13,16 +13,23 @@ const StyledButtonContainer = styled.div`
   margin: 2rem 0;
 `;
 
-const possibleAnswers = [];
-
 const ButtonContainer = props => {
-  // console.log(props);
+  const { current, patterns } = props;
 
-  possibleAnswers.push(props.current);
+  const allOtherAnswers = patterns.filter(pattern => pattern.uuid !== current.uuid);
+  // Shuffle array
+  const shuffled = allOtherAnswers.sort(() => 0.5 - Math.random());
+
+  // Get sub-array of first n elements after shuffled
+  const selected = shuffled.slice(0, 3);
+
+  const variants = [current, ...selected];
+
+  variants.sort(() => 0.5 - Math.random());
 
   return (
     <StyledButtonContainer>
-      {possibleAnswers.map(({ uuid, name }) => (
+      {variants.map(({ uuid, name }) => (
         <Button label={name} id={uuid} key={uuid} />
       ))}
     </StyledButtonContainer>
