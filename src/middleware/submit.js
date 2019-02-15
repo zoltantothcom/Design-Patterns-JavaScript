@@ -1,3 +1,5 @@
+import { randomFromRange } from '../helpers/randomFromRange';
+
 export const submitMiddleware = ({ getState }) => next => action => {
   if (action.type === 'SUBMIT') {
     const { progress } = getState();
@@ -21,8 +23,7 @@ export const submitMiddleware = ({ getState }) => next => action => {
     );
     // console.log(remainingPatterns);
 
-    // TODO: refactor into helper function
-    const currentIndex = Math.floor(Math.random() * remainingPatterns.length);
+    const currentIndex = randomFromRange(remainingPatterns.length);
 
     action.payload = {
       recentlyAnswered,
