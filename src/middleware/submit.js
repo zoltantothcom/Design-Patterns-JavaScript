@@ -2,8 +2,15 @@ export const submitMiddleware = ({ getState }) => next => action => {
   if (action.type === 'SUBMIT') {
     const { progress } = getState();
 
+    // remove code fields - not necessary in progress.answers
+    const filteredKeys = ['uuid', 'name', 'type'];
+    const filtered = filteredKeys.reduce(
+      (obj, key) => ({ ...obj, [key]: progress.current[key] }),
+      {}
+    );
+
     const recentlyAnswered = {
-      ...progress.current,
+      ...filtered,
       answered: true,
       answerId: action.payload,
       correct: action.payload === progress.current.uuid
@@ -14,8 +21,8 @@ export const submitMiddleware = ({ getState }) => next => action => {
     );
     // console.log(remainingPatterns);
 
+    // TODO: refactor into helper function
     const currentIndex = Math.floor(Math.random() * remainingPatterns.length);
-    // console.log(currentIndex);
 
     action.payload = {
       recentlyAnswered,
