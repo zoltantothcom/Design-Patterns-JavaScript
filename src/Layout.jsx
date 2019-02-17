@@ -32,6 +32,9 @@ const Layout = props => {
 
           <Link to="/">Game</Link>
           <Link to="/about">About</Link>
+          <a href="//github.com/zoltantothcom/javascript-patterns" target="_blank">
+            GitHub
+          </a>
 
           <Route exact path="/" render={() => <ToggleButton control="js" />} />
           <ToggleButton control="mode" />
