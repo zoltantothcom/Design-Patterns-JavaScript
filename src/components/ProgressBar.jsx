@@ -16,8 +16,8 @@ const Container = styled.div`
 const Step = styled.span`
   background: ${props => (props.nature ? props.theme[props.nature] : props.theme.lightGrey)};
   display: flex;
-  height: 3px;
-  width: 4%;
+  height: 2px;
+  width: 3.75%;
 `;
 
 export const ProgressBar = props => {
