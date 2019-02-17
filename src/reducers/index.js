@@ -3,12 +3,14 @@ const rootReducer = (state, action) => {
   case 'SUBMIT':
     const { recentlyAnswered, remainingPatterns, currentIndex } = action.payload;
 
+    const current = remainingPatterns.length ? remainingPatterns[currentIndex] : null;
+
     return {
       ...state,
       progress: {
         answers: state.progress.answers.concat(recentlyAnswered),
         remaining: remainingPatterns,
-        current: remainingPatterns[currentIndex]
+        current
       }
     };
   case 'TOGGLE':

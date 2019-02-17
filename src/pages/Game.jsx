@@ -1,41 +1,30 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
 import ButtonContainer from '../components/ButtonContainer';
 import ProgressBar from '../components/ProgressBar';
+import Code from '../components/Code';
+import Results from '../components/Results';
 
-SyntaxHighlighter.registerLanguage('javascript', js);
-
-const Game = props => {
-  const { js, current, style } = props;
-
-  return (
-    <Fragment>
-      <ProgressBar />
-      {js === 'es5' && (
-        <SyntaxHighlighter language="javascript" style={style}>
-          {current.codeES5}
-        </SyntaxHighlighter>
-      )}
-
-      {js === 'es6' && (
-        <SyntaxHighlighter language="javascript" style={style}>
-          {current.codeES6}
-        </SyntaxHighlighter>
-      )}
-      <ButtonContainer />
-    </Fragment>
-  );
-};
+const Game = ({ current, style }) => (
+  <Fragment>
+    {current ? (
+      <Fragment>
+        <ProgressBar />
+        <Code style={style} />
+        <ButtonContainer />
+      </Fragment>
+    ) : (
+      <Results />
+    )}
+  </Fragment>
+);
 
 Game.propTypes = {
-  js: PropTypes.string.isRequired,
-  current: PropTypes.object.isRequired,
-  style: PropTypes.object.isRequired
+  style: PropTypes.object.isRequired,
+  current: PropTypes.object
 };
 
-const mapStateToProps = ({ js, progress: { current } }) => ({ js, current });
+const mapStateToProps = ({ progress: { current } }) => ({ current });
 
 export default connect(mapStateToProps)(Game);
