@@ -13,7 +13,7 @@ const StyledToggleButton = styled.button`
   color: #999999;
   cursor: pointer;
   height: 2.5rem;
-  margin: 1rem 0 0 1rem;
+  margin: 0 0 0 1rem;
   outline: 0;
   width: 2.5rem;
 

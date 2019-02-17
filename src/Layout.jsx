@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { connect } from 'react-redux';
 import styleLight from './styles/hljs/hljs.light';
 import styleDark from './styles/hljs/hljs.dark';
-import ToggleButton from './components/ToggleButton';
-import Title from './components/Title';
+import Header from './components/Header';
 import GlobalStyle from './styles/global';
+import { themeCommon } from './styles/themes/theme.common';
 import { themeLight } from './styles/themes/theme.light';
 import { themeDark } from './styles/themes/theme.dark';
 import Game from './pages/Game';
@@ -17,11 +17,11 @@ const Layout = props => {
   const { mode } = props;
 
   let style = styleLight;
-  let theme = themeLight;
+  let theme = { ...themeCommon, ...themeLight };
 
   if (props.mode === 'dark') {
     style = styleDark;
-    theme = themeDark;
+    theme = { ...themeCommon, ...themeDark };
   }
 
   return (
@@ -29,17 +29,7 @@ const Layout = props => {
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <GlobalStyle mode={mode} />
-
-          <Link to="/">Game</Link>
-          <Link to="/about">About</Link>
-          <a href="//github.com/zoltantothcom/javascript-patterns" target="_blank">
-            GitHub
-          </a>
-
-          <Route exact path="/" render={() => <ToggleButton control="js" />} />
-          <ToggleButton control="mode" />
-
-          <Title />
+          <Header />
 
           <Route exact path="/" render={props => <Game {...props} style={style} />} />
           <Route path="/about" component={About} />

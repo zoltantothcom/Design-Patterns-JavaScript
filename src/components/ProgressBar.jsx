@@ -1,15 +1,13 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { commonTheme as theme } from '../styles/themes/theme.common';
 
 const Container = styled.div`
   display: flex;
   height: 3px;
   justify-content: space-between;
-  margin: 0.5rem 0;
+  margin: 1.25rem 0 1rem;
   width: 100%;
 `;
 
@@ -24,29 +22,27 @@ export const ProgressBar = props => {
   const { answers, remaining } = props;
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        {answers.map(pattern => {
-          let nature;
+    <Container>
+      {answers.map(pattern => {
+        let nature;
 
-          if (pattern.answered) {
-            nature = pattern.correct ? 'success' : 'error';
-          }
+        if (pattern.answered) {
+          nature = pattern.correct ? 'success' : 'error';
+        }
 
-          return <Step key={pattern.uuid} nature={nature} />;
-        })}
+        return <Step key={pattern.uuid} nature={nature} />;
+      })}
 
-        {remaining.map(pattern => (
-          <Step key={pattern.uuid} />
-        ))}
-      </Container>
-    </ThemeProvider>
+      {remaining.map(pattern => (
+        <Step key={pattern.uuid} />
+      ))}
+    </Container>
   );
 };
 
 ProgressBar.propTypes = {
   answers: PropTypes.array.isRequired,
-  remaining: PropTypes.array.isRequired,
+  remaining: PropTypes.array.isRequired
 };
 
 const mapStateToProps = ({ progress: { answers, remaining } }) => ({ answers, remaining });

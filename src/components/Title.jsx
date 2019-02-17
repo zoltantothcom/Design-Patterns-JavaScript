@@ -4,12 +4,18 @@ import withThemeProvider from '../hoc/withThemeProvider';
 
 const StyledTitle = styled.h1`
   font-family: 'Karla', sans-serif;
-  padding: 2em;
-  background: ${props => props.theme.background};
-  font-size: 2em;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background: ${props => props.theme.headerBackground};
+  font-size: 1.75rem;
+  color: ${props => props.theme.orange};
+  margin: 1rem 0 0 -50vw;
   text-align: center;
-  color: #e22a23;
-  margin: 0;
+  left: 50%;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
 `;
 
 export const Title = () => <StyledTitle>JavaScript Design Patterns</StyledTitle>;
