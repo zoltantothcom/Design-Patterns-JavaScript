@@ -1,3 +1,6 @@
+import { initialProgress } from '../store';
+import { randomFromRange } from '../helpers/randomFromRange';
+
 const rootReducer = (state, action) => {
   switch (action.type) {
   case 'SUBMIT':
@@ -19,6 +22,14 @@ const rootReducer = (state, action) => {
     return { ...state, js: action.payload };
   case 'TOGGLE_MODE':
     return { ...state, mode: action.payload };
+  case 'RESTART':
+    return {
+      ...state,
+      progress: {
+        ...initialProgress,
+        current: state.patterns[randomFromRange(state.patterns.length)]
+      }
+    };
   default:
     return state;
   }

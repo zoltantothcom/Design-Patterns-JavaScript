@@ -4,7 +4,7 @@ import reducer from '../reducers/index';
 import patterns from '../data/patterns';
 import middleware from '../middleware';
 
-const answers = patterns.map(pattern => ({
+export const answers = patterns.map(pattern => ({
   ...pattern,
   answered: false,
   correct: null,
@@ -12,15 +12,17 @@ const answers = patterns.map(pattern => ({
   uuid: uuid()
 }));
 
+export const initialProgress = {
+  answers: [],
+  remaining: answers,
+  current: answers[0]
+};
+
 const initialState = {
   js: 'es5',
   mode: 'dark',
   patterns: answers,
-  progress: {
-    answers: [],
-    remaining: answers,
-    current: answers[0]
-  }
+  progress: initialProgress
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

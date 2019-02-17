@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { restart } from '../actions';
 
-const Results = ({ answers }) => {
+const Results = ({ answers, onClick }) => {
   let correct = 0;
   let wrong = 0;
 
@@ -11,15 +12,29 @@ const Results = ({ answers }) => {
   return (
     <div>
       <h2>Results</h2>
-      You've got <strong>{correct}</strong> patterns right and <strong>{wrong}</strong> wrong.
+      <h1>{Math.ceil((correct * 100) / 23)}%</h1>
+      You've got <strong>{correct}</strong> patterns right out of {answers.length}.
+      <div>
+        <button onClick={onClick}>Try Again</button>
+      </div>
     </div>
   );
 };
 
 Results.propTypes = {
-  answers: PropTypes.array.isRequired
+  answers: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 const mapStateToProps = ({ progress: { answers } }) => ({ answers });
 
-export default connect(mapStateToProps)(Results);
+const mapDispatchToProps = dispatch => ({
+  onClick: () => {
+    dispatch(restart());
+  }
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Results);

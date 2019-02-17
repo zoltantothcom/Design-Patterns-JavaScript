@@ -17,3 +17,8 @@ export const toggleMode = payload => ({
   type: 'TOGGLE_MODE',
   payload
 });
+
+export const restart = payload => ({
+  type: 'RESTART',
+  payload
+});
