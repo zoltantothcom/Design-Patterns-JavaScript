@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
-import { submit } from '../actions';
 
 const StyledButton = styled.button`
   background-color: ${props => props.theme.buttonBackground};
@@ -46,14 +44,4 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: () => {
-    const { id } = ownProps;
-    dispatch(submit(id));
-  }
-});
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(Button);
+export default Button;
