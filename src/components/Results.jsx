@@ -4,18 +4,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { restart } from '../actions';
 import Button from './Button';
-
-const Percentage = styled.h1`
-  border: 4px solid ${props => props.level};
-  border-radius: 50%;
-  color: ${props => props.level};
-  font-size: 4rem;
-  height: 10rem;
-  margin: auto;
-  line-height: 10rem;
-  text-align: center;
-  width: 10rem;
-`;
+import Percentage from './Percentage';
 
 const Info = styled.p`
   color: ${props => props.theme.buttonBorderHover};
@@ -35,26 +24,13 @@ const Results = ({ answers, onClick }) => {
   answers.map(answer => (answer.correct ? correct++ : wrong++));
 
   const percent = Math.ceil((correct * 100) / 23);
-  let level = 'red';
-
-  switch (true) {
-  case percent >= 80:
-    level = 'green';
-    break;
-  case percent >= 60:
-    level = 'gold';
-    break;
-  case percent >= 40:
-    level = 'orange';
-    break;
-  }
 
   return (
     <div>
       <Info>
         You've got <strong>{correct}</strong> patterns right out of {answers.length}.
       </Info>
-      <Percentage level={level}>{percent}%</Percentage>
+      <Percentage percent={percent} />
       <Restart>
         <Button label="Try Again" id="try_again" onClick={onClick} />
       </Restart>
