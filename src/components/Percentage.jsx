@@ -6,6 +6,7 @@ const StyledPercentage = styled.h1`
   border: 4px solid ${props => props.level};
   border-radius: 50%;
   color: ${props => props.level};
+  font-family: 'Karla', 'sans-serif';
   font-size: 4rem;
   height: 10rem;
   margin: auto;
