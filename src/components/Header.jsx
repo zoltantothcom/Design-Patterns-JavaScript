@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Route, Link } from 'react-router-dom';
-import ToggleButton from './ToggleButton';
+import Toggle from './Toggle';
 import Title from './Title';
 
 const StyledHeader = styled.div`
@@ -53,8 +53,8 @@ const Header = () => (
     </StyledLinkContainer>
 
     <StyledSettingsContainer>
-      <Route exact path="/" render={() => <ToggleButton control="js" />} />
-      <ToggleButton control="mode" />
+      <Route exact path="/" render={() => <Toggle control="js" />} />
+      <Toggle control="mode" />
     </StyledSettingsContainer>
 
     <Title />

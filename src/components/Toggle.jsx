@@ -6,11 +6,11 @@ import { connect } from 'react-redux';
 import { toggle } from '../actions';
 import SVG from './Svg';
 
-const StyledToggleButton = styled.button`
-  background-color: #2e2e2e;
-  border: 1px solid #555555;
+const StyledToggle = styled.button`
+  background-color: ${props => props.theme.background};
+  border: 1px solid ${props => props.theme.buttonBackground};
   border-radius: 50%;
-  color: #999999;
+  color: ${props => props.theme.buttonBackgroundHover};
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
@@ -18,11 +18,11 @@ const StyledToggleButton = styled.button`
   width: 2.5rem;
 
   &:hover {
-    background-color: #484848;
+    background-color: ${props => props.theme.buttonBackground};
 
     & svg,
     & g {
-      fill: #ffffff;
+      fill: ${props => props.theme.buttonColorHover};
     }
   }
 
@@ -32,29 +32,29 @@ const StyledToggleButton = styled.button`
 
     & svg,
     & g {
-      fill: #ffffff;
+      fill: ${props => props.theme.buttonColorHover};
     }
   }
 
   &.light {
-    background-color: #ffffff;
-    border-color: #d8d8d8;
+    background-color: ${props => props.theme.buttonColorHover};
+    border-color: ${props => props.theme.buttonBorderHover};
 
     & svg,
     & g {
-      fill: #a8a8a8;
+      fill: ${props => props.theme.buttonBorder};
     }
 
     &:hover {
       & svg,
       & g {
-        fill: #707070;
+        fill: ${props => props.theme.buttonBorder};
       }
     }
   }
 `;
 
-const ToggleButton = props => {
+const Toggle = props => {
   const { toggle, control, js, mode } = props;
 
   let isActive, isLightMode;
@@ -64,16 +64,13 @@ const ToggleButton = props => {
   if (!isActive && mode === 'light') isLightMode = 'light';
 
   return (
-    <StyledToggleButton
-      onClick={() => toggle(control)}
-      className={classnames(isActive, isLightMode)}
-    >
+    <StyledToggle onClick={() => toggle(control)} className={classnames(isActive, isLightMode)}>
       <SVG control={control} />
-    </StyledToggleButton>
+    </StyledToggle>
   );
 };
 
-ToggleButton.propTypes = {
+Toggle.propTypes = {
   toggle: PropTypes.func.isRequired,
   control: PropTypes.string.isRequired,
   mode: PropTypes.string.isRequired,
@@ -90,4 +87,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ToggleButton);
+)(Toggle);
