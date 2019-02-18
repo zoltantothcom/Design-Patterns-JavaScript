@@ -11,7 +11,7 @@ const StyledButtonContainer = styled.div`
   flex-wrap: wrap;
   height: 9rem;
   justify-content: space-around;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
 `;
 
 const ButtonContainer = props => {

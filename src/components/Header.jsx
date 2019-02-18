@@ -18,9 +18,6 @@ const StyledLinkContainer = styled.div`
 
 const StyledSettingsContainer = styled.div`
   display: inline-flex;
-  /* display: flex;
-  align-items: center;
-  height: 100%; */
 `;
 
 const linkStyle = css`
@@ -28,7 +25,7 @@ const linkStyle = css`
   color: ${props => props.theme.buttonBackgroundHover};
   display: inline-flex;
   font-size: 0.875rem;
-  margin: 0.5rem;
+  margin: 0.5rem 2rem 0 0;
   padding-bottom: 1px;
   text-decoration: none;
 
