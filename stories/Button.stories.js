@@ -1,36 +1,26 @@
 import React from 'react';
+import Provider from './Provider.js';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select, boolean, object } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 import Button from '../src/components/Button';
+import store from '../src/store';
+import { withThemesProvider } from 'storybook-addon-styled-component-theme';
+import { themeCommon } from '../src/styles/themes/theme.common';
+import { themeLight } from '../src/styles/themes/theme.light';
+import { themeDark } from '../src/styles/themes/theme.dark';
 
-const themes = ['primary', 'secondary'];
+const light = { ...themeCommon, ...themeLight };
+const dark = { ...themeCommon, ...themeDark };
+
+const themes = [light, dark];
+
+const withProvider = story => <Provider store={store}>{story()}</Provider>;
 
 storiesOf('Button', module)
+  .addDecorator(withProvider)
+  .addDecorator(withThemesProvider(themes))
   .addDecorator(withKnobs)
 
-  .add('no prop', () => <Button />)
-  .add('label', () => <Button label={text('label', 'Hello Button')} />)
-  .add('big', () => <Button label="Big Button" big={boolean('big', true)} />)
-  .add('themed', () => (
-    <React.Fragment>
-      <Button label="Button with primary theme" theme="primary" />
-      <Button label="Button with secondary theme" theme="secondary" />
-    </React.Fragment>
-  ))
-  .add('custom style', () => (
-    <Button
-      label="Custom style"
-      style={object('style', {
-        background: 'orange',
-        border: '2px solid crimson'
-      })}
-    />
-  ))
-  .add('playground', () => (
-    <Button
-      label={text('label', 'Hello Button')}
-      big={boolean('big', true)}
-      theme={select('theme', themes)}
-      style={object('style', {})}
-    />
+  .add('label', () => (
+    <Button label={text('label', 'Hello Button')} id="abc" onClick={() => console.log('click')} />
   ));

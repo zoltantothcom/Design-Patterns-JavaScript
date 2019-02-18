@@ -1,4 +1,6 @@
 export const themeDark = {
+  name: 'DARK',
+
   background: '#222222',
   buttonBackground: '#484848',
   buttonBackgroundHover: '#888888',

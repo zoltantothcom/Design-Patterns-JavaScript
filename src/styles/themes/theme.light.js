@@ -1,4 +1,14 @@
 export const themeLight = {
+  name: 'LIGHT',
   background: '#f4f4f4',
-  title: '#000000'
+
+  buttonBackground: '#e8e8e8',
+  buttonBackgroundHover: '#e22a23',
+  buttonBorder: '#cccccc',
+  buttonBorderHover: '#aaaaaa',
+  buttonColor: '#707070',
+  buttonColorHover: '#ffffff',
+
+  title: '#000000',
+  headerBackground: '#ededed'
 };

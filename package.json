@@ -66,6 +66,7 @@
     "jest-styled-components": "^6.3.1",
     "prettier": "1.16.2",
     "react-test-renderer": "^16.7.0",
+    "storybook-addon-styled-component-theme": "^1.1.1",
     "webpack": "^4.29.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.2.1",
