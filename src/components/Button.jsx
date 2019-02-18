@@ -11,6 +11,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   font: 400 1rem 'Karla', 'sans-serif';
   height: 48px;
+  max-width: 240px;
   outline: none;
   padding: 0 1.5rem;
   width: 37.5%;
