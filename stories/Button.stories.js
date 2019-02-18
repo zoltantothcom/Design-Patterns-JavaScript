@@ -11,6 +11,6 @@ storiesOf('Button', module)
   .addDecorator(withProvider)
   .addDecorator(withKnobs)
 
-  .add('label', () => (
+  .add('default', () => (
     <Button label={text('label', 'Hello Button')} id="abc" onClick={() => console.log('click')} />
   ));

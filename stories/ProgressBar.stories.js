@@ -1,41 +1,26 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { ProgressBar } from '../src/components/ProgressBar';
 
-const answersDefault = Array.from(
-  Array(23).fill({
-    patternId: null,
-    answerId: null,
-    answered: false,
-    correct: false
-  })
-);
-const progressDefault = { answers: answersDefault };
+const initialArray = (n, isAnswered, isCorrect) => {
+  let arr = Array(...Array(n));
 
-const answersSuccess = Array.from(
-  Array(23).fill({
-    patternId: null,
-    answerId: null,
-    answered: true,
-    correct: true
-  })
-);
-const progressSuccess = { answers: answersSuccess };
+  return arr.map((x, i) => {
+    return {
+      patternId: null,
+      answerId: null,
+      answered: isAnswered,
+      correct: isCorrect,
+      uuid: i
+    };
+  });
+};
 
-const answersError = Array.from(
-  Array(23).fill({
-    patternId: null,
-    answerId: null,
-    answered: true,
-    correct: false
-  })
-);
-const progressError = { answers: answersError };
+const answersDefault = initialArray(23);
+const answersSuccess = initialArray(23, true, true);
+const answersError = initialArray(23, true, false);
 
 storiesOf('ProgressBar', module)
-  .addDecorator(withKnobs)
-
-  .add('unanswered questions', () => <ProgressBar progress={progressDefault} />)
-  .add('questions answered correct', () => <ProgressBar progress={progressSuccess} />)
-  .add('questions answered wrong', () => <ProgressBar progress={progressError} />);
+  .add('unanswered questions', () => <ProgressBar answers={[]} remaining={answersDefault} />)
+  .add('all questions correct', () => <ProgressBar answers={answersSuccess} remaining={[]} />)
+  .add('all questions wrong', () => <ProgressBar answers={answersError} remaining={[]} />);
