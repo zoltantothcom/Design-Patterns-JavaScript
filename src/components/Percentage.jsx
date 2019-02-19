@@ -19,11 +19,8 @@ const Percentage = ({ percent }) => {
   let level = 'red';
 
   switch (true) {
-  case percent >= 80:
-    level = 'green';
-    break;
-  case percent >= 60:
-    level = 'gold';
+  case percent >= 70:
+    level = 'limegreen';
     break;
   case percent >= 40:
     level = 'orange';
