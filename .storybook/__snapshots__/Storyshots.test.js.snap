@@ -1,93 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Button custom style 1`] = `
-.c0 {
-  height: 36px;
-  outline: none;
-  padding: 0 20px;
-  border-radius: 4px;
-}
+exports[`Storyshots Button default 1`] = `null`;
 
-.c0.primary {
-  background-color: #1585d8;
-}
+exports[`Storyshots Percentage between 40 and 70 1`] = `null`;
 
-.c0.primary span {
-  color: white;
-}
+exports[`Storyshots Percentage over 70 1`] = `null`;
 
-.c0.secondary {
-  background-color: #eff3f6;
-}
+exports[`Storyshots Percentage under 40 1`] = `null`;
 
-.c0.secondary span {
-  color: grey;
-}
+exports[`Storyshots ProgressBar all questions correct 1`] = `null`;
 
-<button
-  className="primary c0"
-  onClick={[Function]}
-  style={
-    Object {
-      "background": "orange",
-      "border": "2px solid crimson",
-    }
-  }
->
-  <span>
-    Custom style
-  </span>
-</button>
-`;
+exports[`Storyshots ProgressBar all questions wrong 1`] = `null`;
 
-exports[`Storyshots Button playground 1`] = `
-.c0 {
-  height: 46px;
-  outline: none;
-  padding: 0 20px;
-  border-radius: 4px;
-}
+exports[`Storyshots ProgressBar unanswered questions 1`] = `null`;
 
-.c0.primary {
-  background-color: #1585d8;
-}
+exports[`Storyshots Title default 1`] = `null`;
 
-.c0.primary span {
-  color: white;
-}
+exports[`Storyshots Toggle js 1`] = `null`;
 
-.c0.secondary {
-  background-color: #eff3f6;
-}
-
-.c0.secondary span {
-  color: grey;
-}
-
-<button
-  className="primary c0"
-  onClick={[Function]}
-  style={Object {}}
->
-  <span>
-    Hello Button
-  </span>
-</button>
-`;
-
-exports[`Storyshots Title light theme 1`] = `
-.c0 {
-  font-family: 'Karla',sans-serif;
-  padding: 2em;
-  font-size: 2em;
-  text-align: center;
-  color: #e22a23;
-  margin: 0;
-}
-
-<h1
-  className="c0"
->
-  JavaScript Design Patterns
-</h1>
-`;
+exports[`Storyshots Toggle mode 1`] = `null`;

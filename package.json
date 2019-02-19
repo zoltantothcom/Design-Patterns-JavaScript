@@ -34,7 +34,8 @@
       "enzyme-to-json/serializer"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/config/"
+      "<rootDir>/__tests__/config/",
+      "<rootDir>/__tests__/helpers/"
     ]
   },
   "devDependencies": {

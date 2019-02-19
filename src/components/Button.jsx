@@ -30,6 +30,7 @@ const StyledButton = styled.button`
 
 export const Button = props => {
   const { id, label, onClick } = props;
+  // console.log(props);
 
   return (
     <StyledButton id={id} onClick={onClick}>
