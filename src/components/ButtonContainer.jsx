@@ -15,7 +15,7 @@ const StyledButtonContainer = styled.div`
   margin: 1rem 0 2rem;
 `;
 
-const ButtonContainer = props => {
+export const ButtonContainer = props => {
   const { current, patterns, onClick } = props;
 
   // get 3 random patterns in addition to correct one
@@ -39,9 +39,9 @@ ButtonContainer.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
-const mapStateToProps = ({ progress: { current }, patterns }) => ({ patterns, current });
+export const mapStateToProps = ({ progress: { current }, patterns }) => ({ patterns, current });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   onClick: id => {
     dispatch(submit(id));
   }

@@ -30,14 +30,14 @@ const About = () => (
 
     <Header>References</Header>
     <p>
-      All the code samples impudently taken from this{' '}
+      All the code samples are taken from this{' '}
       <cite>
         <a href="//github.com/fbeline/Design-Patterns-JS" target="_blank">
           awesome code compilation
         </a>{' '}
         by Felipe Beline
-      </cite>{' '}
-      - because I have no shame.
+      </cite>
+      .
     </p>
     <p>
       If you want a deep dive into the subject I can't recommend enough{' '}
