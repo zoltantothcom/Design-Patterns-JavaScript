@@ -1,8 +1,3 @@
-export const submit = payload => ({
-  type: 'SUBMIT',
-  payload
-});
-
 export const toggle = payload => ({
   type: 'TOGGLE',
   payload

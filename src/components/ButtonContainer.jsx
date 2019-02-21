@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Button from './Button';
-import { submit } from '../actions';
+import submitAnswer from '../actionCreators/submitAnswer';
 import getCurrent from '../selectors/getCurrent';
 import getPatterns from '../selectors/getPatterns';
 import { shuffle } from '../helpers/shuffleArray';
@@ -18,7 +18,7 @@ const StyledButtonContainer = styled.div`
 `;
 
 export const ButtonContainer = props => {
-  const { current, patterns, onClick } = props;
+  const { current, patterns, onSubmitAnswer } = props;
 
   // get 3 random patterns in addition to correct one
   const allOtherAnswers = patterns.filter(pattern => pattern.uuid !== current.uuid);
@@ -29,7 +29,7 @@ export const ButtonContainer = props => {
   return (
     <StyledButtonContainer>
       {variants.map(({ uuid, name }) => (
-        <Button label={name} id={uuid} key={uuid} onClick={() => onClick(uuid)} />
+        <Button label={name} id={uuid} key={uuid} onClick={() => onSubmitAnswer(uuid)} />
       ))}
     </StyledButtonContainer>
   );
@@ -38,21 +38,15 @@ export const ButtonContainer = props => {
 ButtonContainer.propTypes = {
   patterns: PropTypes.array.isRequired,
   current: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired
+  onSubmitAnswer: PropTypes.func.isRequired
 };
 
-export const mapStateToProps = state => ({
-  current: getCurrent(state),
-  patterns: getPatterns(state)
-});
-
-export const mapDispatchToProps = dispatch => ({
-  onClick: id => {
-    dispatch(submit(id));
-  }
-});
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  state => ({
+    current: getCurrent(state),
+    patterns: getPatterns(state)
+  }),
+  {
+    onSubmitAnswer: id => submitAnswer(id)
+  }
 )(ButtonContainer);
