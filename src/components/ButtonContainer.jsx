@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Button from './Button';
 import { submit } from '../actions';
+import getCurrent from '../selectors/getCurrent';
+import getPatterns from '../selectors/getPatterns';
 import { shuffle } from '../helpers/shuffleArray';
 
 const StyledButtonContainer = styled.div`
@@ -39,7 +41,10 @@ ButtonContainer.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
-export const mapStateToProps = ({ progress: { current }, patterns }) => ({ patterns, current });
+export const mapStateToProps = state => ({
+  current: getCurrent(state),
+  patterns: getPatterns(state)
+});
 
 export const mapDispatchToProps = dispatch => ({
   onClick: id => {
