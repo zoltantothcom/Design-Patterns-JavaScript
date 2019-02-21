@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { restart } from '../actions';
+import getAnswers from '../selectors/getAnswers';
 import Button from './Button';
 import Percentage from './Percentage';
 
@@ -43,7 +44,9 @@ Results.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
-const mapStateToProps = ({ progress: { answers } }) => ({ answers });
+const mapStateToProps = state => ({
+  answers: getAnswers(state)
+});
 
 const mapDispatchToProps = dispatch => ({
   onClick: () => {
