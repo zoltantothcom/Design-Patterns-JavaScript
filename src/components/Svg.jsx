@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import getMode from '../selectors/getMode';
 import { JS, SUN_OUTLINED, SUN_FILLED } from '../data/icons';
 
 const SVG = ({ control, mode }) => {
@@ -29,6 +30,8 @@ SVG.propTypes = {
   mode: PropTypes.string.isRequired
 };
 
-const mapStateToProps = ({ mode }) => ({ mode });
+const mapStateToProps = state => ({
+  mode: getMode(state)
+});
 
 export default connect(mapStateToProps)(SVG);
