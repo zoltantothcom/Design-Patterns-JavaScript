@@ -34,9 +34,7 @@ Code.propTypes = {
   style: PropTypes.object.isRequired
 };
 
-const mapStateToProps = state => ({
+export default connect(state => ({
   js: getJS(state),
   current: getCurrent(state)
-});
-
-export default connect(mapStateToProps)(Code);
+}))(Code);
