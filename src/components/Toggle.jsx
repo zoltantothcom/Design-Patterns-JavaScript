@@ -4,6 +4,8 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { toggle } from '../actions';
+import getJS from '../selectors/getJS';
+import getMode from '../selectors/getMode';
 import SVG from './Svg';
 
 const StyledToggle = styled.button`
@@ -77,8 +79,10 @@ Toggle.propTypes = {
   js: PropTypes.string.isRequired
 };
 
-// const mapStateToProps = state => ({ js: state.js });
-const mapStateToProps = ({ js, mode }) => ({ js, mode });
+const mapStateToProps = state => ({
+  js: getJS(state),
+  mode: getMode(state)
+});
 
 const mapDispatchToProps = dispatch => {
   return { toggle: version => dispatch(toggle(version)) };
