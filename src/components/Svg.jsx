@@ -30,8 +30,6 @@ SVG.propTypes = {
   mode: PropTypes.string.isRequired
 };
 
-const mapStateToProps = state => ({
+export default connect(state => ({
   mode: getMode(state)
-});
-
-export default connect(mapStateToProps)(SVG);
+}))(SVG);
