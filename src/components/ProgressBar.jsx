@@ -47,9 +47,7 @@ ProgressBar.propTypes = {
   remaining: PropTypes.array.isRequired
 };
 
-const mapStateToProps = state => ({
+export default connect(state => ({
   answers: getAnswers(state),
   remaining: getRemaining(state)
-});
-
-export default connect(mapStateToProps)(ProgressBar);
+}))(ProgressBar);
