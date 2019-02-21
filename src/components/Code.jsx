@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
+import getJS from '../selectors/getJS';
+import getCurrent from '../selectors/getCurrent';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
@@ -32,6 +34,9 @@ Code.propTypes = {
   style: PropTypes.object.isRequired
 };
 
-const mapStateToProps = ({ js, progress: { current } }) => ({ js, current });
+const mapStateToProps = state => ({
+  js: getJS(state),
+  current: getCurrent(state)
+});
 
 export default connect(mapStateToProps)(Code);
