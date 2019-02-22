@@ -20,9 +20,8 @@ const StyledPercentage = styled.h1`
 const Percentage = ({ answers }) => {
   let level = 'red';
   let correct = 0;
-  let wrong = 0;
 
-  answers.map(answer => (answer.correct ? correct++ : wrong++));
+  answers.map(answer => (answer.correct ? correct++ : null));
 
   const percent = Math.ceil((correct * 100) / 23);
 

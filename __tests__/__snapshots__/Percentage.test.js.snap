@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Percentage /> component matches the snapshot 1`] = `
+.c0 {
+  border: 4px solid red;
+  border-radius: 50%;
+  color: red;
+  font-family: 'Karla','sans-serif';
+  font-size: 4rem;
+  height: 10rem;
+  margin: auto;
+  line-height: 10rem;
+  text-align: center;
+  width: 10rem;
+}
+
+<div>
+  <h1
+    className="c0"
+  >
+    5
+    %
+  </h1>
+</div>
+`;
