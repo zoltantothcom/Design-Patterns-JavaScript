@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import withThemeProvider from '../hoc/withThemeProvider';
 
 const StyledTitle = styled.h1`
   font-family: 'Karla', sans-serif;
@@ -20,4 +19,4 @@ const StyledTitle = styled.h1`
 
 export const Title = () => <StyledTitle>JavaScript Design Patterns</StyledTitle>;
 
-export default withThemeProvider(Title);
+export default Title;

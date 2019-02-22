@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> component renders with a DARK theme 1`] = `
+.c0 {
+  font-family: 'Karla',sans-serif;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background: #282828;
+  font-size: 1.75rem;
+  margin: 1rem 0 0 -50vw;
+  text-align: center;
+  left: 50%;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+<h1
+  className="c0"
+>
+  JavaScript Design Patterns
+</h1>
+`;
+
+exports[`<Title /> component renders with a LIGHT theme 1`] = `
+.c0 {
+  font-family: 'Karla',sans-serif;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background: #ededed;
+  font-size: 1.75rem;
+  margin: 1rem 0 0 -50vw;
+  text-align: center;
+  left: 50%;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+<h1
+  className="c0"
+>
+  JavaScript Design Patterns
+</h1>
+`;
