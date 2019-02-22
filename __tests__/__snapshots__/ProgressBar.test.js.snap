@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> component matches the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 1.25rem 0 1rem;
+  width: 100%;
+}
+
+.c1 {
+  background: #9ACD32;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2px;
+  width: 3.75%;
+}
+
+.c2 {
+  background: #FF0000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2px;
+  width: 3.75%;
+}
+
+.c3 {
+  background: #D8D8D8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2px;
+  width: 3.75%;
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <span
+      className="c1"
+    />
+    <span
+      className="c1"
+    />
+    <span
+      className="c1"
+    />
+    <span
+      className="c2"
+    />
+    <span
+      className="c3"
+    />
+    <span
+      className="c3"
+    />
+    <span
+      className="c3"
+    />
+    <span
+      className="c3"
+    />
+  </div>
+</div>
+`;

@@ -24,18 +24,20 @@ export const ProgressBar = props => {
 
   return (
     <Container>
-      {answers.map(pattern => {
+      {answers.map(({ uuid, answered, correct }) => {
         let nature;
 
-        if (pattern.answered) {
-          nature = pattern.correct ? 'success' : 'error';
+        if (answered && correct) {
+          nature = 'success';
+        } else {
+          nature = 'error';
         }
 
-        return <Step key={pattern.uuid} nature={nature} />;
+        return <Step key={uuid} nature={nature} />;
       })}
 
-      {remaining.map(pattern => (
-        <Step key={pattern.uuid} />
+      {remaining.map(({ uuid }) => (
+        <Step key={uuid} />
       ))}
     </Container>
   );
