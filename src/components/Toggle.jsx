@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { toggle } from '../actions';
+import { toggle } from '../actionCreators/toggle';
 import getJS from '../selectors/getJS';
 import getMode from '../selectors/getMode';
 import SVG from './Svg';
@@ -57,7 +57,7 @@ const StyledToggle = styled.button`
 `;
 
 const Toggle = props => {
-  const { toggle, control, js, mode } = props;
+  const { onToggle, control, js, mode } = props;
 
   let isActive, isLightMode;
   if (control === 'js' && js === 'es6') isActive = 'active';
@@ -66,29 +66,25 @@ const Toggle = props => {
   if (!isActive && mode === 'light') isLightMode = 'light';
 
   return (
-    <StyledToggle onClick={() => toggle(control)} className={classnames(isActive, isLightMode)}>
+    <StyledToggle onClick={() => onToggle(control)} className={classnames(isActive, isLightMode)}>
       <SVG control={control} />
     </StyledToggle>
   );
 };
 
 Toggle.propTypes = {
-  toggle: PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired,
   control: PropTypes.string.isRequired,
   mode: PropTypes.string.isRequired,
   js: PropTypes.string.isRequired
 };
 
-const mapStateToProps = state => ({
-  js: getJS(state),
-  mode: getMode(state)
-});
-
-const mapDispatchToProps = dispatch => {
-  return { toggle: version => dispatch(toggle(version)) };
-};
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  state => ({
+    js: getJS(state),
+    mode: getMode(state)
+  }),
+  {
+    onToggle: control => toggle(control)
+  }
 )(Toggle);

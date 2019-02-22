@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import restart from '../actionCreators/restart';
+import { restart } from '../actionCreators/restart';
 import getAnswers from '../selectors/getAnswers';
 import Button from './Button';
 import Percentage from './Percentage';
