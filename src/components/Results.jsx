@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { restart } from '../actions';
+import restart from '../actionCreators/restart';
 import getAnswers from '../selectors/getAnswers';
 import Button from './Button';
 import Percentage from './Percentage';
@@ -18,7 +18,7 @@ const Restart = styled.div`
   text-align: center;
 `;
 
-const Results = ({ answers, onClick }) => {
+const Results = ({ answers, onRestart }) => {
   let correct = 0;
   let wrong = 0;
 
@@ -33,7 +33,7 @@ const Results = ({ answers, onClick }) => {
       </Info>
       <Percentage percent={percent} />
       <Restart>
-        <Button label="Try Again" id="try_again" onClick={onClick} />
+        <Button label="Try Again" id="try_again" onClick={onRestart} />
       </Restart>
     </div>
   );
@@ -41,20 +41,14 @@ const Results = ({ answers, onClick }) => {
 
 Results.propTypes = {
   answers: PropTypes.array.isRequired,
-  onClick: PropTypes.func.isRequired
+  onRestart: PropTypes.func.isRequired
 };
 
-const mapStateToProps = state => ({
-  answers: getAnswers(state)
-});
-
-const mapDispatchToProps = dispatch => ({
-  onClick: () => {
-    dispatch(restart());
-  }
-});
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  state => ({
+    answers: getAnswers(state)
+  }),
+  {
+    onRestart: () => restart()
+  }
 )(Results);
