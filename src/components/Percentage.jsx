@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { getAnswers } from '../selectors';
 
 const StyledPercentage = styled.h1`
   border: 4px solid ${props => props.level};
@@ -15,8 +17,14 @@ const StyledPercentage = styled.h1`
   width: 10rem;
 `;
 
-const Percentage = ({ percent }) => {
+const Percentage = ({ answers }) => {
   let level = 'red';
+  let correct = 0;
+  let wrong = 0;
+
+  answers.map(answer => (answer.correct ? correct++ : wrong++));
+
+  const percent = Math.ceil((correct * 100) / 23);
 
   switch (true) {
   case percent >= 70:
@@ -31,7 +39,9 @@ const Percentage = ({ percent }) => {
 };
 
 Percentage.propTypes = {
-  percent: PropTypes.number.isRequired
+  answers: PropTypes.array.isRequired
 };
 
-export default Percentage;
+export default connect(state => ({
+  answers: getAnswers(state)
+}))(Percentage);
