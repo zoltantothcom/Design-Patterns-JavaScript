@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Result /> component matches the snapshot 1`] = `
+.c0 {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+<div>
+  <p
+    className="c0"
+  >
+    You've got 
+    <strong>
+      3
+    </strong>
+     patterns right out of 
+    4
+    .
+  </p>
+</div>
+`;

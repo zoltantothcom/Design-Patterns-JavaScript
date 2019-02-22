@@ -10,11 +10,10 @@ const StyledResult = styled.p`
   text-align: center;
 `;
 
-const Result = ({ answers }) => {
+export const Result = ({ answers }) => {
   let correct = 0;
-  let wrong = 0;
 
-  answers.map(answer => (answer.correct ? correct++ : wrong++));
+  answers.map(answer => (answer.correct ? correct++ : null));
 
   return (
     <StyledResult>
