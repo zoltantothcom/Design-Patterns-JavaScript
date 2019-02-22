@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { restart } from '../actionCreators/restart';
-import getAnswers from '../selectors/getAnswers';
+import { getAnswers } from '../selectors';
 import Button from './Button';
 import Percentage from './Percentage';
 

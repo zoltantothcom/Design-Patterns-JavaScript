@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Button from './Button';
 import { submitAnswer } from '../actionCreators/submitAnswer';
-import getCurrent from '../selectors/getCurrent';
-import getPatterns from '../selectors/getPatterns';
+import { getCurrent, getPatterns } from '../selectors';
 import { shuffle } from '../helpers/shuffleArray';
 
 const StyledButtonContainer = styled.div`

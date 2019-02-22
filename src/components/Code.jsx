@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
-import getJS from '../selectors/getJS';
-import getCurrent from '../selectors/getCurrent';
+import { getJS, getCurrent } from '../selectors';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 

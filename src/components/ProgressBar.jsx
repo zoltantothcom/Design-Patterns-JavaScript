@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import getAnswers from '../selectors/getAnswers';
-import getRemaining from '../selectors/getRemaining';
+import { getAnswers, getRemaining } from '../selectors';
 
 const Container = styled.div`
   display: flex;

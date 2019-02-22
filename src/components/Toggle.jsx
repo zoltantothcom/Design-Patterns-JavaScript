@@ -4,8 +4,7 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { toggle } from '../actionCreators/toggle';
-import getJS from '../selectors/getJS';
-import getMode from '../selectors/getMode';
+import { getJS, getMode } from '../selectors';
 import SVG from './Svg';
 
 const StyledToggle = styled.button`
