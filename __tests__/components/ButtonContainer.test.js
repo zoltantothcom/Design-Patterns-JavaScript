@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 import 'jest-styled-components';
-import { ButtonContainer } from '../src/components/ButtonContainer';
-import { submitAnswer } from '../src/actionCreators/submitAnswer';
+import { ButtonContainer } from '../../src/components/ButtonContainer';
+import { submitAnswer } from '../../src/actions/submitAnswer';
 
 const mockStore = configureStore();
 

@@ -1,4 +1,4 @@
-import { toggleJS, toggleMode } from '../actionCreators/toggle';
+import { toggleJS, toggleMode } from '../actions/toggle';
 
 export const toggleMiddleware = ({ dispatch, getState }) => next => action => {
   if (action.type === 'TOGGLE') {

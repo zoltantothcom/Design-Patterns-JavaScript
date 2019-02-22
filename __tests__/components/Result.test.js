@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import 'jest-styled-components';
-import Result from '../src/components/Result';
+import Result from '../../src/components/Result';
 
 const mockStore = configureMockStore();
 const store = mockStore({

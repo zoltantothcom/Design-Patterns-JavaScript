@@ -5,8 +5,8 @@ import 'jest-styled-components';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import { themeCommon } from '../src/styles/themes/theme.common';
-import ProgressBar from '../src/components/ProgressBar';
+import { themeCommon } from '../../src/styles/themes/theme.common';
+import ProgressBar from '../../src/components/ProgressBar';
 
 const mockStore = configureMockStore();
 const store = mockStore({

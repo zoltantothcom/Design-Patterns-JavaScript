@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Button from './Button';
-import { submitAnswer } from '../actionCreators/submitAnswer';
+import { submitAnswer } from '../actions/submitAnswer';
 import { getCurrent, getPatterns } from '../selectors';
 import { shuffle } from '../helpers/shuffleArray';
 

@@ -5,7 +5,7 @@ import {
   getJS,
   getCurrent,
   getAnswers
-} from '../src/selectors';
+} from '../../src/selectors';
 
 describe('Selectors', () => {
   let state;

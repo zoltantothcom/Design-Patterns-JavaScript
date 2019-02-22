@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { restart } from '../actionCreators/restart';
+import { restart } from '../actions/restart';
 import { getCurrent } from '../selectors';
 import ButtonContainer from '../components/ButtonContainer';
 import ProgressBar from '../components/ProgressBar';

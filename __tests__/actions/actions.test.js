@@ -1,6 +1,6 @@
-import { restart } from '../src/actionCreators/restart';
-import { submitAnswer } from '../src/actionCreators/submitAnswer';
-import { toggle, toggleJS, toggleMode } from '../src/actionCreators/toggle';
+import { restart } from '../../src/actions/restart';
+import { submitAnswer } from '../../src/actions/submitAnswer';
+import { toggle, toggleJS, toggleMode } from '../../src/actions/toggle';
 
 describe('Action Creators', () => {
   it('should dispatch RESTART action', () => {

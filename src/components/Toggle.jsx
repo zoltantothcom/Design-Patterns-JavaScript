@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { toggle } from '../actionCreators/toggle';
+import { toggle } from '../actions/toggle';
 import { getJS, getMode } from '../selectors';
 import SVG from './Svg';
 

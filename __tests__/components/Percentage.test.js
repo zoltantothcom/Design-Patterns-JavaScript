@@ -5,8 +5,8 @@ import 'jest-styled-components';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import { themeCommon } from '../src/styles/themes/theme.common';
-import Percentage from '../src/components/Percentage';
+import { themeCommon } from '../../src/styles/themes/theme.common';
+import Percentage from '../../src/components/Percentage';
 
 const mockStore = configureMockStore();
 const storeUnder40 = mockStore({

@@ -2,9 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
-import Button from '../src/components/Button';
-import { renderWithLightTheme } from './helpers';
-import { renderWithDarkTheme } from './helpers';
+import Button from '../../src/components/Button';
+import { renderWithLightTheme } from '../helpers';
+import { renderWithDarkTheme } from '../helpers';
 
 describe('<Button /> component', () => {
   const mockClick = jest.fn();

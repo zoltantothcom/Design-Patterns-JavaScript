@@ -2,9 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
-import Title from '../src/components/Title';
-import { renderWithLightTheme } from './helpers';
-import { renderWithDarkTheme } from './helpers';
+import Title from '../../src/components/Title';
+import { renderWithLightTheme } from '../helpers';
+import { renderWithDarkTheme } from '../helpers';
 
 describe('<Title /> component', () => {
   let titleEl = <Title />;
