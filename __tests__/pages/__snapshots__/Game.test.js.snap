@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About page renders with a DARK theme 1`] = `
+.c0 {
+  color: #c4c4c4;
+}
+
+.c0 a {
+  border-bottom: 1px solid transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:hover {
+  border-bottom: 1px solid;
+}
+
+.c1 {
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+<div
+  className="c0"
+>
+  <h3
+    className="c1"
+  >
+    The Game
+  </h3>
+  <p>
+    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
+  </p>
+  <h3
+    className="c1"
+  >
+    References
+  </h3>
+  <p>
+    All the code samples are taken from this
+     
+    <cite>
+      <a
+        href="//github.com/fbeline/Design-Patterns-JS"
+        target="_blank"
+      >
+        awesome code compilation
+      </a>
+       
+      by Felipe Beline
+    </cite>
+    .
+  </p>
+  <p>
+    If you want a deep dive into the subject I can't recommend enough
+     
+    <cite>
+      <a
+        href="//addyosmani.com/resources/essentialjsdesignpatterns/book/"
+        target="_blank"
+      >
+        Learning JavaScript Design Patterns
+      </a>
+       
+      by Addy Osmani
+    </cite>
+    .
+  </p>
+</div>
+`;
+
+exports[`About page renders with a LIGHT theme 1`] = `
+.c0 {
+  color: #aaaaaa;
+}
+
+.c0 a {
+  border-bottom: 1px solid transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:hover {
+  border-bottom: 1px solid;
+}
+
+.c1 {
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+<div
+  className="c0"
+>
+  <h3
+    className="c1"
+  >
+    The Game
+  </h3>
+  <p>
+    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
+  </p>
+  <h3
+    className="c1"
+  >
+    References
+  </h3>
+  <p>
+    All the code samples are taken from this
+     
+    <cite>
+      <a
+        href="//github.com/fbeline/Design-Patterns-JS"
+        target="_blank"
+      >
+        awesome code compilation
+      </a>
+       
+      by Felipe Beline
+    </cite>
+    .
+  </p>
+  <p>
+    If you want a deep dive into the subject I can't recommend enough
+     
+    <cite>
+      <a
+        href="//addyosmani.com/resources/essentialjsdesignpatterns/book/"
+        target="_blank"
+      >
+        Learning JavaScript Design Patterns
+      </a>
+       
+      by Addy Osmani
+    </cite>
+    .
+  </p>
+</div>
+`;

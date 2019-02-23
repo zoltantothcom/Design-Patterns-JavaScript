@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Code /> component renders ES5 code in LIGHT style 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#fafafa",
+      "border": "1px solid #d8d8d8",
+      "color": "#383a42",
+      "display": "block",
+      "height": 375,
+      "overflowX": "auto",
+      "padding": "1em",
+    }
+  }
+>
+  <code>
+    JavaScript ES5
+  </code>
+</pre>
+`;
+
+exports[`<Code /> component renders ES6 code in DARK style 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#282828",
+      "border": "1px solid #555",
+      "color": "#ebdbb2",
+      "display": "block",
+      "height": 375,
+      "overflowX": "auto",
+      "padding": "1em",
+    }
+  }
+>
+  <code>
+    JavaScript ES6
+  </code>
+</pre>
+`;
