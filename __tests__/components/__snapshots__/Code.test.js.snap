@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Code /> component renders ES5 code in LIGHT style 1`] = `
+exports[`<Code /> component renders ES5 code in LIGHT mode 1`] = `
 <pre
   style={
     Object {
@@ -20,7 +20,7 @@ exports[`<Code /> component renders ES5 code in LIGHT style 1`] = `
 </pre>
 `;
 
-exports[`<Code /> component renders ES6 code in DARK style 1`] = `
+exports[`<Code /> component renders ES6 code in DARK mode 1`] = `
 <pre
   style={
     Object {
