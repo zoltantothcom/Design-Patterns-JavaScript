@@ -55,7 +55,7 @@ const StyledToggle = styled.button`
   }
 `;
 
-const Toggle = props => {
+export const Toggle = props => {
   const { onToggle, control, js, mode } = props;
 
   let isActive, isLightMode;
