@@ -1,4 +1,3 @@
-/* eslint-disable */
 import configureMockStore from 'redux-mock-store';
 import { toggleMiddleware } from '../../src/middleware/toggle';
 
@@ -11,7 +10,7 @@ describe('Toggle middleware', () => {
 
     const store = mockStore({
       js: 'es5',
-      dispatch: mockDispatch,
+      dispatch: mockDispatch
     });
     const action = { type: 'TOGGLE', payload: 'js' };
 
@@ -19,7 +18,7 @@ describe('Toggle middleware', () => {
 
     expect(store.getActions()[0]).toEqual({
       type: 'TOGGLE_JS',
-      payload: 'es6',
+      payload: 'es6'
     });
 
     expect(next).toHaveBeenCalled();
@@ -30,7 +29,7 @@ describe('Toggle middleware', () => {
 
     const store = mockStore({
       js: 'es6',
-      dispatch: mockDispatch,
+      dispatch: mockDispatch
     });
     const action = { type: 'TOGGLE', payload: 'js' };
 
@@ -38,7 +37,7 @@ describe('Toggle middleware', () => {
 
     expect(store.getActions()[0]).toEqual({
       type: 'TOGGLE_JS',
-      payload: 'es5',
+      payload: 'es5'
     });
 
     expect(next).toHaveBeenCalled();
@@ -49,7 +48,7 @@ describe('Toggle middleware', () => {
 
     const store = mockStore({
       mode: 'dark',
-      dispatch: mockDispatch,
+      dispatch: mockDispatch
     });
     const action = { type: 'TOGGLE', payload: 'mode' };
 
@@ -57,7 +56,7 @@ describe('Toggle middleware', () => {
 
     expect(store.getActions()[0]).toEqual({
       type: 'TOGGLE_MODE',
-      payload: 'light',
+      payload: 'light'
     });
   });
 
@@ -66,7 +65,7 @@ describe('Toggle middleware', () => {
 
     const store = mockStore({
       mode: 'light',
-      dispatch: mockDispatch,
+      dispatch: mockDispatch
     });
     const action = { type: 'TOGGLE', payload: 'mode' };
 
@@ -74,7 +73,7 @@ describe('Toggle middleware', () => {
 
     expect(store.getActions()[0]).toEqual({
       type: 'TOGGLE_MODE',
-      payload: 'dark',
+      payload: 'dark'
     });
   });
 
