@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Global style renders with a DARK theme 1`] = `
+<head>
+  <style
+    data-styled=""
+    data-styled-version="4.1.3"
+  >
+    
+    
+/* sc-component-id: sc-global-2479929527 */
+body{background:#222222;font-family:'Karla',sans-serif;margin:0;padding:0;} #root{max-width:640px;margin:auto;}
+  </style>
+</head>
+`;
+
+exports[`Global style renders with a LIGHT theme 1`] = `
+<head>
+  <style
+    data-styled=""
+    data-styled-version="4.1.3"
+  >
+    
+    
+/* sc-component-id: sc-global-2479929527 */
+body{background:#f4f4f4;font-family:'Karla',sans-serif;margin:0;padding:0;} #root{max-width:640px;margin:auto;}
+  </style>
+</head>
+`;
