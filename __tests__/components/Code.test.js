@@ -24,7 +24,7 @@ const storeES5 = mockStore(initialStore);
 const storeES6 = mockStore({ ...initialStore, js: 'es6' });
 
 describe('<Code /> component', () => {
-  it('renders ES5 code in LIGHT style', () => {
+  it('renders ES5 code in LIGHT mode', () => {
     const tree = renderer
       .create(
         <Provider store={storeES5}>
@@ -35,7 +35,7 @@ describe('<Code /> component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders ES6 code in DARK style', () => {
+  it('renders ES6 code in DARK mode', () => {
     const tree = renderer
       .create(
         <Provider store={storeES6}>
