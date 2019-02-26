@@ -6,10 +6,11 @@ export const toggleMiddleware = ({ dispatch, getState }) => next => action => {
     case 'js':
       const js = getState()['js'] === 'es5' ? 'es6' : 'es5';
       dispatch(toggleJS(js));
-
+      break;
     case 'mode':
       const mode = getState()['mode'] === 'dark' ? 'light' : 'dark';
       dispatch(toggleMode(mode));
+      break;
     }
   }
 
