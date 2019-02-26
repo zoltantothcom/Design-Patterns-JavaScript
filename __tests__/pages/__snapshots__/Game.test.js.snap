@@ -1,139 +1,1039 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About page renders with a DARK theme 1`] = `
-.c0 {
-  color: #c4c4c4;
-}
-
-.c0 a {
-  border-bottom: 1px solid transparent;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 a:hover {
-  border-bottom: 1px solid;
-}
-
-.c1 {
-  color: #ffffff;
-  margin-top: 2rem;
-}
-
-<div
-  className="c0"
+exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
+<Code
+  current={
+    Object {
+      "answerId": null,
+      "answered": false,
+      "codeES5": "Code ES5 - Prototype",
+      "codeES6": "Code ES6 - Prototype",
+      "correct": null,
+      "name": "Prototype",
+      "type": "creational",
+      "uuid": "abc123",
+    }
+  }
+  dispatch={[Function]}
+  js="es5"
+  style={
+    Object {
+      "hljs": Object {
+        "background": "#282828",
+        "border": "1px solid #555",
+        "color": "#ebdbb2",
+        "display": "block",
+        "height": 375,
+        "overflowX": "auto",
+        "padding": "1em",
+      },
+      "hljs-addition": Object {
+        "color": "#b8bb26",
+      },
+      "hljs-attr": Object {
+        "color": "#fabd2f",
+      },
+      "hljs-attribute": Object {
+        "color": "#8ec07c",
+      },
+      "hljs-built_in": Object {
+        "color": "#83a598",
+      },
+      "hljs-builtin-name": Object {
+        "color": "#8f3f71",
+      },
+      "hljs-bullet": Object {
+        "color": "#8ec07c",
+      },
+      "hljs-class": Object {
+        "color": "#8ec07c",
+      },
+      "hljs-code": Object {
+        "color": "#fe8019",
+      },
+      "hljs-comment": Object {
+        "color": "#928374",
+        "fontStyle": "italic",
+      },
+      "hljs-deletion": Object {
+        "color": "#fb4934",
+      },
+      "hljs-doctag": Object {
+        "color": "#8f3f71",
+      },
+      "hljs-emphasis": Object {
+        "color": "#83a598",
+        "fontStyle": "italic",
+      },
+      "hljs-formula": Object {
+        "color": "#fb4934",
+      },
+      "hljs-function": Object {
+        "color": "#8ec07c",
+      },
+      "hljs-function .hljs-keyword": Object {
+        "color": "#8ec07c",
+      },
+      "hljs-keyword": Object {
+        "color": "#fb4934",
+      },
+      "hljs-link": Object {
+        "color": "#fb4934",
+      },
+      "hljs-link_label": Object {
+        "color": "#d3869b",
+      },
+      "hljs-literal": Object {
+        "color": "#d3869b",
+      },
+      "hljs-meta": Object {
+        "color": "#fe8019",
+      },
+      "hljs-meta-keyword": Object {
+        "color": "#8ec07c",
+      },
+      "hljs-meta-string": Object {
+        "color": "#b8bb26",
+      },
+      "hljs-name": Object {
+        "color": "#83a598",
+      },
+      "hljs-number": Object {
+        "color": "#d3869b",
+      },
+      "hljs-params": Object {
+        "color": "#fabd2f",
+      },
+      "hljs-quote": Object {
+        "color": "#83a598",
+      },
+      "hljs-regexp": Object {
+        "color": "#fe8019",
+      },
+      "hljs-section": Object {
+        "color": "#b8bb26",
+        "fontWeight": "bold",
+      },
+      "hljs-selector-attr": Object {
+        "color": "#b8bb26",
+      },
+      "hljs-selector-class": Object {
+        "color": "#b8bb26",
+      },
+      "hljs-selector-id": Object {
+        "color": "#fe8019",
+      },
+      "hljs-selector-pseudo": Object {
+        "color": "#8ec07c",
+      },
+      "hljs-selector-tag": Object {
+        "color": "#fb4934",
+      },
+      "hljs-string": Object {
+        "color": "#b8bb26",
+      },
+      "hljs-strong": Object {
+        "color": "#83a598",
+        "fontWeight": "bold",
+      },
+      "hljs-subst": Object {
+        "color": "#ebdbb2",
+      },
+      "hljs-symbol": Object {
+        "color": "#b8bb26",
+      },
+      "hljs-tag": Object {
+        "color": "#8ec07c",
+        "fontWeight": "bold",
+      },
+      "hljs-template-tag": Object {
+        "color": "#fabd2f",
+      },
+      "hljs-template-variable": Object {
+        "color": "#fe8019",
+      },
+      "hljs-title": Object {
+        "color": "#83a598",
+      },
+      "hljs-type": Object {
+        "color": "#fabd2f",
+      },
+      "hljs-variable": Object {
+        "color": "#83a598",
+      },
+    }
+  }
 >
-  <h3
-    className="c1"
+  <SyntaxHighlighter
+    language="javascript"
+    style={
+      Object {
+        "hljs": Object {
+          "background": "#282828",
+          "border": "1px solid #555",
+          "color": "#ebdbb2",
+          "display": "block",
+          "height": 375,
+          "overflowX": "auto",
+          "padding": "1em",
+        },
+        "hljs-addition": Object {
+          "color": "#b8bb26",
+        },
+        "hljs-attr": Object {
+          "color": "#fabd2f",
+        },
+        "hljs-attribute": Object {
+          "color": "#8ec07c",
+        },
+        "hljs-built_in": Object {
+          "color": "#83a598",
+        },
+        "hljs-builtin-name": Object {
+          "color": "#8f3f71",
+        },
+        "hljs-bullet": Object {
+          "color": "#8ec07c",
+        },
+        "hljs-class": Object {
+          "color": "#8ec07c",
+        },
+        "hljs-code": Object {
+          "color": "#fe8019",
+        },
+        "hljs-comment": Object {
+          "color": "#928374",
+          "fontStyle": "italic",
+        },
+        "hljs-deletion": Object {
+          "color": "#fb4934",
+        },
+        "hljs-doctag": Object {
+          "color": "#8f3f71",
+        },
+        "hljs-emphasis": Object {
+          "color": "#83a598",
+          "fontStyle": "italic",
+        },
+        "hljs-formula": Object {
+          "color": "#fb4934",
+        },
+        "hljs-function": Object {
+          "color": "#8ec07c",
+        },
+        "hljs-function .hljs-keyword": Object {
+          "color": "#8ec07c",
+        },
+        "hljs-keyword": Object {
+          "color": "#fb4934",
+        },
+        "hljs-link": Object {
+          "color": "#fb4934",
+        },
+        "hljs-link_label": Object {
+          "color": "#d3869b",
+        },
+        "hljs-literal": Object {
+          "color": "#d3869b",
+        },
+        "hljs-meta": Object {
+          "color": "#fe8019",
+        },
+        "hljs-meta-keyword": Object {
+          "color": "#8ec07c",
+        },
+        "hljs-meta-string": Object {
+          "color": "#b8bb26",
+        },
+        "hljs-name": Object {
+          "color": "#83a598",
+        },
+        "hljs-number": Object {
+          "color": "#d3869b",
+        },
+        "hljs-params": Object {
+          "color": "#fabd2f",
+        },
+        "hljs-quote": Object {
+          "color": "#83a598",
+        },
+        "hljs-regexp": Object {
+          "color": "#fe8019",
+        },
+        "hljs-section": Object {
+          "color": "#b8bb26",
+          "fontWeight": "bold",
+        },
+        "hljs-selector-attr": Object {
+          "color": "#b8bb26",
+        },
+        "hljs-selector-class": Object {
+          "color": "#b8bb26",
+        },
+        "hljs-selector-id": Object {
+          "color": "#fe8019",
+        },
+        "hljs-selector-pseudo": Object {
+          "color": "#8ec07c",
+        },
+        "hljs-selector-tag": Object {
+          "color": "#fb4934",
+        },
+        "hljs-string": Object {
+          "color": "#b8bb26",
+        },
+        "hljs-strong": Object {
+          "color": "#83a598",
+          "fontWeight": "bold",
+        },
+        "hljs-subst": Object {
+          "color": "#ebdbb2",
+        },
+        "hljs-symbol": Object {
+          "color": "#b8bb26",
+        },
+        "hljs-tag": Object {
+          "color": "#8ec07c",
+          "fontWeight": "bold",
+        },
+        "hljs-template-tag": Object {
+          "color": "#fabd2f",
+        },
+        "hljs-template-variable": Object {
+          "color": "#fe8019",
+        },
+        "hljs-title": Object {
+          "color": "#83a598",
+        },
+        "hljs-type": Object {
+          "color": "#fabd2f",
+        },
+        "hljs-variable": Object {
+          "color": "#83a598",
+        },
+      }
+    }
   >
-    The Game
-  </h3>
-  <p>
-    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
-  </p>
-  <h3
-    className="c1"
-  >
-    References
-  </h3>
-  <p>
-    All the code samples are taken from this
-     
-    <cite>
-      <a
-        href="//github.com/fbeline/Design-Patterns-JS"
-        target="_blank"
-      >
-        awesome code compilation
-      </a>
-       
-      by Felipe Beline
-    </cite>
-    .
-  </p>
-  <p>
-    If you want a deep dive into the subject I can't recommend enough
-     
-    <cite>
-      <a
-        href="//addyosmani.com/resources/essentialjsdesignpatterns/book/"
-        target="_blank"
-      >
-        Learning JavaScript Design Patterns
-      </a>
-       
-      by Addy Osmani
-    </cite>
-    .
-  </p>
-</div>
+    <pre
+      style={
+        Object {
+          "background": "#282828",
+          "border": "1px solid #555",
+          "color": "#ebdbb2",
+          "display": "block",
+          "height": 375,
+          "overflowX": "auto",
+          "padding": "1em",
+        }
+      }
+    >
+      <code>
+        Code ES5 - Prototype
+      </code>
+    </pre>
+  </SyntaxHighlighter>
+</Code>
 `;
 
-exports[`About page renders with a LIGHT theme 1`] = `
+exports[`Game page - GAME - DARK style renders a <ProgressBar /> component 1`] = `
 .c0 {
-  color: #aaaaaa;
-}
-
-.c0 a {
-  border-bottom: 1px solid transparent;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 a:hover {
-  border-bottom: 1px solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 1.25rem 0 1rem;
+  width: 100%;
 }
 
 .c1 {
-  color: #ffffff;
-  margin-top: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2px;
+  width: 3.75%;
 }
 
-<div
-  className="c0"
+<ProgressBar
+  answers={Array []}
+  dispatch={[Function]}
+  remaining={
+    Array [
+      Object {
+        "answerId": null,
+        "answered": false,
+        "codeES5": "Code ES5 - Singleton",
+        "codeES6": "Code ES6 - Singleton",
+        "correct": null,
+        "name": "SIngleton",
+        "type": "creational",
+        "uuid": "abc234",
+      },
+    ]
+  }
 >
-  <h3
-    className="c1"
-  >
-    The Game
-  </h3>
-  <p>
-    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
-  </p>
-  <h3
-    className="c1"
-  >
-    References
-  </h3>
-  <p>
-    All the code samples are taken from this
-     
-    <cite>
-      <a
-        href="//github.com/fbeline/Design-Patterns-JS"
-        target="_blank"
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  height: 3px;
+  justify-content: space-between;
+  margin: 1.25rem 0 1rem;
+  width: 100%;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0"
       >
-        awesome code compilation
-      </a>
-       
-      by Felipe Beline
-    </cite>
-    .
-  </p>
-  <p>
-    If you want a deep dive into the subject I can't recommend enough
-     
-    <cite>
-      <a
-        href="//addyosmani.com/resources/essentialjsdesignpatterns/book/"
-        target="_blank"
+        <styled.span
+          key="abc234"
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  background: ",
+                    [Function],
+                    ";
+  display: flex;
+  height: 2px;
+  width: 3.75%;
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <span
+              className="c1"
+            />
+          </StyledComponent>
+        </styled.span>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</ProgressBar>
+`;
+
+exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
+<Code
+  current={
+    Object {
+      "answerId": null,
+      "answered": false,
+      "codeES5": "Code ES5 - Prototype",
+      "codeES6": "Code ES6 - Prototype",
+      "correct": null,
+      "name": "Prototype",
+      "type": "creational",
+      "uuid": "abc123",
+    }
+  }
+  dispatch={[Function]}
+  js="es5"
+  style={
+    Object {
+      "hljs": Object {
+        "background": "#fafafa",
+        "border": "1px solid #d8d8d8",
+        "color": "#383a42",
+        "display": "block",
+        "height": 375,
+        "overflowX": "auto",
+        "padding": "1em",
+      },
+      "hljs-addition": Object {
+        "color": "#50a14f",
+      },
+      "hljs-attr": Object {
+        "color": "#986801",
+      },
+      "hljs-attribute": Object {
+        "color": "#50a14f",
+      },
+      "hljs-built_in": Object {
+        "color": "#c18401",
+      },
+      "hljs-bullet": Object {
+        "color": "#4078f2",
+      },
+      "hljs-class .hljs-title": Object {
+        "color": "#c18401",
+      },
+      "hljs-comment": Object {
+        "color": "#a0a1a7",
+        "fontStyle": "italic",
+      },
+      "hljs-deletion": Object {
+        "color": "#e45649",
+      },
+      "hljs-doctag": Object {
+        "color": "#a626a4",
+      },
+      "hljs-emphasis": Object {
+        "fontStyle": "italic",
+      },
+      "hljs-formula": Object {
+        "color": "#a626a4",
+      },
+      "hljs-keyword": Object {
+        "color": "#a626a4",
+      },
+      "hljs-link": Object {
+        "color": "#4078f2",
+        "textDecoration": "underline",
+      },
+      "hljs-literal": Object {
+        "color": "#0184bb",
+      },
+      "hljs-meta": Object {
+        "color": "#4078f2",
+      },
+      "hljs-meta-string": Object {
+        "color": "#50a14f",
+      },
+      "hljs-name": Object {
+        "color": "#e45649",
+      },
+      "hljs-number": Object {
+        "color": "#986801",
+      },
+      "hljs-quote": Object {
+        "color": "#a0a1a7",
+        "fontStyle": "italic",
+      },
+      "hljs-regexp": Object {
+        "color": "#50a14f",
+      },
+      "hljs-section": Object {
+        "color": "#e45649",
+      },
+      "hljs-selector-attr": Object {
+        "color": "#986801",
+      },
+      "hljs-selector-class": Object {
+        "color": "#986801",
+      },
+      "hljs-selector-id": Object {
+        "color": "#4078f2",
+      },
+      "hljs-selector-pseudo": Object {
+        "color": "#986801",
+      },
+      "hljs-selector-tag": Object {
+        "color": "#e45649",
+      },
+      "hljs-string": Object {
+        "color": "#50a14f",
+      },
+      "hljs-strong": Object {
+        "fontWeight": "bold",
+      },
+      "hljs-subst": Object {
+        "color": "#e45649",
+      },
+      "hljs-symbol": Object {
+        "color": "#4078f2",
+      },
+      "hljs-template-variable": Object {
+        "color": "#986801",
+      },
+      "hljs-title": Object {
+        "color": "#4078f2",
+      },
+      "hljs-type": Object {
+        "color": "#986801",
+      },
+      "hljs-variable": Object {
+        "color": "#986801",
+      },
+    }
+  }
+>
+  <SyntaxHighlighter
+    language="javascript"
+    style={
+      Object {
+        "hljs": Object {
+          "background": "#fafafa",
+          "border": "1px solid #d8d8d8",
+          "color": "#383a42",
+          "display": "block",
+          "height": 375,
+          "overflowX": "auto",
+          "padding": "1em",
+        },
+        "hljs-addition": Object {
+          "color": "#50a14f",
+        },
+        "hljs-attr": Object {
+          "color": "#986801",
+        },
+        "hljs-attribute": Object {
+          "color": "#50a14f",
+        },
+        "hljs-built_in": Object {
+          "color": "#c18401",
+        },
+        "hljs-bullet": Object {
+          "color": "#4078f2",
+        },
+        "hljs-class .hljs-title": Object {
+          "color": "#c18401",
+        },
+        "hljs-comment": Object {
+          "color": "#a0a1a7",
+          "fontStyle": "italic",
+        },
+        "hljs-deletion": Object {
+          "color": "#e45649",
+        },
+        "hljs-doctag": Object {
+          "color": "#a626a4",
+        },
+        "hljs-emphasis": Object {
+          "fontStyle": "italic",
+        },
+        "hljs-formula": Object {
+          "color": "#a626a4",
+        },
+        "hljs-keyword": Object {
+          "color": "#a626a4",
+        },
+        "hljs-link": Object {
+          "color": "#4078f2",
+          "textDecoration": "underline",
+        },
+        "hljs-literal": Object {
+          "color": "#0184bb",
+        },
+        "hljs-meta": Object {
+          "color": "#4078f2",
+        },
+        "hljs-meta-string": Object {
+          "color": "#50a14f",
+        },
+        "hljs-name": Object {
+          "color": "#e45649",
+        },
+        "hljs-number": Object {
+          "color": "#986801",
+        },
+        "hljs-quote": Object {
+          "color": "#a0a1a7",
+          "fontStyle": "italic",
+        },
+        "hljs-regexp": Object {
+          "color": "#50a14f",
+        },
+        "hljs-section": Object {
+          "color": "#e45649",
+        },
+        "hljs-selector-attr": Object {
+          "color": "#986801",
+        },
+        "hljs-selector-class": Object {
+          "color": "#986801",
+        },
+        "hljs-selector-id": Object {
+          "color": "#4078f2",
+        },
+        "hljs-selector-pseudo": Object {
+          "color": "#986801",
+        },
+        "hljs-selector-tag": Object {
+          "color": "#e45649",
+        },
+        "hljs-string": Object {
+          "color": "#50a14f",
+        },
+        "hljs-strong": Object {
+          "fontWeight": "bold",
+        },
+        "hljs-subst": Object {
+          "color": "#e45649",
+        },
+        "hljs-symbol": Object {
+          "color": "#4078f2",
+        },
+        "hljs-template-variable": Object {
+          "color": "#986801",
+        },
+        "hljs-title": Object {
+          "color": "#4078f2",
+        },
+        "hljs-type": Object {
+          "color": "#986801",
+        },
+        "hljs-variable": Object {
+          "color": "#986801",
+        },
+      }
+    }
+  >
+    <pre
+      style={
+        Object {
+          "background": "#fafafa",
+          "border": "1px solid #d8d8d8",
+          "color": "#383a42",
+          "display": "block",
+          "height": 375,
+          "overflowX": "auto",
+          "padding": "1em",
+        }
+      }
+    >
+      <code>
+        Code ES5 - Prototype
+      </code>
+    </pre>
+  </SyntaxHighlighter>
+</Code>
+`;
+
+exports[`Game page - GAME - LIGHT style renders a <ProgressBar /> component 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 1.25rem 0 1rem;
+  width: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2px;
+  width: 3.75%;
+}
+
+<ProgressBar
+  answers={Array []}
+  dispatch={[Function]}
+  remaining={
+    Array [
+      Object {
+        "answerId": null,
+        "answered": false,
+        "codeES5": "Code ES5 - Singleton",
+        "codeES6": "Code ES6 - Singleton",
+        "correct": null,
+        "name": "SIngleton",
+        "type": "creational",
+        "uuid": "abc234",
+      },
+    ]
+  }
+>
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+  height: 3px;
+  justify-content: space-between;
+  margin: 1.25rem 0 1rem;
+  width: 100%;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0"
       >
-        Learning JavaScript Design Patterns
-      </a>
-       
-      by Addy Osmani
-    </cite>
-    .
-  </p>
-</div>
+        <styled.span
+          key="abc234"
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  background: ",
+                    [Function],
+                    ";
+  display: flex;
+  height: 2px;
+  width: 3.75%;
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <span
+              className="c1"
+            />
+          </StyledComponent>
+        </styled.span>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</ProgressBar>
+`;
+
+exports[`Game page - RESULTS renders a <Percentage /> component 1`] = `
+.c0 {
+  border: 4px solid red;
+  border-radius: 50%;
+  color: red;
+  font-family: 'Karla','sans-serif';
+  font-size: 4rem;
+  height: 10rem;
+  margin: auto;
+  line-height: 10rem;
+  text-align: center;
+  width: 10rem;
+}
+
+<Percentage
+  answers={
+    Array [
+      Object {
+        "answerId": "abc123",
+        "answered": true,
+        "codeES5": "Code ES5 - Prototype",
+        "codeES6": "Code ES6 - Prototype",
+        "correct": true,
+        "name": "Prototype",
+        "type": "creational",
+        "uuid": "abc123",
+      },
+      Object {
+        "answerId": "abc123",
+        "answered": true,
+        "codeES5": "Code ES5 - Singleton",
+        "codeES6": "Code ES6 - Singleton",
+        "correct": false,
+        "name": "SIngleton",
+        "type": "creational",
+        "uuid": "abc234",
+      },
+    ]
+  }
+  dispatch={[Function]}
+>
+  <styled.h1
+    level="red"
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-EHOje",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  border: 4px solid ",
+              [Function],
+              ";
+  border-radius: 50%;
+  color: ",
+              [Function],
+              ";
+  font-family: 'Karla', 'sans-serif';
+  font-size: 4rem;
+  height: 10rem;
+  margin: auto;
+  line-height: 10rem;
+  text-align: center;
+  width: 10rem;
+",
+            ],
+          },
+          "displayName": "styled.h1",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-EHOje",
+          "target": "h1",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      level="red"
+    >
+      <h1
+        className="c0"
+      >
+        5
+        %
+      </h1>
+    </StyledComponent>
+  </styled.h1>
+</Percentage>
+`;
+
+exports[`Game page - RESULTS renders a <Restart /> component 1`] = `null`;
+
+exports[`Game page - RESULTS renders a <Result /> component 1`] = `
+.c0 {
+  color: #aaaaaa;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+<Result
+  answers={
+    Array [
+      Object {
+        "answerId": "abc123",
+        "answered": true,
+        "codeES5": "Code ES5 - Prototype",
+        "codeES6": "Code ES6 - Prototype",
+        "correct": true,
+        "name": "Prototype",
+        "type": "creational",
+        "uuid": "abc123",
+      },
+      Object {
+        "answerId": "abc123",
+        "answered": true,
+        "codeES5": "Code ES5 - Singleton",
+        "codeES6": "Code ES6 - Singleton",
+        "correct": false,
+        "name": "SIngleton",
+        "type": "creational",
+        "uuid": "abc234",
+      },
+    ]
+  }
+  dispatch={[Function]}
+>
+  <styled.p>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  color: ",
+              [Function],
+              ";
+  margin: 3rem 0;
+  text-align: center;
+",
+            ],
+          },
+          "displayName": "styled.p",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": "p",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <p
+        className="c0"
+      >
+        You've got 
+        <strong>
+          1
+        </strong>
+         patterns right out of 
+        2
+        .
+      </p>
+    </StyledComponent>
+  </styled.p>
+</Result>
 `;
