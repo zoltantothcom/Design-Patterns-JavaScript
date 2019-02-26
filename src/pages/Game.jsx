@@ -31,6 +31,16 @@ const Game = ({ current, style, onRestart }) => (
         <Restart>
           <Button label="Try Again" id="try_again" onClick={onRestart} />
         </Restart>
+        <p>
+          <a
+            className="twitter-share-button"
+            data-size="large"
+            data-dnt="true"
+            href="https://twitter.com/intent/tweet?text=I%20scored%2021%20out%20of%2023%20JavaScript%20Design%20Patterns!&url=https://javascript-design-patterns.netlify.com"
+          >
+            Tweet Your Score
+          </a>
+        </p>
       </Fragment>
     )}
   </Fragment>
