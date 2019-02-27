@@ -36,7 +36,7 @@ const initialState = {
 
 describe('Reducers', () => {
   it('should return the initial state', () => {
-    expect(reducer(undefined, {})).toEqual({});
+    expect(reducer(undefined, {})).toEqual(undefined);
   });
 
   it('should return unchanged state on toggle', () => {

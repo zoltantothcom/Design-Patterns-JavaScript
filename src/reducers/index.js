@@ -1,4 +1,3 @@
-import { initialProgress } from '../store';
 import { randomFromRange } from '../helpers/randomFromRange';
 
 const rootReducer = (state, action) => {
@@ -26,7 +25,8 @@ const rootReducer = (state, action) => {
     return {
       ...state,
       progress: {
-        ...initialProgress,
+        answers: [],
+        remaining: state.patterns,
         current: state.patterns[randomFromRange(state.patterns.length)]
       }
     };
