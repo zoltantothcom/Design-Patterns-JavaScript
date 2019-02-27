@@ -1,10 +1,12 @@
-# JavaScript Patterns Game
+# JavaScript Design Patterns
 
-JavaScript patterns game - to learn the patterns, test your knowledge or simply for fun.
+JavaScript Design Patterns - a game to get familiar with the design patterns, test your knowledge or simply for fun.
 
 ## Credits
 
-Used the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)
+Code samples are taken from the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)
+
+If you want a deeper dive into the subject feel free to check out [Learning JavaScript Design Patterns](//addyosmani.com/resources/essentialjsdesignpatterns/book/) by _Addy Osmani_.
 
 ## License
 
