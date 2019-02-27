@@ -23,7 +23,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook",
+    "heroku-postbuild": "yarn build"
   },
   "jest": {
     "setupFiles": [
