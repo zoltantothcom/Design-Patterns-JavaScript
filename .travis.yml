@@ -12,7 +12,6 @@ script:
   - yarn
   - yarn build
   - yarn test
-  - yarn test:coveralls
 
 jobs:
   include:
