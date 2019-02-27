@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import SVG from '../../src/components/SVG';
+import SVG from '../../src/components/Svg';
 
 const mockStore = configureMockStore();
 
