@@ -26,6 +26,7 @@
     "storybook:build": "build-storybook",
     "heroku-postbuild": "yarn build"
   },
+  "heroku-run-build-script": true,
   "jest": {
     "setupFiles": [
       "<rootDir>__tests__/config/configure-enzyme.js",
