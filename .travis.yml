@@ -8,7 +8,8 @@ branches:
     - master
 
 script:
-  - yarn start
+  - yarn
+  - yarn build
   - yarn test
 
 after_script:
