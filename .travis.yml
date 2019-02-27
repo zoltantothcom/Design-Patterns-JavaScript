@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - '11'
+
+branches:
+  only:
+    - master
+
+script:
+  - yarn start
+  - yarn test
+
+after_script:
+  - cat ./coverage/**/lcov.info | ./node_modules/coveralls/bin/coveralls.js
