@@ -12,9 +12,10 @@ script:
   - yarn
   - yarn build
   - yarn test
-
-jobs:
-  include:
-    - stage: Produce Coverage
-      node_js: node
-      script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+  - yarn jest --coverage --coverageReporters=text-lcov | coveralls
+  - yarn jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+# jobs:
+#   include:
+#     - stage: Produce Coverage
+#       node_js: node
+#       script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
