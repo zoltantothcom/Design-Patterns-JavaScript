@@ -13,8 +13,6 @@ script:
   - yarn test
   - yarn test:coverage
 
-after_script:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-
 after_success:
   - surge --project ./build --domain javascript-design-patterns.surge.sh
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
