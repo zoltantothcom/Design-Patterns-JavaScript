@@ -30,7 +30,9 @@ module.exports = {
     ]
   },
   plugins: [
+    // new HtmlWebpackPlugin(),
     new HtmlWebpackPlugin({
+      filenames: ['index.html', '200.html'],
       template: 'index.html'
     }),
     new BundleAnalyzerPlugin({
