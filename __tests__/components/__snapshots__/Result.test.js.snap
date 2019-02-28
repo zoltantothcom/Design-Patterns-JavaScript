@@ -10,7 +10,7 @@ exports[`<Result /> component matches the snapshot 1`] = `
   <p
     className="c0"
   >
-    You've got 
+    You got 
     <strong>
       3
     </strong>
