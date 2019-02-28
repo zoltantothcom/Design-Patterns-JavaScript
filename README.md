@@ -94,7 +94,7 @@ yarn test:coverage
 
 ## Credits
 
-- Inpired by very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
+- Inpired by the very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
 
 - Code samples impudently taken from the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)
 
