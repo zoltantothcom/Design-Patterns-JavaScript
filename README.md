@@ -1,6 +1,6 @@
 # JavaScript Design Patterns
 
-[![Build Status](https://travis-ci.org/zoltantothcom/JavaScript-Design-Patterns.svg?branch=master)](https://travis-ci.org/zoltantothcom/JavaScript-Design-Patterns) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/JavaScript-Design-Patterns/badge.svg)](https://coveralls.io/github/zoltantothcom/JavaScript-Design-Patterns)
+[![Build Status](https://travis-ci.org/zoltantothcom/JavaScript-Design-Patterns.svg?branch=master)](https://travis-ci.org/zoltantothcom/JavaScript-Design-Patterns) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/JavaScript-Design-Patterns/badge.svg)](https://coveralls.io/github/zoltantothcom/JavaScript-Design-Patterns) [![Greenkeeper badge](https://badges.greenkeeper.io/zoltantothcom/JavaScript-Design-Patterns.svg)](https://greenkeeper.io/)
 
 JavaScript Design Patterns - a game to get familiar with the design patterns, test your knowledge or simply for fun.
 
