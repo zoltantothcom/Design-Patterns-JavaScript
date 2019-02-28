@@ -8,9 +8,11 @@ JavaScript Design Patterns - a game to get familiar with the design patterns, te
 
 ## Credits
 
+Inpired by very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
+
 Code samples are taken from the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)
 
-If you want a deeper dive into the subject feel free to check out [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) by _Addy Osmani_.
+**\*** If you want a deeper dive into the subject feel free to check out [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) by _Addy Osmani_.
 
 ## License
 
