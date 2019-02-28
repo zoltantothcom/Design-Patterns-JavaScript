@@ -11,8 +11,13 @@ script:
   - yarn
   - yarn build
   - yarn test
-  - yarn test:coverage
 
 after_success:
-  - surge --project ./build --domain https://javascript-design-patterns.surge.sh
+  - yarn test:coverage
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+deploy:
+  provider: surge
+  project: ./build
+  domain: https://javascript-design-patterns.surge.sh
+  skip_cleanup: true

@@ -17,7 +17,7 @@ export const Result = ({ answers }) => {
 
   return (
     <StyledResult>
-      You've got <strong>{correct}</strong> patterns right out of {answers.length}.
+      You got <strong>{correct}</strong> patterns right out of {answers.length}.
     </StyledResult>
   );
 };
