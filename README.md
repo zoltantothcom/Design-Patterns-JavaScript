@@ -6,7 +6,7 @@ JavaScript Design Patterns - a game to get familiar with the design patterns, te
 
 ### :zap: [PLAY HERE](http://javascript-design-patterns.surge.sh/)
 
-<img src="https://cdn.rawgit.com/zoltantothcom/JavaScript-Design-Patterns/master/static/screenshot.png" alt="JavaScript Design Patterns - game results screenshot" />
+<img src="https://raw.githubusercontent.com/zoltantothcom/JavaScript-Design-Patterns/master/static/screenshot.png?sanitize=true&raw=true" alt="JavaScript Design Patterns - game results screenshot" />
 
 ## Credits
 
