@@ -26,14 +26,9 @@ const TwitterButton = styled.a`
   font-size: 0.8rem;
 `;
 
-const GitHubButton = styled.a`
+const GitHubButton = styled(TwitterButton)`
   background: #e9ecef;
   color: #495057;
-  padding: 6px 12px;
-  border-radius: 4px;
-  margin: 0 8px;
-  text-decoration: none;
-  font-size: 0.8rem;
 `;
 
 const ShareContainer = styled.p`
@@ -74,6 +69,7 @@ const Game = ({ current, answers, style, onRestart }) => {
             <GitHubButton
               href="https://github.com/zoltantothcom/JavaScript-Design-Patterns"
               aria-label="Star zoltantothcom/JavaScript-Design-Patterns on GitHub"
+              target="_blank"
             >
               Star on GitHub
             </GitHubButton>
