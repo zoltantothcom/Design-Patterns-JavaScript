@@ -8,13 +8,97 @@ JavaScript Design Patterns - a game to get familiar with the design patterns, te
 
 <img src="https://raw.githubusercontent.com/zoltantothcom/JavaScript-Design-Patterns/master/static/screenshot.png?sanitize=true&raw=true" alt="JavaScript Design Patterns - game results screenshot" />
 
+## About
+
+This is a small game to get you familiar with all the 23 Gang of Four design patterns implemented in JavaScript.
+
+### Creational Patterns
+
+- Abstract factory
+- Builder
+- Factory method
+- Prototype
+- Singleton
+
+### Structural Patterns
+
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
+
+### Behavioral Patterns
+
+- Chain of responsibility
+- Command
+- Interpreter
+- Iterator
+- Mediator
+- Memento
+- Observer
+- State
+- Strategy
+- Template
+- Visitor
+
+## Run it locally
+
+1. Clone this repo
+
+```
+git clone git@github.com:zoltantothcom/JavaScript-Design-Patterns.git
+```
+
+2. Switch to project folder
+
+```
+cd JavaScript-Design-Patterns
+```
+
+3. Install all the dependencies
+
+```
+yarn
+```
+
+4. Time to start the engine
+
+```
+yarn start
+```
+
+5. Voila! The project is running on `http://localhost:8080`
+
+## Tests
+
+- To run the tests
+
+```
+yarn test
+```
+
+- To see the detailed test coverage
+
+```
+yarn test:coverage
+```
+
+## TODO
+
+- Write more unit tests
+- Add E2E tests (Cypress)
+- Add a &laquo;_Reference_&raquo; section where the patterns can be viewed
+
 ## Credits
 
-Inpired by very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
+- Inpired by very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
 
-Code samples are taken from the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)
+- Code samples impudently taken from the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)
 
-**\*** If you want a deeper dive into the subject feel free to check out [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) by _Addy Osmani_.
+If you want a deeper dive into the subject feel free to check out [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) by _Addy Osmani_.
 
 ## License
 
