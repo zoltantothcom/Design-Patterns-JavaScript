@@ -19,21 +19,21 @@ const Restart = styled.div`
 const TwitterButton = styled.a`
   background: #1da1f2;
   color: #ffffff;
-  padding: 4px 8px;
+  padding: 6px 12px;
   border-radius: 4px;
   margin: 0 8px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 `;
 
 const GitHubButton = styled.a`
   background: #e9ecef;
   color: #495057;
-  padding: 4px 8px;
+  padding: 6px 12px;
   border-radius: 4px;
   margin: 0 8px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 `;
 
 const ShareContainer = styled.p`
@@ -66,7 +66,7 @@ const Game = ({ current, answers, style, onRestart }) => {
             <TwitterButton
               className="twitter-share-button"
               data-dnt="true"
-              href={`https://twitter.com/intent/tweet?text=I%20scored%20${correct}%20out%20of%2023%20in%20JavaScript%20Design%20Patterns%20game!%20Try%20it!&url=https://javascript-design-patterns.netlify.com`}
+              href={`https://twitter.com/intent/tweet?text=I%20scored%20${correct}%20out%20of%2023%20in%20JavaScript%20Design%20Patterns%20game!%20Try%20it!&url=http://javascript-design-patterns.surge.sh/`}
             >
               Tweet Your Score
             </TwitterButton>
