@@ -7,13 +7,9 @@ exports[`<Title /> component renders with a DARK theme 1`] = `
   border-radius: 4px;
   background: #282828;
   font-size: 1.75rem;
-  margin: 1rem 0 0 -50vw;
+  margin: 1rem 0 0;
   text-align: center;
-  left: 50%;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
+  width: 100%;
 }
 
 <h1
@@ -30,13 +26,9 @@ exports[`<Title /> component renders with a LIGHT theme 1`] = `
   border-radius: 4px;
   background: #ededed;
   font-size: 1.75rem;
-  margin: 1rem 0 0 -50vw;
+  margin: 1rem 0 0;
   text-align: center;
-  left: 50%;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
+  width: 100%;
 }
 
 <h1

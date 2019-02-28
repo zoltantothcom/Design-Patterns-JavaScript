@@ -3,7 +3,7 @@
 exports[`<Button /> component renders with a DARK theme 1`] = `
 .c0 {
   background-color: #484848;
-  border-color: #707070;
+  border: 1px solid #707070;
   border-radius: 4px;
   cursor: pointer;
   font: 400 1rem 'Karla','sans-serif';
@@ -41,7 +41,7 @@ exports[`<Button /> component renders with a DARK theme 1`] = `
 exports[`<Button /> component renders with a LIGHT theme 1`] = `
 .c0 {
   background-color: #e8e8e8;
-  border-color: #cccccc;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   cursor: pointer;
   font: 400 1rem 'Karla','sans-serif';
