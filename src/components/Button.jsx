@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   background-color: ${props => props.theme.buttonBackground};
-  border-color: ${props => props.theme.buttonBorder};
+  border: 1px solid ${props => props.theme.buttonBorder};
   border-radius: 4px;
   cursor: pointer;
   font: 400 1rem 'Karla', 'sans-serif';

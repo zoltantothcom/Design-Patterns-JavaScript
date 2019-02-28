@@ -4,6 +4,8 @@
 
 JavaScript Design Patterns - a game to get familiar with the design patterns, test your knowledge or simply for fun.
 
+### :zap: [PLAY HERE](http://javascript-design-patterns.surge.sh/)
+
 ## Credits
 
 Code samples are taken from the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)

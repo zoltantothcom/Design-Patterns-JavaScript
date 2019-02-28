@@ -8,13 +8,9 @@ const StyledTitle = styled.h1`
   background: ${props => props.theme.headerBackground};
   font-size: 1.75rem;
   color: ${props => props.theme.orange};
-  margin: 1rem 0 0 -50vw;
+  margin: 1rem 0 0;
   text-align: center;
-  left: 50%;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const Title = () => <StyledTitle>JavaScript Design Patterns</StyledTitle>;
