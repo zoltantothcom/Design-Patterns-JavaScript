@@ -1,20 +1,20 @@
 language: node_js
+
 node_js:
-- '11'
+  - '11'
+
 branches:
   only:
-  - master
+    - master
+
 script:
-- yarn
-- yarn build
-- yarn test
-- yarn test:coverage
+  - yarn
+  - yarn build
+  - yarn test
+  - yarn test:coverage
+
 after_script:
-- cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-deploy:
-  provider: heroku
-  api_key:
-    secure: S7xmhSSXas4yalMS9JE6SiEdankGBwFpfjDoXb3s8W+T0aGnTm1O2LqVLJQZRcwr8hE26ezGeRRNZZCFZ5x2ZDQowqW/rFDXudPxL0JrZGQlXI84hqto5O3DrcrLnk5heCVfNwAuaXCoVP//8Afv7glpbW2h1rYACT6uoqQ+pfAUP4fNeNicLQLep8bxY8YqTbD7waVd47SS9XtAUtSbJSyv8TWdKRcIoq/Sv0mSZyVqrBRusBVpB7r6mVR0qEv9s6xzTs2l9pY7NzQKLT1pQ+GInJzYzRd8WKGt+duWg9mlz3m1CMt214Nagl11Rf8uz+QRHjFeBZ+FW5uKhQB3ZctuU1Yy0w0DbMMX92du11yEiO9Bd1zDQXjkrI2oysEDzUwuQM0ckWxehLsXb/DhTpYGvLW7rvYjif/sHSN/h7uJxnaffJCJlG2pMfoHRNULxRQOtqqfHtVnYi6CirN5+GRw7/sZV+zKFQpW1pvvSbE3JweDVmryEbdyGrcGkWh32Qf2t7sLZDAuMJpU0ze6XeXq5IGgSZTPTT6w63nSxWZmQbEolXPJHmpTfABSgceI2nVZTbrKzcTniQ/Bl0pOS/n346JPUYIZdLETROSUpMTElAMfvAvY/HObpeI0hZtv+3GPg1m8oxMuh8g/4wnx9WZk75NDjJeQL4jQmylvY1w=
-  app: javascript-design-patterns
-  on:
-    repo: zoltantothcom/JavaScript-Design-Patterns
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+after_success:
+  - surge --project ./build --domain javascript-design-patterns.surge.sh
