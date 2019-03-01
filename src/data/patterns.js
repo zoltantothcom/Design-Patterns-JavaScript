@@ -133,26 +133,26 @@ export default RequestPattern;`
   {
     name: 'Factory',
     type: 'creational',
-    codeES5: `function bmwPattern(type) {
-  if (type === 'X5') return new Bmw(type, 108000, 300);
-  if (type === 'X6') return new Bmw(type, 111000, 320);
+    codeES5: `function teslaPattern(type) {
+  if (type === 'ModelX') return new Tesla(type, 108000, 300);
+  if (type === 'ModelS') return new Tesla(type, 111000, 320);
 }
 
-function Bmw(model, price, maxSpeed) {
+function Tesla(model, price, maxSpeed) {
   this.model = model;
   this.price = price;
   this.maxSpeed = maxSpeed;
 }
 
-module.exports = bmwPattern;`,
-    codeES6: `class BmwPattern {
+module.exports = teslaPattern;`,
+    codeES6: `class TeslaPattern {
   create(type) {
-    if (type === 'X5') return new Bmw(type, 108000, 300);
-    if (type === 'X6') return new Bmw(type, 111000, 320);
+    if (type === 'ModelX') return new Tesla(type, 108000, 300);
+    if (type === 'ModelS') return new Tesla(type, 111000, 320);
   }
 }
 
-class Bmw {
+class Tesla {
   constructor(model, price, maxSpeed) {
     this.model = model;
     this.price = price;
@@ -160,7 +160,7 @@ class Bmw {
   }
 }
 
-export default BmwPattern;`
+export default TeslaPattern;`
   },
   /*
    * Prototype
@@ -1273,7 +1273,7 @@ export { Product, fees, proft };`
    * State
    */
   {
-    name: 'Pattern',
+    name: 'State',
     type: 'behavioral',
     codeES5: `function Order() {
   this.pattern = new WaitingForPayment();
