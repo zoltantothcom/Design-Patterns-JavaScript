@@ -12,6 +12,7 @@ import { themeLight } from './styles/themes/theme.light';
 import { themeDark } from './styles/themes/theme.dark';
 import Game from './pages/Game';
 import About from './pages/About';
+import Patterns from './pages/Patterns';
 import { getMode } from './selectors';
 
 const Layout = props => {
@@ -32,6 +33,7 @@ const Layout = props => {
         <Header />
 
         <Route exact path="/" render={() => <Game style={style} />} />
+        <Route path="/patterns/:pattern" component={Patterns} />
         <Route path="/about" component={About} />
       </React.Fragment>
     </ThemeProvider>

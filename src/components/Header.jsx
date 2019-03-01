@@ -46,6 +46,7 @@ const Header = () => (
   <StyledHeader>
     <StyledLinkContainer>
       <StyledRouterLink to="/">Game</StyledRouterLink>
+      <StyledRouterLink to="/patterns/memento">Patterns</StyledRouterLink>
       <StyledRouterLink to="/about">About</StyledRouterLink>
       <StyledLink href="//github.com/zoltantothcom/javascript-patterns" target="_blank">
         GitHub
