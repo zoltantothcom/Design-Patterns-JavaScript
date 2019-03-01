@@ -77,7 +77,7 @@ yarn
 yarn start
 ```
 
-5. Voila! The project is running on `http://localhost:8080`
+5. Voila! The project is running on [http://localhost:8080](http://localhost:8080)
 
 ## Running the Tests
 
