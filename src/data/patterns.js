@@ -6,15 +6,15 @@ const patterns = [
     name: 'Abstract Factory',
     type: 'creational',
     codeES5: `function droidProducer(kind) {
-  if (kind === 'battle') return battleDroidFactory;
-  return pilotDroidFactory;
+  if (kind === 'battle') return battleDroidPattern;
+  return pilotDroidPattern;
 }
 
-function battleDroidFactory() {
+function battleDroidPattern() {
   return new B1();
 }
 
-function pilotDroidFactory() {
+function pilotDroidPattern() {
   return new Rx24();
 }
 
@@ -30,15 +30,15 @@ Rx24.prototype.info = function() {
 
 module.exports = droidProducer;`,
     codeES6: `function droidProducer(kind) {
-  if (kind === 'battle') return battleDroidFactory;
-  return pilotDroidFactory;
+  if (kind === 'battle') return battleDroidPattern;
+  return pilotDroidPattern;
 }
 
-function battleDroidFactory() {
+function battleDroidPattern() {
   return new B1();
 }
 
-function pilotDroidFactory() {
+function pilotDroidPattern() {
   return new Rx24();
 }
 
@@ -68,7 +68,7 @@ export default droidProducer;`
   this.payload = {};
 }
 
-function RequestBuilder() {
+function RequestPattern() {
   this.request = new Request();
 
   this.forUrl = function(url) {
@@ -91,7 +91,7 @@ function RequestBuilder() {
   };
 }
 
-module.exports = RequestBuilder;`,
+module.exports = RequestPattern;`,
     codeES6: `class Request {
   constructor() {
     this.url = '';
@@ -100,7 +100,7 @@ module.exports = RequestBuilder;`,
   }
 }
 
-class RequestBuilder {
+class RequestPattern {
   constructor() {
     this.request = new Request();
   }
@@ -125,7 +125,7 @@ class RequestBuilder {
   }
 }
 
-export default RequestBuilder;`
+export default RequestPattern;`
   },
   /*
    * Factory
@@ -133,7 +133,7 @@ export default RequestBuilder;`
   {
     name: 'Factory',
     type: 'creational',
-    codeES5: `function bmwFactory(type) {
+    codeES5: `function bmwPattern(type) {
   if (type === 'X5') return new Bmw(type, 108000, 300);
   if (type === 'X6') return new Bmw(type, 111000, 320);
 }
@@ -144,8 +144,8 @@ function Bmw(model, price, maxSpeed) {
   this.maxSpeed = maxSpeed;
 }
 
-module.exports = bmwFactory;`,
-    codeES6: `class BmwFactory {
+module.exports = bmwPattern;`,
+    codeES6: `class BmwPattern {
   create(type) {
     if (type === 'X5') return new Bmw(type, 108000, 300);
     if (type === 'X6') return new Bmw(type, 111000, 320);
@@ -160,7 +160,7 @@ class Bmw {
   }
 }
 
-export default BmwFactory;`
+export default BmwPattern;`
   },
   /*
    * Prototype
@@ -240,15 +240,15 @@ Jedi.prototype.attackWithSaber = function() {
   return this.lvl * 100;
 };
 
-function JediAdapter(jedi) {
+function JediPattern(jedi) {
   this.jedi = jedi;
 }
 
-JediAdapter.prototype.attack = function() {
+JediPattern.prototype.attack = function() {
   return this.jedi.attackWithSaber();
 };
 
-module.exports = [Soldier, Jedi, JediAdapter];`,
+module.exports = [Soldier, Jedi, JediPattern];`,
     codeES6: `class Soldier {
   constructor(level) {
     this.level = level;
@@ -269,7 +269,7 @@ class Jedi {
   }
 }
 
-class JediAdapter {
+class JediPattern {
   constructor(jedi) {
     this.jedi = jedi;
   }
@@ -279,7 +279,7 @@ class JediAdapter {
   }
 }
 
-export { Soldier, Jedi, JediAdapter };`
+export { Soldier, Jedi, JediPattern };`
   },
   /*
    * Bridge
@@ -365,17 +365,16 @@ export { EpsonPrinter, HPprinter, AcrylicInk, AlcoholInk };`
   {
     name: 'Composite',
     type: 'structural',
-    codeES5: `// composition
-function EquipmentComposition(name) {
+    codeES5: `function EquipmentPattern(name) {
   this.equipments = [];
   this.name = name;
 }
 
-EquipmentComposition.prototype.add = function(equipment) {
+EquipmentPattern.prototype.add = function(equipment) {
   this.equipments.push(equipment);
 };
 
-EquipmentComposition.prototype.getPrice = function() {
+EquipmentPattern.prototype.getPrice = function() {
   return this.equipments
     .map(function(equipment) {
       return equipment.getPrice();
@@ -410,7 +409,7 @@ function Memory() {
 }
 Memory.prototype = Object.create(Equipment.prototype);
 
-module.exports = [EquipmentComposition, FloppyDisk, HardDrive, Memory];`,
+module.exports = [EquipmentPattern, FloppyDisk, HardDrive, Memory];`,
     codeES6: `//Equipment
 class Equipment {
   getPrice() {
@@ -426,8 +425,7 @@ class Equipment {
   }
 }
 
-// --- composite ---
-class Composite extends Equipment {
+class Pattern extends Equipment {
   constructor() {
     super();
     this.equipments = [];
@@ -448,7 +446,7 @@ class Composite extends Equipment {
   }
 }
 
-class Cabbinet extends Composite {
+class Cabbinet extends Pattern {
   constructor() {
     super();
     this.setName('cabbinet');
@@ -500,23 +498,23 @@ function Penne() {
 }
 Penne.prototype = Object.create(Pasta.prototype);
 
-function SauceDecorator(pasta) {
+function SaucePattern(pasta) {
   this.pasta = pasta;
 }
 
-SauceDecorator.prototype.getPrice = function() {
+SaucePattern.prototype.getPrice = function() {
   return this.pasta.getPrice() + 5;
 };
 
-function CheeseDecorator(pasta) {
+function CheesePattern(pasta) {
   this.pasta = pasta;
 }
 
-CheeseDecorator.prototype.getPrice = function() {
+CheesePattern.prototype.getPrice = function() {
   return this.pasta.getPrice() + 3;
 };
 
-module.exports = [Penne, SauceDecorator, CheeseDecorator];`,
+module.exports = [Penne, SaucePattern, CheesePattern];`,
     codeES6: `class Pasta {
   constructor() {
     this.price = 0;
@@ -533,7 +531,7 @@ class Penne extends Pasta {
   }
 }
 
-class PastaDecorator extends Pasta {
+class PastaPattern extends Pasta {
   constructor(pasta) {
     super();
     this.pasta = pasta;
@@ -544,7 +542,7 @@ class PastaDecorator extends Pasta {
   }
 }
 
-class SauceDecorator extends PastaDecorator {
+class SaucePattern extends PastaPattern {
   constructor(pasta) {
     super(pasta);
   }
@@ -554,7 +552,7 @@ class SauceDecorator extends PastaDecorator {
   }
 }
 
-class CheeseDecorator extends PastaDecorator {
+class CheesePattern extends PastaPattern {
   constructor(pasta) {
     super(pasta);
   }
@@ -564,7 +562,7 @@ class CheeseDecorator extends PastaDecorator {
   }
 }
 
-export { Penne, SauceDecorator, CheeseDecorator };`
+export { Penne, SaucePattern, CheesePattern };`
   },
   /*
    * Facade
@@ -572,7 +570,7 @@ export { Penne, SauceDecorator, CheeseDecorator };`
   {
     name: 'Facade',
     type: 'structural',
-    codeES5: `var shopFacade = {
+    codeES5: `var shopPattern = {
   calc: function(price) {
     price = discount(price);
     price = fees(price);
@@ -593,8 +591,8 @@ function fees(value) {
   return value * 1.05;
 }
 
-module.exports = shopFacade;`,
-    codeES6: `class ShopFacade {
+module.exports = shopPattern;`,
+    codeES6: `class ShopPattern {
   constructor() {
     this.discount = new Discount();
     this.shipping = new Shipping();
@@ -627,7 +625,7 @@ class Fees {
   }
 }
 
-export default ShopFacade;`
+export default ShopPattern;`
   },
   /*
    * Flyweight
@@ -639,7 +637,7 @@ export default ShopFacade;`
   this.name = name;
 }
 
-var colorFactory = {
+var colorCreator = {
   colors: {},
   create: function(name) {
     var color = this.colors[name];
@@ -650,14 +648,14 @@ var colorFactory = {
   }
 };
 
-module.exports = colorFactory;`,
+module.exports = colorCreator;`,
     codeES6: `class Color {
   constructor(name) {
     this.name = name;
   }
 }
 
-class colorFactory {
+class colorCreator {
   constructor(name) {
     this.colors = {};
   }
@@ -669,7 +667,7 @@ class colorFactory {
   }
 }
 
-export { colorFactory };`
+export { colorCreator };`
   },
   /*
    * Proxy
@@ -683,7 +681,7 @@ export { colorFactory };`
   };
 }
 
-function CarProxy(driver) {
+function CarPattern(driver) {
   this.driver = driver;
   this.drive = function() {
     if (driver.age < 18) return 'too young to drive';
@@ -695,14 +693,14 @@ function Driver(age) {
   this.age = age;
 }
 
-module.exports = [Car, CarProxy, Driver];`,
+module.exports = [Car, CarPattern, Driver];`,
     codeES6: `class Car {
   drive() {
     return 'driving';
   }
 }
 
-class CarProxy {
+class CarPattern {
   constructor(driver) {
     this.driver = driver;
   }
@@ -717,7 +715,7 @@ class Driver {
   }
 }
 
-export { Car, CarProxy, Driver };`
+export { Car, CarPattern, Driver };`
   },
   /*
    * Chain of Resp
@@ -855,11 +853,11 @@ export { ShoppingCart, Discount };`
   {
     name: 'Command',
     type: 'behavioral',
-    codeES5: `function Cockpit(command) {
-  this.command = command;
+    codeES5: `function Cockpit(instruction) {
+  this.instruction = instruction;
 }
 Cockpit.prototype.execute = function() {
-  this.command.execute();
+  this.instruction.execute();
 };
 
 function Turbine() {
@@ -889,41 +887,41 @@ Turbine.prototype.speedUp = function() {
   this.speed += 100;
 };
 
-function OnCommand(turbine) {
+function OnInstruction(turbine) {
   this.turbine = turbine;
 }
-OnCommand.prototype.execute = function() {
+OnInstruction.prototype.execute = function() {
   this.turbine.on();
 };
 
-function OffCommand(turbine) {
+function OffInstruction(turbine) {
   this.turbine = turbine;
 }
-OffCommand.prototype.execute = function() {
+OffInstruction.prototype.execute = function() {
   this.turbine.off();
 };
 
-function SpeedUpCommand(turbine) {
+function SpeedUpInstruction(turbine) {
   this.turbine = turbine;
 }
-SpeedUpCommand.prototype.execute = function() {
+SpeedUpInstruction.prototype.execute = function() {
   this.turbine.speedUp();
 };
 
-function SpeedDownCommand(turbine) {
+function SpeedDownInstruction(turbine) {
   this.turbine = turbine;
 }
-SpeedDownCommand.prototype.execute = function() {
+SpeedDownInstruction.prototype.execute = function() {
   this.turbine.speedDown();
 };
 
-module.exports = [Cockpit, Turbine, OnCommand, OffCommand, SpeedUpCommand, SpeedDownCommand];`,
+module.exports = [Cockpit, Turbine, OnInstruction, OffInstruction, SpeedUpInstruction, SpeedDownInstruction];`,
     codeES6: `class Cockpit {
-  constructor(command) {
-    this.command = command;
+  constructor(instruction) {
+    this.instruction = instruction;
   }
   execute() {
-    this.command.execute();
+    this.instruction.execute();
   }
 }
 
@@ -939,7 +937,7 @@ class Turbine {
   }
 }
 
-class OnCommand {
+class OnInstruction {
   constructor(turbine) {
     this.turbine = turbine;
   }
@@ -948,7 +946,7 @@ class OnCommand {
   }
 }
 
-class OffCommand {
+class OffInstruction {
   constructor(turbine) {
     this.turbine = turbine;
   }
@@ -957,7 +955,7 @@ class OffCommand {
   }
 }
 
-export { Cockpit, Turbine, OnCommand, OffCommand };`
+export { Cockpit, Turbine, OnInstruction, OffInstruction };`
   },
   /*
    * Interpreter
@@ -970,8 +968,8 @@ export { Cockpit, Turbine, OnCommand, OffCommand };`
   this.right = right;
 }
 
-Sum.prototype.interpret = function() {
-  return this.left.interpret() + this.right.interpret();
+Sum.prototype.pattern = function() {
+  return this.left.pattern() + this.right.pattern();
 };
 
 function Min(left, right) {
@@ -979,15 +977,15 @@ function Min(left, right) {
   this.right = right;
 }
 
-Min.prototype.interpret = function() {
-  return this.left.interpret() - this.right.interpret();
+Min.prototype.pattern = function() {
+  return this.left.pattern() - this.right.pattern();
 };
 
 function Num(val) {
   this.val = val;
 }
 
-Num.prototype.interpret = function() {
+Num.prototype.pattern = function() {
   return this.val;
 };
 
@@ -998,8 +996,8 @@ module.exports = [Num, Min, Sum];`,
     this.right = right;
   }
 
-  interpret() {
-    return this.left.interpret() + this.right.interpret();
+  pattern() {
+    return this.left.pattern() + this.right.pattern();
   }
 }
 
@@ -1009,8 +1007,8 @@ class Min {
     this.right = right;
   }
 
-  interpret() {
-    return this.left.interpret() - this.right.interpret();
+  pattern() {
+    return this.left.pattern() - this.right.pattern();
   }
 }
 
@@ -1019,7 +1017,7 @@ class Num {
     this.val = val;
   }
 
-  interpret() {
+  pattern() {
     return this.val;
   }
 }
@@ -1032,12 +1030,12 @@ export { Num, Min, Sum };`
   {
     name: 'Iterator',
     type: 'behavioral',
-    codeES5: `function Iterator(el) {
+    codeES5: `function Pattern(el) {
   this.index = 0;
   this.elements = el;
 }
 
-Iterator.prototype = {
+Pattern.prototype = {
   next: function() {
     return this.elements[this.index++];
   },
@@ -1046,8 +1044,8 @@ Iterator.prototype = {
   }
 };
 
-module.exports = Iterator;`,
-    codeES6: `class Iterator {
+module.exports = Pattern;`,
+    codeES6: `class Pattern {
   constructor(el) {
     this.index = 0;
     this.elements = el;
@@ -1062,7 +1060,7 @@ module.exports = Iterator;`,
   }
 }
 
-export default Iterator;`
+export default Pattern;`
   },
   /*
    * Mediator
@@ -1123,16 +1121,16 @@ export { TrafficTower, Airplane };`
   {
     name: 'Memento',
     type: 'behavioral',
-    codeES5: `function Memento(value) {
+    codeES5: `function Pattern(value) {
   this.value = value;
 }
 
 var originator = {
   store: function(val) {
-    return new Memento(val);
+    return new Pattern(val);
   },
-  restore: function(memento) {
-    return memento.value;
+  restore: function(pattern) {
+    return pattern.value;
   }
 };
 
@@ -1140,16 +1138,16 @@ function Caretaker() {
   this.values = [];
 }
 
-Caretaker.prototype.addMemento = function(memento) {
-  this.values.push(memento);
+Caretaker.prototype.addPattern = function(pattern) {
+  this.values.push(pattern);
 };
 
-Caretaker.prototype.getMemento = function(index) {
+Caretaker.prototype.getPattern = function(index) {
   return this.values[index];
 };
 
 module.exports = [originator, Caretaker];`,
-    codeES6: `class Memento {
+    codeES6: `class Pattern {
   constructor(value) {
     this.value = value;
   }
@@ -1157,10 +1155,10 @@ module.exports = [originator, Caretaker];`,
 
 const originator = {
   store: function(val) {
-    return new Memento(val);
+    return new Pattern(val);
   },
-  restore: function(memento) {
-    return memento.value;
+  restore: function(pattern) {
+    return pattern.value;
   }
 };
 
@@ -1169,11 +1167,11 @@ class Caretaker {
     this.values = [];
   }
 
-  addMemento(memento) {
-    this.values.push(memento);
+  addPattern(pattern) {
+    this.values.push(pattern);
   }
 
-  getMemento(index) {
+  getPattern(index) {
     return this.values[index];
   }
 }
@@ -1275,13 +1273,13 @@ export { Product, fees, proft };`
    * State
    */
   {
-    name: 'State',
+    name: 'Pattern',
     type: 'behavioral',
     codeES5: `function Order() {
-  this.state = new WaitingForPayment();
+  this.pattern = new WaitingForPayment();
 
-  this.nextState = function() {
-    this.state = this.state.next();
+  this.nextPattern = function() {
+    this.pattern = this.pattern.next();
   };
 }
 
@@ -1338,11 +1336,11 @@ class Delivered extends OrderStatus {
 
 class Order {
   constructor() {
-    this.state = new WaitingForPayment();
+    this.pattern = new WaitingForPayment();
   }
 
-  nextState() {
-    this.state = this.state.next();
+  nextPattern() {
+    this.pattern = this.pattern.next();
   }
 }
 
@@ -1367,19 +1365,19 @@ ShoppingCart.prototype.checkout = function() {
   return this.discount(this.amount);
 };
 
-function guestStrategy(amount) {
+function guestPattern(amount) {
   return amount;
 }
 
-function regularStrategy(amount) {
+function regularPattern(amount) {
   return amount * 0.9;
 }
 
-function premiumStrategy(amount) {
+function premiumPattern(amount) {
   return amount * 0.8;
 }
 
-module.exports = [ShoppingCart, guestStrategy, regularStrategy, premiumStrategy];`,
+module.exports = [ShoppingCart, guestPattern, regularPattern, premiumPattern];`,
     codeES6: `class ShoppingCart {
   constructor(discount) {
     this.discount = discount;
@@ -1395,19 +1393,19 @@ module.exports = [ShoppingCart, guestStrategy, regularStrategy, premiumStrategy]
   }
 }
 
-function guestStrategy(amount) {
+function guestPattern(amount) {
   return amount;
 }
 
-function regularStrategy(amount) {
+function regularPattern(amount) {
   return amount * 0.9;
 }
 
-function premiumStrategy(amount) {
+function premiumPattern(amount) {
   return amount * 0.8;
 }
 
-export { ShoppingCart, guestStrategy, regularStrategy, premiumStrategy };`
+export { ShoppingCart, guestPattern, regularPattern, premiumPattern };`
   },
   /*
    * Template
@@ -1480,7 +1478,7 @@ export { Tax1, Tax2 };`
   {
     name: 'Visitor',
     type: 'behavioral',
-    codeES5: `function bonusVisitor(employee) {
+    codeES5: `function bonusPattern(employee) {
   if (employee instanceof Manager) employee.bonus = employee.salary * 2;
   if (employee instanceof Developer) employee.bonus = employee.salary;
 }
@@ -1489,8 +1487,8 @@ function Employee() {
   this.bonus = 0;
 }
 
-Employee.prototype.accept = function(visitor) {
-  visitor(this);
+Employee.prototype.accept = function(item) {
+  item(this);
 };
 
 function Manager(salary) {
@@ -1505,8 +1503,8 @@ function Developer(salary) {
 
 Developer.prototype = Object.create(Employee.prototype);
 
-module.exports = [Developer, Manager, bonusVisitor];`,
-    codeES6: `function bonusVisitor(employee) {
+module.exports = [Developer, Manager, bonusPattern];`,
+    codeES6: `function bonusPattern(employee) {
   if (employee instanceof Manager) employee.bonus = employee.salary * 2;
   if (employee instanceof Developer) employee.bonus = employee.salary;
 }
@@ -1517,8 +1515,8 @@ class Employee {
     this.salary = salary;
   }
 
-  accept(visitor) {
-    visitor(this);
+  accept(item) {
+    item(this);
   }
 }
 
@@ -1534,7 +1532,7 @@ class Developer extends Employee {
   }
 }
 
-export { Developer, Manager, bonusVisitor };`
+export { Developer, Manager, bonusPattern };`
   }
 ];
 
