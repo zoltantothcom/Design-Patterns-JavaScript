@@ -8,8 +8,12 @@ const StyledHeader = styled.div`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   margin-top: 1rem;
+
+  @media (min-width: 769px) {
+    justify-content: space-between;
+  }
 `;
 
 const StyledLinkContainer = styled.div`
@@ -38,18 +42,12 @@ const linkStyle = css`
 const StyledRouterLink = styled(Link)`
   ${linkStyle}
 `;
-const StyledLink = styled.a`
-  ${linkStyle}
-`;
 
 const Header = () => (
   <StyledHeader>
     <StyledLinkContainer>
       <StyledRouterLink to="/">Game</StyledRouterLink>
       <StyledRouterLink to="/about">About</StyledRouterLink>
-      <StyledLink href="//github.com/zoltantothcom/javascript-patterns" target="_blank">
-        GitHub
-      </StyledLink>
     </StyledLinkContainer>
 
     <StyledSettingsContainer>
