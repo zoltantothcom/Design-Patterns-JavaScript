@@ -8,6 +8,13 @@ JavaScript Design Patterns - a game to get familiar with the design patterns, te
 
 <img src="https://raw.githubusercontent.com/zoltantothcom/JavaScript-Design-Patterns/master/static/screenshot.png?sanitize=true&raw=true" alt="JavaScript Design Patterns - game results screenshot" />
 
+- [About](#about)
+- [How To Run Locally](#how-to-run-locally)
+- [Running the Tests](#running-the-tests)
+- [ToDo](#todo)
+- [Credits](#credits)
+- [License](#license)
+
 ## About
 
 This is a small game to get you familiar with all the 23 Gang of Four design patterns implemented in JavaScript.
@@ -44,7 +51,7 @@ This is a small game to get you familiar with all the 23 Gang of Four design pat
 - Template
 - Visitor
 
-## Run it locally
+## How To Run Locally
 
 1. Clone this repo
 
@@ -72,7 +79,7 @@ yarn start
 
 5. Voila! The project is running on `http://localhost:8080`
 
-## Tests
+## Running the Tests
 
 - To run the tests
 
@@ -86,7 +93,7 @@ yarn test
 yarn test:coverage
 ```
 
-## TODO
+## ToDo
 
 - Write more unit tests
 - Add E2E tests (Cypress)
