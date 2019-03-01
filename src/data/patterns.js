@@ -235,8 +235,8 @@ export default Person;`
     id: 'adapter',
     name: 'Adapter',
     type: 'structural',
-    hint:
-      'allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class',
+    hint: `allows classes with incompatible interfaces to work together by wrapping its
+      own interface around that of an already existing class`,
     codeES5: `function Soldier(lvl) {
   this.lvl = lvl;
 }
