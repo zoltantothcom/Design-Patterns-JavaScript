@@ -3,8 +3,10 @@ const patterns = [
    * Abstract
    */
   {
+    id: 'abstract_factory',
     name: 'Abstract Factory',
     type: 'creational',
+    hint: 'groups object factories that have a common theme',
     codeES5: `function droidProducer(kind) {
   if (kind === 'battle') return battleDroidPattern;
   return pilotDroidPattern;
@@ -60,8 +62,10 @@ export default droidProducer;`
    * Builder
    */
   {
+    id: 'builder',
     name: 'Builder',
     type: 'creational',
+    hint: 'constructs complex objects by separating construction and representation',
     codeES5: `function Request() {
   this.url = '';
   this.method = '';
@@ -131,8 +135,10 @@ export default RequestPattern;`
    * Factory
    */
   {
+    id: 'factory',
     name: 'Factory',
     type: 'creational',
+    hint: 'creates objects without specifying the exact class to create',
     codeES5: `function teslaPattern(type) {
   if (type === 'ModelX') return new Tesla(type, 108000, 300);
   if (type === 'ModelS') return new Tesla(type, 111000, 320);
@@ -166,8 +172,10 @@ export default TeslaPattern;`
    * Prototype
    */
   {
+    id: 'prototype',
     name: 'Prototype',
     type: 'creational',
+    hint: 'creates objects by cloning an existing object',
     codeES5: `function Sheep(name, weight) {
   this.name = name;
   this.weight = weight;
@@ -195,8 +203,10 @@ export default Sheep;`
    * Singleton
    */
   {
+    id: 'singleton',
     name: 'Singleton',
     type: 'creational',
+    hint: 'restricts object creation for a class to only one instance',
     codeES5: `function Person() {
   if (typeof Person.instance === 'object') return Person.instance;
 
@@ -222,8 +232,11 @@ export default Person;`
    * Adapter
    */
   {
+    id: 'adapter',
     name: 'Adapter',
     type: 'structural',
+    hint:
+      'allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class',
     codeES5: `function Soldier(lvl) {
   this.lvl = lvl;
 }
@@ -285,8 +298,10 @@ export { Soldier, Jedi, JediPattern };`
    * Bridge
    */
   {
+    id: 'bridge',
     name: 'Bridge',
     type: 'structural',
+    hint: 'decouples an abstraction from its implementation so that the two can vary independently',
     codeES5: `function EpsonPrinter(ink) {
   this.ink = ink();
 }
@@ -363,8 +378,10 @@ export { EpsonPrinter, HPprinter, AcrylicInk, AlcoholInk };`
    * Composite
    */
   {
+    id: 'composite',
     name: 'Composite',
     type: 'structural',
+    hint: 'composes zero-or-more similar objects so that they can be manipulated as one object',
     codeES5: `function EquipmentPattern(name) {
   this.equipments = [];
   this.name = name;
@@ -484,8 +501,10 @@ export { Cabbinet, FloppyDisk, HardDrive, Memory };`
    * Decorator
    */
   {
+    id: 'decorator',
     name: 'Decorator',
     type: 'structural',
+    hint: 'dynamically adds/overrides behaviour in an existing method of an object',
     codeES5: `function Pasta() {
   this.price = 0;
 }
@@ -568,8 +587,10 @@ export { Penne, SaucePattern, CheesePattern };`
    * Facade
    */
   {
+    id: 'facade',
     name: 'Facade',
     type: 'structural',
+    hint: 'provides a simplified interface to a large body of code',
     codeES5: `var shopPattern = {
   calc: function(price) {
     price = discount(price);
@@ -631,8 +652,10 @@ export default ShopPattern;`
    * Flyweight
    */
   {
+    id: 'flyweight',
     name: 'Flyweight',
     type: 'structural',
+    hint: 'reduces the cost of creating and manipulating a large number of similar objects',
     codeES5: `function Color(name) {
   this.name = name;
 }
@@ -673,8 +696,11 @@ export { colorCreator };`
    * Proxy
    */
   {
+    id: 'proxy',
     name: 'Proxy',
     type: 'structural',
+    hint:
+      'provides a placeholder for another object to control access, reduce cost, and reduce complexity',
     codeES5: `function Car() {
   this.drive = function() {
     return 'driving';
@@ -721,8 +747,10 @@ export { Car, CarPattern, Driver };`
    * Chain of Resp
    */
   {
-    name: 'Chain of Resp',
+    id: 'chain_of_responsibility',
+    name: 'Chain of Responsibility',
     type: 'behavioral',
+    hint: 'delegates commands to a chain of processing objects',
     codeES5: `function ShoppingCart() {
   this.products = [];
 
@@ -851,8 +879,10 @@ export { ShoppingCart, Discount };`
    * Command
    */
   {
+    id: 'command',
     name: 'Command',
     type: 'behavioral',
+    hint: 'creates objects which encapsulate actions and parameters',
     codeES5: `function Cockpit(instruction) {
   this.instruction = instruction;
 }
@@ -961,8 +991,10 @@ export { Cockpit, Turbine, OnInstruction, OffInstruction };`
    * Interpreter
    */
   {
+    id: 'interpteter',
     name: 'Interpreter',
     type: 'behavioral',
+    hint: 'implements a specialized language',
     codeES5: `function Sum(left, right) {
   this.left = left;
   this.right = right;
@@ -1028,8 +1060,11 @@ export { Num, Min, Sum };`
    * Iterator
    */
   {
+    id: 'iterator',
     name: 'Iterator',
     type: 'behavioral',
+    hint:
+      'accesses the elements of an object sequentially without exposing its underlying representation',
     codeES5: `function Pattern(el) {
   this.index = 0;
   this.elements = el;
@@ -1066,8 +1101,11 @@ export default Pattern;`
    * Mediator
    */
   {
+    id: 'mediator',
     name: 'Mediator',
     type: 'behavioral',
+    hint:
+      'allows loose coupling between classes by being the only class that has detailed knowledge of their methods',
     codeES5: `function TrafficTower() {
   this.airplanes = [];
 }
@@ -1119,8 +1157,10 @@ export { TrafficTower, Airplane };`
    * Memento
    */
   {
+    id: 'memento',
     name: 'Memento',
     type: 'behavioral',
+    hint: 'provides the ability to restore an object to its previous state',
     codeES5: `function Pattern(value) {
   this.value = value;
 }
@@ -1182,8 +1222,11 @@ export { originator, Caretaker };`
    * Observer
    */
   {
+    id: 'observer',
     name: 'Observer',
     type: 'behavioral',
+    hint:
+      'is a publish/subscribe pattern which allows a number of observer objects to see an event',
     codeES5: `function Product() {
   this.price = 0;
   this.actions = [];
@@ -1273,8 +1316,10 @@ export { Product, fees, proft };`
    * State
    */
   {
+    id: 'state',
     name: 'State',
     type: 'behavioral',
+    hint: 'allows an object to alter its behavior when its internal state changes',
     codeES5: `function Order() {
   this.pattern = new WaitingForPayment();
 
@@ -1350,8 +1395,10 @@ export default Order;`
    * Strategy
    */
   {
+    id: 'strategy',
     name: 'Strategy',
     type: 'behavioral',
+    hint: 'allows one of a family of algorithms to be selected on-the-fly at runtime',
     codeES5: `function ShoppingCart(discount) {
   this.discount = discount;
   this.amount = 0;
@@ -1411,8 +1458,11 @@ export { ShoppingCart, guestPattern, regularPattern, premiumPattern };`
    * Template
    */
   {
+    id: 'template',
     name: 'Template',
     type: 'behavioral',
+    hint:
+      'defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior',
     codeES5: `function Tax() {}
 
 Tax.prototype.calc = function(value) {
@@ -1476,8 +1526,11 @@ export { Tax1, Tax2 };`
    * Visitor
    */
   {
+    id: 'visitor',
     name: 'Visitor',
     type: 'behavioral',
+    hint:
+      'separates an algorithm from an object structure by moving the hierarchy of methods into one object',
     codeES5: `function bonusPattern(employee) {
   if (employee instanceof Manager) employee.bonus = employee.salary * 2;
   if (employee instanceof Developer) employee.bonus = employee.salary;
