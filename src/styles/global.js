@@ -9,8 +9,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
+    justify-content: start;
     max-width: 640px;
     margin: auto;
+    padding: 0 1rem;
+
+    @media (min-width: 769px) {
+      justify-content: space-between;
+      padding: 0;
+    }
   }
 `;
 

@@ -12,7 +12,7 @@ import Percentage from '../components/Percentage';
 import Button from '../components/Button';
 
 const Restart = styled.div`
-  margin: 3rem 4rem;
+  margin: 3rem 0;
   text-align: center;
 `;
 
