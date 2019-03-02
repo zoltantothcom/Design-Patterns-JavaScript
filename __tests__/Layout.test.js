@@ -64,8 +64,12 @@ describe('Layout', () => {
       expect(tree.find('Header').text()).toMatch('JavaScript Design Patterns');
     });
 
-    it('renders 2 links', () => {
-      expect(tree.find('a')).toHaveLength(2);
+    it('renders 1 link', () => {
+      expect(tree.find('header a')).toHaveLength(1);
+    });
+
+    it('renders 1 span', () => {
+      expect(tree.find('header span')).toHaveLength(1);
     });
 
     it('renders 2 toggle buttons', () => {
@@ -102,8 +106,12 @@ describe('Layout', () => {
       expect(tree.find('Header').text()).toMatch('JavaScript Design Patterns');
     });
 
-    it('renders 2 links', () => {
-      expect(tree.find('a')).toHaveLength(2);
+    it('renders 1 link', () => {
+      expect(tree.find('header a')).toHaveLength(1);
+    });
+
+    it('renders 1 span', () => {
+      expect(tree.find('header span')).toHaveLength(1);
     });
 
     it('renders 2 toggle buttons', () => {

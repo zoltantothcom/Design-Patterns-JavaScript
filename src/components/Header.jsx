@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Route, Link } from 'react-router-dom';
+import { Route, withRouter, Link } from 'react-router-dom';
 import Toggle from './Toggle';
 import Title from './Title';
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -32,31 +33,63 @@ const linkStyle = css`
   margin: 0.5rem 2rem 0 0;
   padding-bottom: 1px;
   text-decoration: none;
+`;
 
+const StyledRouterLink = styled(Link)`
+  ${linkStyle}
   &:hover {
     border-bottom: 1px solid ${props => props.theme.buttonColor};
     color: ${props => props.theme.buttonColor};
   }
 `;
 
-const StyledRouterLink = styled(Link)`
+const StyledRouterSpan = styled.span`
   ${linkStyle}
+  color: ${props => props.theme.buttonColor};
 `;
 
-const Header = () => (
-  <StyledHeader>
-    <StyledLinkContainer>
-      <StyledRouterLink to="/">Game</StyledRouterLink>
-      <StyledRouterLink to="/about">About</StyledRouterLink>
-    </StyledLinkContainer>
+const Header = props => {
+  const {
+    location: { pathname }
+  } = props;
 
-    <StyledSettingsContainer>
-      <Route exact path="/" render={() => <Toggle control="js" />} />
-      <Toggle control="mode" />
-    </StyledSettingsContainer>
+  const paths = [
+    {
+      path: '/',
+      page: 'Game'
+    },
+    {
+      path: '/about',
+      page: 'About'
+    }
+  ];
 
-    <Title />
-  </StyledHeader>
-);
+  return (
+    <StyledHeader>
+      <StyledLinkContainer>
+        {paths.map(({ path, page }) =>
+          pathname === path ? (
+            <StyledRouterSpan key={page}>{page}</StyledRouterSpan>
+          ) : (
+            <StyledRouterLink key={page} to={path}>
+              {page}
+            </StyledRouterLink>
+          )
+        )}
+      </StyledLinkContainer>
 
-export default Header;
+      <StyledSettingsContainer>
+        <Route exact path="/" render={() => <Toggle control="js" />} />
+        <Toggle control="mode" />
+      </StyledSettingsContainer>
+
+      <Title />
+    </StyledHeader>
+  );
+};
+
+Header.propTypes = {
+  location: PropTypes.object.isRequired
+};
+
+export default withRouter(Header);

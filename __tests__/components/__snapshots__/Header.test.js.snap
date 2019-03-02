@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> component renders with DARK theme 1`] = `
-.c4 {
+.c5 {
   background-color: #222222;
   border: 1px solid #484848;
   border-radius: 50%;
@@ -13,41 +13,41 @@ exports[`<Header /> component renders with DARK theme 1`] = `
   width: 2.5rem;
 }
 
-.c4:hover {
+.c5:hover {
   background-color: #484848;
 }
 
-.c4:hover svg,
-.c4:hover g {
+.c5:hover svg,
+.c5:hover g {
   fill: #ffffff;
 }
 
-.c4.active {
+.c5.active {
   background-color: #e22a23;
   border-color: #e22a23;
 }
 
-.c4.active svg,
-.c4.active g {
+.c5.active svg,
+.c5.active g {
   fill: #ffffff;
 }
 
-.c4.light {
+.c5.light {
   background-color: #ffffff;
   border-color: #c4c4c4;
 }
 
-.c4.light svg,
-.c4.light g {
+.c5.light svg,
+.c5.light g {
   fill: #707070;
 }
 
-.c4.light:hover svg,
-.c4.light:hover g {
+.c5.light:hover svg,
+.c5.light:hover g {
   fill: #707070;
 }
 
-.c5 {
+.c6 {
   font-family: 'Karla',sans-serif;
   padding: 1.5rem;
   border-radius: 4px;
@@ -84,11 +84,30 @@ exports[`<Header /> component renders with DARK theme 1`] = `
   display: inline-flex;
 }
 
-.c3 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.c3 {
+  border-bottom: 1px solid transparent;
+  color: #888888;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 0.875rem;
+  margin: 0.5rem 2rem 0 0;
+  padding-bottom: 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  border-bottom: 1px solid #f5f5f5;
+  color: #f5f5f5;
 }
 
 .c2 {
@@ -103,10 +122,6 @@ exports[`<Header /> component renders with DARK theme 1`] = `
   padding-bottom: 1px;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c2:hover {
-  border-bottom: 1px solid #f5f5f5;
   color: #f5f5f5;
 }
 
@@ -120,21 +135,19 @@ exports[`<Header /> component renders with DARK theme 1`] = `
 }
 
 <div>
-  <div
+  <header
     className="c0"
   >
     <div
       className="c1"
     >
-      <a
+      <span
         className="c2"
-        href="/"
-        onClick={[Function]}
       >
         Game
-      </a>
+      </span>
       <a
-        className="c2"
+        className="c3"
         href="/about"
         onClick={[Function]}
       >
@@ -142,10 +155,10 @@ exports[`<Header /> component renders with DARK theme 1`] = `
       </a>
     </div>
     <div
-      className="c3"
+      className="c4"
     >
       <button
-        className="c4"
+        className="c5"
         onClick={[Function]}
       >
         <svg
@@ -172,7 +185,7 @@ exports[`<Header /> component renders with DARK theme 1`] = `
         </svg>
       </button>
       <button
-        className="c4"
+        className="c5"
         onClick={[Function]}
       >
         <svg
@@ -194,16 +207,16 @@ exports[`<Header /> component renders with DARK theme 1`] = `
       </button>
     </div>
     <h1
-      className="c5"
+      className="c6"
     >
       JavaScript Design Patterns
     </h1>
-  </div>
+  </header>
 </div>
 `;
 
 exports[`<Header /> component renders with LIGHT theme 1`] = `
-.c4 {
+.c5 {
   background-color: #f4f4f4;
   border: 1px solid #e8e8e8;
   border-radius: 50%;
@@ -215,41 +228,41 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
   width: 2.5rem;
 }
 
-.c4:hover {
+.c5:hover {
   background-color: #e8e8e8;
 }
 
-.c4:hover svg,
-.c4:hover g {
+.c5:hover svg,
+.c5:hover g {
   fill: #ffffff;
 }
 
-.c4.active {
+.c5.active {
   background-color: #e22a23;
   border-color: #e22a23;
 }
 
-.c4.active svg,
-.c4.active g {
+.c5.active svg,
+.c5.active g {
   fill: #ffffff;
 }
 
-.c4.light {
+.c5.light {
   background-color: #ffffff;
   border-color: #aaaaaa;
 }
 
-.c4.light svg,
-.c4.light g {
+.c5.light svg,
+.c5.light g {
   fill: #cccccc;
 }
 
-.c4.light:hover svg,
-.c4.light:hover g {
+.c5.light:hover svg,
+.c5.light:hover g {
   fill: #cccccc;
 }
 
-.c5 {
+.c6 {
   font-family: 'Karla',sans-serif;
   padding: 1.5rem;
   border-radius: 4px;
@@ -286,11 +299,30 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
   display: inline-flex;
 }
 
-.c3 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.c3 {
+  border-bottom: 1px solid transparent;
+  color: #e22a23;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 0.875rem;
+  margin: 0.5rem 2rem 0 0;
+  padding-bottom: 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  border-bottom: 1px solid #707070;
+  color: #707070;
 }
 
 .c2 {
@@ -305,10 +337,6 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
   padding-bottom: 1px;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c2:hover {
-  border-bottom: 1px solid #707070;
   color: #707070;
 }
 
@@ -322,21 +350,19 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
 }
 
 <div>
-  <div
+  <header
     className="c0"
   >
     <div
       className="c1"
     >
-      <a
+      <span
         className="c2"
-        href="/"
-        onClick={[Function]}
       >
         Game
-      </a>
+      </span>
       <a
-        className="c2"
+        className="c3"
         href="/about"
         onClick={[Function]}
       >
@@ -344,10 +370,10 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
       </a>
     </div>
     <div
-      className="c3"
+      className="c4"
     >
       <button
-        className="c4"
+        className="c5"
         onClick={[Function]}
       >
         <svg
@@ -374,7 +400,7 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
         </svg>
       </button>
       <button
-        className="c4"
+        className="c5"
         onClick={[Function]}
       >
         <svg
@@ -396,10 +422,10 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
       </button>
     </div>
     <h1
-      className="c5"
+      className="c6"
     >
       JavaScript Design Patterns
     </h1>
-  </div>
+  </header>
 </div>
 `;
