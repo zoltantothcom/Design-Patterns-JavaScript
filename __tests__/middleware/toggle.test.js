@@ -1,5 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import { toggleMiddleware } from '../../src/middleware/toggle';
+import { TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../../src/data/constants';
 
 const next = jest.fn();
 const mockStore = configureMockStore();
@@ -12,12 +13,12 @@ describe('Toggle middleware', () => {
       js: 'es5',
       dispatch: mockDispatch
     });
-    const action = { type: 'TOGGLE', payload: 'js' };
+    const action = { type: TOGGLE, payload: 'js' };
 
     toggleMiddleware(store)(next)(action);
 
     expect(store.getActions()[0]).toEqual({
-      type: 'TOGGLE_JS',
+      type: TOGGLE_JS,
       payload: 'es6'
     });
 
@@ -31,12 +32,12 @@ describe('Toggle middleware', () => {
       js: 'es6',
       dispatch: mockDispatch
     });
-    const action = { type: 'TOGGLE', payload: 'js' };
+    const action = { type: TOGGLE, payload: 'js' };
 
     toggleMiddleware(store)(next)(action);
 
     expect(store.getActions()[0]).toEqual({
-      type: 'TOGGLE_JS',
+      type: TOGGLE_JS,
       payload: 'es5'
     });
 
@@ -50,12 +51,12 @@ describe('Toggle middleware', () => {
       mode: 'dark',
       dispatch: mockDispatch
     });
-    const action = { type: 'TOGGLE', payload: 'mode' };
+    const action = { type: TOGGLE, payload: 'mode' };
 
     toggleMiddleware(store)(next)(action);
 
     expect(store.getActions()[0]).toEqual({
-      type: 'TOGGLE_MODE',
+      type: TOGGLE_MODE,
       payload: 'light'
     });
   });
@@ -67,12 +68,12 @@ describe('Toggle middleware', () => {
       mode: 'light',
       dispatch: mockDispatch
     });
-    const action = { type: 'TOGGLE', payload: 'mode' };
+    const action = { type: TOGGLE, payload: 'mode' };
 
     toggleMiddleware(store)(next)(action);
 
     expect(store.getActions()[0]).toEqual({
-      type: 'TOGGLE_MODE',
+      type: TOGGLE_MODE,
       payload: 'dark'
     });
   });

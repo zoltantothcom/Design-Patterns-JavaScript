@@ -1,7 +1,8 @@
+import { TOGGLE } from '../data/constants';
 import { toggleJS, toggleMode } from '../actions/toggle';
 
 export const toggleMiddleware = ({ dispatch, getState }) => next => action => {
-  if (action.type === 'TOGGLE') {
+  if (action.type === TOGGLE) {
     switch (action.payload) {
     case 'js':
       const js = getState()['js'] === 'es5' ? 'es6' : 'es5';

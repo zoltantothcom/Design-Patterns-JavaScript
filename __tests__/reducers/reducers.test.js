@@ -1,4 +1,5 @@
 import reducer from '../../src/reducers';
+import { SUBMIT, TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../../src/data/constants';
 
 const answers = [
   {
@@ -41,7 +42,7 @@ describe('Reducers', () => {
 
   it('should return unchanged state on toggle', () => {
     const action = {
-      type: 'TOGGLE',
+      type: TOGGLE,
       payload: null
     };
 
@@ -52,7 +53,7 @@ describe('Reducers', () => {
 
   it('should toggle JS', () => {
     const action = {
-      type: 'TOGGLE_JS',
+      type: TOGGLE_JS,
       payload: 'es6'
     };
 
@@ -64,7 +65,7 @@ describe('Reducers', () => {
 
   it('should toggle MODE', () => {
     const action = {
-      type: 'TOGGLE_MODE',
+      type: TOGGLE_MODE,
       payload: 'light'
     };
 
@@ -76,7 +77,7 @@ describe('Reducers', () => {
 
   xit('should handle SUBMIT', () => {
     const action = {
-      type: 'SUBMIT',
+      type: SUBMIT,
       payload: {
         currentIndex: 0,
         remainingPatterns: answers[1],
