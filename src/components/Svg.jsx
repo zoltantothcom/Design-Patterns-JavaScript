@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getMode } from '../selectors';
-import { JS, SUN_OUTLINED, SUN_FILLED } from '../data/icons';
+import { JS, SUN_OUTLINED, SUN_FILLED } from '../static/icons';
 
 const SVG = ({ control, mode }) => {
   let icon = JS;

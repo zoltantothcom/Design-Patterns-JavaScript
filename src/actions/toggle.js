@@ -1,4 +1,4 @@
-import { TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../data/constants';
+import { TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../static/constants/actions';
 
 export const toggle = payload => ({
   type: TOGGLE,

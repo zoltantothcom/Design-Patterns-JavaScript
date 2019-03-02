@@ -8,7 +8,7 @@ import ButtonContainer, {
   ButtonContainer as NotConnectedButtonContainer
 } from '../../src/components/ButtonContainer';
 import { answers } from '../../src/store';
-import { SUBMIT } from '../../src/data/constants';
+import { SUBMIT } from '../../src/static/constants/actions';
 
 describe('<ButtonContainer /> connected', () => {
   const mockStore = configureMockStore();

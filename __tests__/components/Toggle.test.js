@@ -8,7 +8,7 @@ import { themeLight } from '../../src/styles/themes/theme.light';
 import { themeDark } from '../../src/styles/themes/theme.dark';
 import 'jest-styled-components';
 import Toggle from '../../src/components/Toggle';
-import { TOGGLE } from '../../src/data/constants';
+import { TOGGLE } from '../../src/static/constants/actions';
 
 const mockClick = jest.fn();
 const mockStore = configureMockStore();

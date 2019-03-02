@@ -1,4 +1,4 @@
-import { TOGGLE } from '../data/constants';
+import { TOGGLE } from '../static/constants/actions';
 import { toggleJS, toggleMode } from '../actions/toggle';
 
 export const toggleMiddleware = ({ dispatch, getState }) => next => action => {

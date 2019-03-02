@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import { submitMiddleware } from '../../src/middleware/submit';
-import { SUBMIT } from '../../src/data/constants';
+import { SUBMIT } from '../../src/static/constants/actions';
 
 const next = jest.fn();
 const mockStore = configureMockStore();

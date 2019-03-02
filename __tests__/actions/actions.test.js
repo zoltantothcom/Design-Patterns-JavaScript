@@ -1,7 +1,13 @@
 import { restart } from '../../src/actions/restart';
 import { submitAnswer } from '../../src/actions/submitAnswer';
 import { toggle, toggleJS, toggleMode } from '../../src/actions/toggle';
-import { SUBMIT, TOGGLE, TOGGLE_JS, TOGGLE_MODE, RESTART } from '../../src/data/constants';
+import {
+  SUBMIT,
+  TOGGLE,
+  TOGGLE_JS,
+  TOGGLE_MODE,
+  RESTART
+} from '../../src/static/constants/actions';
 
 describe('Action Creators', () => {
   it('should dispatch RESTART action', () => {

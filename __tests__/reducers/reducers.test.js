@@ -1,5 +1,5 @@
 import reducer from '../../src/reducers';
-import { SUBMIT, TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../../src/data/constants';
+import { SUBMIT, TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../../src/static/constants/actions';
 
 const answers = [
   {

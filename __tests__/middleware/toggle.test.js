@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import { toggleMiddleware } from '../../src/middleware/toggle';
-import { TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../../src/data/constants';
+import { TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../../src/static/constants/actions';
 
 const next = jest.fn();
 const mockStore = configureMockStore();

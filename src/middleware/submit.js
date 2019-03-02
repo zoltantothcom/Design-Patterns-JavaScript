@@ -1,4 +1,4 @@
-import { SUBMIT } from '../data/constants';
+import { SUBMIT } from '../static/constants/actions';
 import { randomFromRange } from '../helpers/randomFromRange';
 
 export const submitMiddleware = ({ getState }) => next => action => {

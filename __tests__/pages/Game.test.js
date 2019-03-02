@@ -9,7 +9,7 @@ import { themeDark } from '../../src/styles/themes/theme.dark';
 import styleLight from '../../src/styles/hljs/hljs.light';
 import styleDark from '../../src/styles/hljs/hljs.dark';
 import Game from '../../src/pages/Game';
-import { RESTART } from '../../src/data/constants';
+import { RESTART } from '../../src/static/constants/actions';
 
 const patterns = [
   {
