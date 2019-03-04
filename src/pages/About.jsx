@@ -24,8 +24,8 @@ const About = () => (
   <StyledAbout>
     <Header>The Game</Header>
     <p>
-      JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone
-      else) or simply for fun. Enjoy!
+      Design Patterns - get familiar with the design patterns implemented in JavaScript, test
+      yourself (or someone else) or simply for fun. Enjoy!
     </p>
 
     <Header>References</Header>

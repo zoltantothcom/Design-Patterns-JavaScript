@@ -67,8 +67,8 @@ const Game = ({ current, answers, style, onRestart }) => {
             </TwitterButton>
 
             <GitHubButton
-              href="https://github.com/zoltantothcom/JavaScript-Design-Patterns"
-              aria-label="Star zoltantothcom/JavaScript-Design-Patterns on GitHub"
+              href="https://github.com/zoltantothcom/Design-Patterns-JavaScript"
+              aria-label="Star zoltantothcom/Design-Patterns-JavaScript on GitHub"
               target="_blank"
             >
               Star on GitHub

@@ -29,7 +29,7 @@ exports[`About page renders with a DARK theme 1`] = `
     The Game
   </h3>
   <p>
-    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
+    Design Patterns - get familiar with the design patterns implemented in JavaScript, test yourself (or someone else) or simply for fun. Enjoy!
   </p>
   <h3
     className="c1"
@@ -98,7 +98,7 @@ exports[`About page renders with a LIGHT theme 1`] = `
     The Game
   </h3>
   <p>
-    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
+    Design Patterns - get familiar with the design patterns implemented in JavaScript, test yourself (or someone else) or simply for fun. Enjoy!
   </p>
   <h3
     className="c1"
