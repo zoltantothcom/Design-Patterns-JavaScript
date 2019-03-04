@@ -2,21 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledAbout = styled.div`
-  color: ${props => props.theme.buttonBorderHover};
+  color: ${props => props.theme.text};
 
   a {
-    border-bottom: 1px solid transparent;
-    color: ${props => props.theme.orange};
+    border-bottom: 1px solid ${props => props.theme.CRIMSON};
+    color: ${props => props.theme.CRIMSON};
     text-decoration: none;
 
     &:hover {
-      border-bottom: 1px solid ${props => props.theme.orange};
+      border-bottom: 1px solid transparent;
     }
   }
 `;
 
 const Header = styled.h3`
-  color: ${props => props.theme.buttonColorHover};
+  color: ${props => props.theme.header};
   margin-top: 2rem;
 `;
 

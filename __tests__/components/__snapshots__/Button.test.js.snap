@@ -3,7 +3,7 @@
 exports[`<Button /> component renders with a DARK theme 1`] = `
 .c0 {
   background-color: #484848;
-  border: 1px solid #707070;
+  border: 1px solid #484848;
   border-radius: 4px;
   cursor: pointer;
   font: 400 1rem 'Karla','sans-serif';
@@ -15,16 +15,16 @@ exports[`<Button /> component renders with a DARK theme 1`] = `
 }
 
 .c0 span {
-  color: #f5f5f5;
+  color: #F5F5F5;
 }
 
 .c0:hover {
   background-color: #888888;
-  border-color: #c4c4c4;
+  border-color: #888888;
 }
 
 .c0:hover span {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 <button
@@ -40,8 +40,8 @@ exports[`<Button /> component renders with a DARK theme 1`] = `
 
 exports[`<Button /> component renders with a LIGHT theme 1`] = `
 .c0 {
-  background-color: #e8e8e8;
-  border: 1px solid #cccccc;
+  background-color: #F2E8F2;
+  border: 1px solid #EDB8ED;
   border-radius: 4px;
   cursor: pointer;
   font: 400 1rem 'Karla','sans-serif';
@@ -53,16 +53,16 @@ exports[`<Button /> component renders with a LIGHT theme 1`] = `
 }
 
 .c0 span {
-  color: #707070;
+  color: #6F256F;
 }
 
 .c0:hover {
-  background-color: #e22a23;
-  border-color: #aaaaaa;
+  background-color: #6F256F;
+  border-color: #6F256F;
 }
 
 .c0:hover span {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 <button

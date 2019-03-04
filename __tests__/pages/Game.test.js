@@ -9,6 +9,7 @@ import { themeDark } from '../../src/styles/themes/theme.dark';
 import styleLight from '../../src/styles/hljs/hljs.light';
 import styleDark from '../../src/styles/hljs/hljs.dark';
 import Game from '../../src/pages/Game';
+import { RESTART } from '../../src/static/constants/actions';
 
 const patterns = [
   {
@@ -179,6 +180,6 @@ describe('Game page - RESULTS', () => {
   it('reacts to button click', () => {
     tree.find('button').simulate('click');
     const actions = store.getActions();
-    expect(actions).toMatchObject([{ type: 'RESTART' }]);
+    expect(actions).toMatchObject([{ type: RESTART }]);
   });
 });

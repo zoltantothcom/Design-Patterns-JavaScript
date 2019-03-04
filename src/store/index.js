@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 const uuid = require('uuid/v4');
 import reducer from '../reducers/index';
-import patterns from '../data/patterns';
+import patterns from '../static/patterns';
 import middleware from '../middleware';
 
 export const answers = patterns.map(pattern => ({

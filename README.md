@@ -11,7 +11,6 @@ JavaScript Design Patterns - a game to get familiar with the design patterns, te
 - [About](#about)
 - [How To Run Locally](#how-to-run-locally)
 - [Running the Tests](#running-the-tests)
-- [ToDo](#todo)
 - [Credits](#credits)
 - [License](#license)
 
@@ -92,12 +91,6 @@ yarn test
 ```
 yarn test:coverage
 ```
-
-## ToDo
-
-- Write more unit tests
-- Add E2E tests (Cypress)
-- Add a &laquo;_Reference_&raquo; section where the patterns can be viewed
 
 ## Credits
 

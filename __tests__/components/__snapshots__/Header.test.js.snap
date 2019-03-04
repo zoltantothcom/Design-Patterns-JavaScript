@@ -2,10 +2,9 @@
 
 exports[`<Header /> component renders with DARK theme 1`] = `
 .c5 {
-  background-color: #222222;
-  border: 1px solid #484848;
+  background-color: #484848;
+  border: 1px solid #707070;
   border-radius: 50%;
-  color: #888888;
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
@@ -13,38 +12,28 @@ exports[`<Header /> component renders with DARK theme 1`] = `
   width: 2.5rem;
 }
 
+.c5 svg,
+.c5 g {
+  fill: #C8C8C8;
+}
+
 .c5:hover {
-  background-color: #484848;
+  background-color: #707070;
 }
 
 .c5:hover svg,
 .c5:hover g {
-  fill: #ffffff;
+  fill: #F5F5F5;
 }
 
 .c5.active {
-  background-color: #e22a23;
-  border-color: #e22a23;
+  background-color: #C8C8C8;
+  border-color: #C8C8C8;
 }
 
 .c5.active svg,
 .c5.active g {
-  fill: #ffffff;
-}
-
-.c5.light {
-  background-color: #ffffff;
-  border-color: #c4c4c4;
-}
-
-.c5.light svg,
-.c5.light g {
-  fill: #707070;
-}
-
-.c5.light:hover svg,
-.c5.light:hover g {
-  fill: #707070;
+  fill: #484848;
 }
 
 .c6 {
@@ -53,6 +42,7 @@ exports[`<Header /> component renders with DARK theme 1`] = `
   border-radius: 4px;
   background: #282828;
   font-size: 1.75rem;
+  color: #E22A23;
   margin: 1rem 0 0;
   text-align: center;
   width: 100%;
@@ -92,8 +82,8 @@ exports[`<Header /> component renders with DARK theme 1`] = `
 }
 
 .c3 {
-  border-bottom: 1px solid transparent;
-  color: #888888;
+  border-bottom: 1px solid #C8C8C8;
+  color: #C8C8C8;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -106,13 +96,12 @@ exports[`<Header /> component renders with DARK theme 1`] = `
 }
 
 .c3:hover {
-  border-bottom: 1px solid #f5f5f5;
-  color: #f5f5f5;
+  border-bottom: none;
 }
 
 .c2 {
-  border-bottom: 1px solid transparent;
-  color: #888888;
+  border-bottom: 1px solid #C8C8C8;
+  color: #C8C8C8;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -122,7 +111,8 @@ exports[`<Header /> component renders with DARK theme 1`] = `
   padding-bottom: 1px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #f5f5f5;
+  border-bottom: none;
+  color: #FFFFFF;
 }
 
 @media (min-width:769px) {
@@ -162,7 +152,6 @@ exports[`<Header /> component renders with DARK theme 1`] = `
         onClick={[Function]}
       >
         <svg
-          fill="#707070"
           height="100%"
           viewBox="0 0 24 23"
           width="100%"
@@ -189,7 +178,6 @@ exports[`<Header /> component renders with DARK theme 1`] = `
         onClick={[Function]}
       >
         <svg
-          fill="#707070"
           height="100%"
           viewBox="0 0 24 23"
           width="100%"
@@ -217,10 +205,9 @@ exports[`<Header /> component renders with DARK theme 1`] = `
 
 exports[`<Header /> component renders with LIGHT theme 1`] = `
 .c5 {
-  background-color: #f4f4f4;
-  border: 1px solid #e8e8e8;
+  background-color: #F2E8F2;
+  border: 1px solid #EDB8ED;
   border-radius: 50%;
-  color: #e22a23;
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
@@ -228,46 +215,37 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
   width: 2.5rem;
 }
 
+.c5 svg,
+.c5 g {
+  fill: #A568A5;
+}
+
 .c5:hover {
-  background-color: #e8e8e8;
+  background-color: #EDB8ED;
 }
 
 .c5:hover svg,
 .c5:hover g {
-  fill: #ffffff;
+  fill: #6F256F;
 }
 
 .c5.active {
-  background-color: #e22a23;
-  border-color: #e22a23;
+  background-color: #A568A5;
+  border-color: #6F256F;
 }
 
 .c5.active svg,
 .c5.active g {
-  fill: #ffffff;
-}
-
-.c5.light {
-  background-color: #ffffff;
-  border-color: #aaaaaa;
-}
-
-.c5.light svg,
-.c5.light g {
-  fill: #cccccc;
-}
-
-.c5.light:hover svg,
-.c5.light:hover g {
-  fill: #cccccc;
+  fill: #F2E8F2;
 }
 
 .c6 {
   font-family: 'Karla',sans-serif;
   padding: 1.5rem;
   border-radius: 4px;
-  background: #ededed;
+  background: #F2E8F2;
   font-size: 1.75rem;
+  color: #6F256F;
   margin: 1rem 0 0;
   text-align: center;
   width: 100%;
@@ -307,8 +285,8 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
 }
 
 .c3 {
-  border-bottom: 1px solid transparent;
-  color: #e22a23;
+  border-bottom: 1px solid #6F256F;
+  color: #6F256F;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -321,13 +299,12 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
 }
 
 .c3:hover {
-  border-bottom: 1px solid #707070;
-  color: #707070;
+  border-bottom: none;
 }
 
 .c2 {
-  border-bottom: 1px solid transparent;
-  color: #e22a23;
+  border-bottom: 1px solid #6F256F;
+  color: #6F256F;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -337,7 +314,8 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
   padding-bottom: 1px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #707070;
+  border-bottom: none;
+  color: #EDB8ED;
 }
 
 @media (min-width:769px) {
@@ -377,7 +355,6 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
         onClick={[Function]}
       >
         <svg
-          fill="#707070"
           height="100%"
           viewBox="0 0 24 23"
           width="100%"
@@ -404,7 +381,6 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
         onClick={[Function]}
       >
         <svg
-          fill="#707070"
           height="100%"
           viewBox="0 0 24 23"
           width="100%"

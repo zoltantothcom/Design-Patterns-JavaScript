@@ -26,7 +26,7 @@ exports[`<ProgressBar /> component matches the snapshot 1`] = `
 }
 
 .c2 {
-  background: #FF0000;
+  background: #E22A23;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

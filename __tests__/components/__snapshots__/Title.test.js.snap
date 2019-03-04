@@ -7,6 +7,7 @@ exports[`<Title /> component renders with a DARK theme 1`] = `
   border-radius: 4px;
   background: #282828;
   font-size: 1.75rem;
+  color: #E22A23;
   margin: 1rem 0 0;
   text-align: center;
   width: 100%;
@@ -24,8 +25,9 @@ exports[`<Title /> component renders with a LIGHT theme 1`] = `
   font-family: 'Karla',sans-serif;
   padding: 1.5rem;
   border-radius: 4px;
-  background: #ededed;
+  background: #F2E8F2;
   font-size: 1.75rem;
+  color: #6F256F;
   margin: 1rem 0 0;
   text-align: center;
   width: 100%;

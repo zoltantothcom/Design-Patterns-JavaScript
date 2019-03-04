@@ -958,7 +958,7 @@ exports[`Game page - RESULTS renders a <Restart /> component 1`] = `null`;
 
 exports[`Game page - RESULTS renders a <Result /> component 1`] = `
 .c0 {
-  color: #aaaaaa;
+  color: #0A000A;
   margin: 3rem 0;
   text-align: center;
 }

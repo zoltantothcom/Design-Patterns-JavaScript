@@ -8,6 +8,7 @@ import { themeLight } from '../../src/styles/themes/theme.light';
 import { themeDark } from '../../src/styles/themes/theme.dark';
 import 'jest-styled-components';
 import Toggle from '../../src/components/Toggle';
+import { TOGGLE } from '../../src/static/constants/actions';
 
 const mockClick = jest.fn();
 const mockStore = configureMockStore();
@@ -90,7 +91,7 @@ describe('<Toggle> actions', () => {
     toggle.find('button').simulate('click');
 
     const actions = store.getActions();
-    expect(actions).toMatchObject([{ type: 'TOGGLE', payload: 'mode' }]);
+    expect(actions).toMatchObject([{ type: TOGGLE, payload: 'mode' }]);
   });
 
   it('toggles MODE to DARK', () => {
@@ -111,7 +112,7 @@ describe('<Toggle> actions', () => {
     toggle.find('button').simulate('click');
 
     const actions = store.getActions();
-    expect(actions).toMatchObject([{ type: 'TOGGLE', payload: 'mode' }]);
+    expect(actions).toMatchObject([{ type: TOGGLE, payload: 'mode' }]);
   });
 
   it('toggles JS to ES6', () => {
@@ -132,7 +133,7 @@ describe('<Toggle> actions', () => {
     toggle.find('button').simulate('click');
 
     const actions = store.getActions();
-    expect(actions).toMatchObject([{ type: 'TOGGLE', payload: 'js' }]);
+    expect(actions).toMatchObject([{ type: TOGGLE, payload: 'js' }]);
   });
 
   it('toggles JS to ES5', () => {
@@ -153,6 +154,6 @@ describe('<Toggle> actions', () => {
     toggle.find('button').simulate('click');
 
     const actions = store.getActions();
-    expect(actions).toMatchObject([{ type: 'TOGGLE', payload: 'js' }]);
+    expect(actions).toMatchObject([{ type: TOGGLE, payload: 'js' }]);
   });
 });
