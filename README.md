@@ -1,6 +1,6 @@
 # Design Patterns _(implemented in JavaScript)_
 
-[![Build Status](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript.svg?branch=master)](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/Design-Patterns-JavaScript/badge.svg)](https://coveralls.io/github/zoltantothcom/Design-Patterns-JavaScript) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f4e97b771504e23b0b414d2cbc69506)](https://www.codacy.com/app/zoltantothcom/Design-Patterns-JavaScript?utm_source=github.com&utm_medium=referral&utm_content=zoltantothcom/Design-Patterns-JavaScript&utm_campaign=Badge_Grade) [![Greenkeeper badge](https://badges.greenkeeper.io/zoltantothcom/Design-Patterns-JavaScript.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript.svg?branch=master)](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/Design-Patterns-JavaScript/badge.svg)](https://coveralls.io/github/zoltantothcom/Design-Patterns-JavaScript) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f4e97b771504e23b0b414d2cbc69506)](https://www.codacy.com/app/zoltantothcom/Design-Patterns-JavaScript) [![Greenkeeper badge](https://badges.greenkeeper.io/zoltantothcom/Design-Patterns-JavaScript.svg)](https://greenkeeper.io/)
 
 Design Patterns - a game to get familiar with the design patterns implemented in JavaScript, test your knowledge or simply for fun.
 
