@@ -1,17 +1,17 @@
-# JavaScript Design Patterns
+# Design Patterns _(implemented in JavaScript)_
 
-[![Build Status](https://travis-ci.org/zoltantothcom/JavaScript-Design-Patterns.svg?branch=master)](https://travis-ci.org/zoltantothcom/JavaScript-Design-Patterns) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/JavaScript-Design-Patterns/badge.svg)](https://coveralls.io/github/zoltantothcom/JavaScript-Design-Patterns) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f4e97b771504e23b0b414d2cbc69506)](https://www.codacy.com/app/zoltantothcom/JavaScript-Design-Patterns?utm_source=github.com&utm_medium=referral&utm_content=zoltantothcom/JavaScript-Design-Patterns&utm_campaign=Badge_Grade) [![Greenkeeper badge](https://badges.greenkeeper.io/zoltantothcom/JavaScript-Design-Patterns.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript.svg?branch=master)](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/Design-Patterns-JavaScript/badge.svg)](https://coveralls.io/github/zoltantothcom/Design-Patterns-JavaScript) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f4e97b771504e23b0b414d2cbc69506)](https://www.codacy.com/app/zoltantothcom/Design-Patterns-JavaScript?utm_source=github.com&utm_medium=referral&utm_content=zoltantothcom/Design-Patterns-JavaScript&utm_campaign=Badge_Grade) [![Greenkeeper badge](https://badges.greenkeeper.io/zoltantothcom/Design-Patterns-JavaScript.svg)](https://greenkeeper.io/)
 
-JavaScript Design Patterns - a game to get familiar with the design patterns, test your knowledge or simply for fun.
+Design Patterns - a game to get familiar with the design patterns implemented in JavaScript, test your knowledge or simply for fun.
 
-### :zap: [PLAY HERE](http://javascript-design-patterns.surge.sh/)
+### :zap: [PLAY HERE](http://design-patterns-javascript.surge.sh/)
 
-<img src="https://raw.githubusercontent.com/zoltantothcom/JavaScript-Design-Patterns/master/static/screenshot.png?sanitize=true&raw=true" alt="JavaScript Design Patterns - game results screenshot" />
+<img src="https://raw.githubusercontent.com/zoltantothcom/Design-Patterns-JavaScript/master/static/screenshot.png?sanitize=true&raw=true" alt="Design Patterns - game results screenshot" />
 
 - [About](#about)
 - [How To Run Locally](#how-to-run-locally)
 - [Running the Tests](#running-the-tests)
-- [Credits](#credits)
+- [Inspiration and Credits](#inspiration-and-credits)
 - [License](#license)
 
 ## About
@@ -55,13 +55,13 @@ This is a small game to get you familiar with all the 23 Gang of Four design pat
 1. Clone this repo
 
 ```
-git clone git@github.com:zoltantothcom/JavaScript-Design-Patterns.git
+git clone git@github.com:zoltantothcom/Design-Patterns-JavaScript.git
 ```
 
 2. Switch to project folder
 
 ```
-cd JavaScript-Design-Patterns
+cd Design-Patterns-JavaScript
 ```
 
 3. Install all the dependencies
@@ -92,7 +92,7 @@ yarn test
 yarn test:coverage
 ```
 
-## Credits
+## Inspiration and Credits
 
 - Inpired by the very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
 

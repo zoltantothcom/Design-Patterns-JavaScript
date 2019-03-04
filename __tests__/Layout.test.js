@@ -61,7 +61,7 @@ describe('Layout', () => {
     });
 
     it('has the correct title', () => {
-      expect(tree.find('Header').text()).toMatch('JavaScript Design Patterns');
+      expect(tree.find('header h1').text()).toMatch('Design Patterns');
     });
 
     it('renders 1 link', () => {
@@ -103,7 +103,7 @@ describe('Layout', () => {
     });
 
     it('has the correct title', () => {
-      expect(tree.find('Header').text()).toMatch('JavaScript Design Patterns');
+      expect(tree.find('header h1').text()).toMatch('Design Patterns');
     });
 
     it('renders 1 link', () => {

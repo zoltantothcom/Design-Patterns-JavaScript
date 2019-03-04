@@ -2,40 +2,78 @@
 
 exports[`<Title /> component renders with a DARK theme 1`] = `
 .c0 {
-  font-family: 'Karla',sans-serif;
-  padding: 1.5rem;
+  padding: 0.75rem 0 1rem;
   border-radius: 4px;
   background: #282828;
-  font-size: 1.75rem;
-  color: #E22A23;
   margin: 1rem 0 0;
   text-align: center;
   width: 100%;
 }
 
-<h1
+.c1 {
+  font-family: 'Karla',sans-serif;
+  font-size: 1.75rem;
+  color: #E22A23;
+  margin: 0;
+}
+
+.c2 {
+  font: 400 0.925rem 'Karla',sans-serif;
+  color: #C8C8C8;
+  margin: 0.75rem 0 0;
+}
+
+<div
   className="c0"
 >
-  JavaScript Design Patterns
-</h1>
+  <h1
+    className="c1"
+  >
+    Design Patterns
+  </h1>
+  <h2
+    className="c2"
+  >
+    implemented in JavaScript
+  </h2>
+</div>
 `;
 
 exports[`<Title /> component renders with a LIGHT theme 1`] = `
 .c0 {
-  font-family: 'Karla',sans-serif;
-  padding: 1.5rem;
+  padding: 0.75rem 0 1rem;
   border-radius: 4px;
   background: #F2E8F2;
-  font-size: 1.75rem;
-  color: #6F256F;
   margin: 1rem 0 0;
   text-align: center;
   width: 100%;
 }
 
-<h1
+.c1 {
+  font-family: 'Karla',sans-serif;
+  font-size: 1.75rem;
+  color: #6F256F;
+  margin: 0;
+}
+
+.c2 {
+  font: 400 0.925rem 'Karla',sans-serif;
+  color: #6F256F;
+  margin: 0.75rem 0 0;
+}
+
+<div
   className="c0"
 >
-  JavaScript Design Patterns
-</h1>
+  <h1
+    className="c1"
+  >
+    Design Patterns
+  </h1>
+  <h2
+    className="c2"
+  >
+    implemented in JavaScript
+  </h2>
+</div>
 `;
