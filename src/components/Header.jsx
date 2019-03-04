@@ -26,8 +26,8 @@ const StyledSettingsContainer = styled.div`
 `;
 
 const linkStyle = css`
-  border-bottom: 1px solid transparent;
-  color: ${props => props.theme.buttonBackgroundHover};
+  border-bottom: 1px solid ${props => props.theme.link};
+  color: ${props => props.theme.link};
   display: inline-flex;
   font-size: 0.875rem;
   margin: 0.5rem 2rem 0 0;
@@ -38,14 +38,14 @@ const linkStyle = css`
 const StyledRouterLink = styled(Link)`
   ${linkStyle}
   &:hover {
-    border-bottom: 1px solid ${props => props.theme.buttonColor};
-    color: ${props => props.theme.buttonColor};
+    border-bottom: none;
   }
 `;
 
 const StyledRouterSpan = styled.span`
   ${linkStyle}
-  color: ${props => props.theme.buttonColor};
+  border-bottom: none;
+  color: ${props => props.theme.active};
 `;
 
 const Header = props => {

@@ -16,7 +16,6 @@ const SVG = ({ control, mode }) => {
       height="100%"
       width="100%"
       viewBox="0 0 24 23"
-      fill="#707070"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >

@@ -5,9 +5,9 @@ const StyledTitle = styled.h1`
   font-family: 'Karla', sans-serif;
   padding: 1.5rem;
   border-radius: 4px;
-  background: ${props => props.theme.headerBackground};
+  background: ${props => props.theme.titleBackground};
   font-size: 1.75rem;
-  color: ${props => props.theme.orange};
+  color: ${props => props.theme.title};
   margin: 1rem 0 0;
   text-align: center;
   width: 100%;

@@ -8,49 +8,36 @@ import { getJS, getMode } from '../selectors';
 import SVG from './Svg';
 
 const StyledToggle = styled.button`
-  background-color: ${props => props.theme.background};
-  border: 1px solid ${props => props.theme.buttonBackground};
+  background-color: ${props => props.theme.toggleBackground};
+  border: 1px solid ${props => props.theme.toggleBorder};
   border-radius: 50%;
-  color: ${props => props.theme.buttonBackgroundHover};
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
   outline: 0;
   width: 2.5rem;
 
+  & svg,
+  & g {
+    fill: ${props => props.theme.toggleFill};
+  }
+
   &:hover {
-    background-color: ${props => props.theme.buttonBackground};
+    background-color: ${props => props.theme.toggleBackgroundHover};
 
     & svg,
     & g {
-      fill: ${props => props.theme.buttonColorHover};
+      fill: ${props => props.theme.toggleFillHover};
     }
   }
 
   &.active {
-    background-color: #e22a23;
-    border-color: #e22a23;
+    background-color: ${props => props.theme.toggleActiveBackground};
+    border-color: ${props => props.theme.toggleActiveBorder};
 
     & svg,
     & g {
-      fill: ${props => props.theme.buttonColorHover};
-    }
-  }
-
-  &.light {
-    background-color: ${props => props.theme.buttonColorHover};
-    border-color: ${props => props.theme.buttonBorderHover};
-
-    & svg,
-    & g {
-      fill: ${props => props.theme.buttonBorder};
-    }
-
-    &:hover {
-      & svg,
-      & g {
-        fill: ${props => props.theme.buttonBorder};
-      }
+      fill: ${props => props.theme.toggleActiveFill};
     }
   }
 `;
@@ -58,14 +45,12 @@ const StyledToggle = styled.button`
 export const Toggle = props => {
   const { onToggle, control, js, mode } = props;
 
-  let isActive, isLightMode;
+  let isActive;
   if (control === 'js' && js === 'es6') isActive = 'active';
   if (control === 'mode' && mode === 'light') isActive = 'active';
 
-  if (!isActive && mode === 'light') isLightMode = 'light';
-
   return (
-    <StyledToggle onClick={() => onToggle(control)} className={classnames(isActive, isLightMode)}>
+    <StyledToggle onClick={() => onToggle(control)} className={classnames(isActive)}>
       <SVG control={control} />
     </StyledToggle>
   );

@@ -3,7 +3,6 @@
 exports[`<SVG /> component renders JS control 1`] = `
 <div>
   <svg
-    fill="#707070"
     height="100%"
     viewBox="0 0 24 23"
     width="100%"
@@ -30,7 +29,6 @@ exports[`<SVG /> component renders JS control 1`] = `
 exports[`<SVG /> component renders MODE control in DARK mode  1`] = `
 <div>
   <svg
-    fill="#707070"
     height="100%"
     viewBox="0 0 24 23"
     width="100%"
@@ -51,7 +49,6 @@ exports[`<SVG /> component renders MODE control in DARK mode  1`] = `
 exports[`<SVG /> component renders MODE control in LIGHT mode  1`] = `
 <div>
   <svg
-    fill="#707070"
     height="100%"
     viewBox="0 0 24 23"
     width="100%"
