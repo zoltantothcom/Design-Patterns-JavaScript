@@ -1,5 +1,6 @@
 import React from 'react';
 import Provider from './Provider.js';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import Button from '../src/components/Button';
@@ -12,5 +13,5 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
 
   .add('default', () => (
-    <Button label={text('label', 'Hello Button')} id="abc" onClick={() => console.log('click')} />
+    <Button label={text('label', 'Hello Button')} id="abc" onClick={action('button-click')} />
   ));
