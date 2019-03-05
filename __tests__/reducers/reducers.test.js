@@ -1,26 +1,36 @@
 import reducer from '../../src/reducers';
-import { SUBMIT, TOGGLE, TOGGLE_JS, TOGGLE_MODE } from '../../src/static/constants/actions';
+import {
+  SUBMIT,
+  TOGGLE,
+  TOGGLE_JS,
+  TOGGLE_MODE,
+  RESTART
+} from '../../src/static/constants/actions';
 
 const answers = [
   {
     name: 'Template',
     type: 'behavioral',
-    codeES5: 'Code ES5',
-    codeES6: 'Code ES6',
-    answered: false,
-    correct: null,
-    answerId: null,
+    answered: true,
+    correct: true,
+    answerId: 'ba2ca6b0-0c86-4573-baf0-60f33ce6e947',
     uuid: 'ba2ca6b0-0c86-4573-baf0-60f33ce6e947'
   },
   {
     name: 'Visitor',
     type: 'behavioral',
-    codeES5: 'Code ES5',
-    codeES6: 'Code ES6',
     answered: false,
     correct: null,
     answerId: null,
     uuid: 'eb9427c5-0167-4d65-a99b-a5ffadf5fd46'
+  },
+  {
+    name: 'Singleton',
+    type: 'creational',
+    answered: false,
+    correct: null,
+    answerId: null,
+    uuid: 'slearknbqarlnbqasOLdnv'
   }
 ];
 
@@ -75,12 +85,12 @@ describe('Reducers', () => {
     });
   });
 
-  xit('should handle SUBMIT', () => {
+  it('should handle SUBMIT', () => {
     const action = {
       type: SUBMIT,
       payload: {
-        currentIndex: 0,
-        remainingPatterns: answers[1],
+        currentIndex: 1,
+        remainingPatterns: [answers[1], answers[2]],
         recentlyAnswered: answers[0]
       }
     };
@@ -88,9 +98,44 @@ describe('Reducers', () => {
     expect(reducer(initialState, action)).toMatchObject({
       ...initialState,
       progress: {
-        remaining: [answers[1]],
+        remaining: [answers[1], answers[2]],
         answers: [answers[0]],
-        current: answers[1]
+        current: answers[2]
+      }
+    });
+  });
+
+  it('should handle the _last_ SUBMIT', () => {
+    const action = {
+      type: SUBMIT,
+      payload: {
+        currentIndex: null,
+        remainingPatterns: [],
+        recentlyAnswered: answers[2]
+      }
+    };
+
+    expect(reducer(initialState, action)).toMatchObject({
+      ...initialState,
+      progress: {
+        remaining: [],
+        answers: [answers[2]],
+        current: null
+      }
+    });
+  });
+
+  it('should handle RESTART', () => {
+    const action = {
+      type: RESTART,
+      payload: null
+    };
+
+    expect(reducer(initialState, action)).toMatchObject({
+      ...initialState,
+      progress: {
+        remaining: answers,
+        answers: []
       }
     });
   });
