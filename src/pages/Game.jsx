@@ -61,7 +61,7 @@ const Game = ({ current, answers, style, onRestart }) => {
             <TwitterButton
               className="twitter-share-button"
               data-dnt="true"
-              href={`https://twitter.com/intent/tweet?text=I%20scored%20${correct}%20out%20of%2023%20in%20JavaScript%20Design%20Patterns%20game!%20Try%20it!&url=http://javascript-design-patterns.surge.sh/`}
+              href={`https://twitter.com/intent/tweet?text=I%20scored%20${correct}%20out%20of%2023%20in%20JavaScript%20Design%20Patterns%20game!%20Try%20it!&url=http://design-patterns-javascript.surge.sh/`}
             >
               Tweet Your Score
             </TwitterButton>
