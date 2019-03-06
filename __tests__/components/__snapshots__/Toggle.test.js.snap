@@ -2,10 +2,9 @@
 
 exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
 .c0 {
-  background-color: #f4f4f4;
-  border: 1px solid #e8e8e8;
+  background-color: #F2E8F2;
+  border: 1px solid #EDB8ED;
   border-radius: 50%;
-  color: #e22a23;
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
@@ -13,38 +12,28 @@ exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
   width: 2.5rem;
 }
 
+.c0 svg,
+.c0 g {
+  fill: #A568A5;
+}
+
 .c0:hover {
-  background-color: #e8e8e8;
+  background-color: #EDB8ED;
 }
 
 .c0:hover svg,
 .c0:hover g {
-  fill: #ffffff;
+  fill: #6F256F;
 }
 
 .c0.active {
-  background-color: #e22a23;
-  border-color: #e22a23;
+  background-color: #A568A5;
+  border-color: #6F256F;
 }
 
 .c0.active svg,
 .c0.active g {
-  fill: #ffffff;
-}
-
-.c0.light {
-  background-color: #ffffff;
-  border-color: #aaaaaa;
-}
-
-.c0.light svg,
-.c0.light g {
-  fill: #cccccc;
-}
-
-.c0.light:hover svg,
-.c0.light:hover g {
-  fill: #cccccc;
+  fill: #F2E8F2;
 }
 
 <div>
@@ -53,7 +42,6 @@ exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
     onClick={[Function]}
   >
     <svg
-      fill="#707070"
       height="100%"
       viewBox="0 0 24 23"
       width="100%"
@@ -80,10 +68,9 @@ exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
 
 exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
 .c0 {
-  background-color: #f4f4f4;
-  border: 1px solid #e8e8e8;
+  background-color: #F2E8F2;
+  border: 1px solid #EDB8ED;
   border-radius: 50%;
-  color: #e22a23;
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
@@ -91,38 +78,28 @@ exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
   width: 2.5rem;
 }
 
+.c0 svg,
+.c0 g {
+  fill: #A568A5;
+}
+
 .c0:hover {
-  background-color: #e8e8e8;
+  background-color: #EDB8ED;
 }
 
 .c0:hover svg,
 .c0:hover g {
-  fill: #ffffff;
+  fill: #6F256F;
 }
 
 .c0.active {
-  background-color: #e22a23;
-  border-color: #e22a23;
+  background-color: #A568A5;
+  border-color: #6F256F;
 }
 
 .c0.active svg,
 .c0.active g {
-  fill: #ffffff;
-}
-
-.c0.light {
-  background-color: #ffffff;
-  border-color: #aaaaaa;
-}
-
-.c0.light svg,
-.c0.light g {
-  fill: #cccccc;
-}
-
-.c0.light:hover svg,
-.c0.light:hover g {
-  fill: #cccccc;
+  fill: #F2E8F2;
 }
 
 <div>
@@ -131,7 +108,6 @@ exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
     onClick={[Function]}
   >
     <svg
-      fill="#707070"
       height="100%"
       viewBox="0 0 24 23"
       width="100%"
@@ -158,10 +134,9 @@ exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
 
 exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
 .c0 {
-  background-color: #f4f4f4;
-  border: 1px solid #e8e8e8;
+  background-color: #F2E8F2;
+  border: 1px solid #EDB8ED;
   border-radius: 50%;
-  color: #e22a23;
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
@@ -169,38 +144,28 @@ exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
   width: 2.5rem;
 }
 
+.c0 svg,
+.c0 g {
+  fill: #A568A5;
+}
+
 .c0:hover {
-  background-color: #e8e8e8;
+  background-color: #EDB8ED;
 }
 
 .c0:hover svg,
 .c0:hover g {
-  fill: #ffffff;
+  fill: #6F256F;
 }
 
 .c0.active {
-  background-color: #e22a23;
-  border-color: #e22a23;
+  background-color: #A568A5;
+  border-color: #6F256F;
 }
 
 .c0.active svg,
 .c0.active g {
-  fill: #ffffff;
-}
-
-.c0.light {
-  background-color: #ffffff;
-  border-color: #aaaaaa;
-}
-
-.c0.light svg,
-.c0.light g {
-  fill: #cccccc;
-}
-
-.c0.light:hover svg,
-.c0.light:hover g {
-  fill: #cccccc;
+  fill: #F2E8F2;
 }
 
 <div>
@@ -209,7 +174,6 @@ exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
     onClick={[Function]}
   >
     <svg
-      fill="#707070"
       height="100%"
       viewBox="0 0 24 23"
       width="100%"
@@ -230,10 +194,9 @@ exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
 
 exports[`<Toggle /> renders the MODE toggle in LIGHT mode 1`] = `
 .c0 {
-  background-color: #f4f4f4;
-  border: 1px solid #e8e8e8;
+  background-color: #F2E8F2;
+  border: 1px solid #EDB8ED;
   border-radius: 50%;
-  color: #e22a23;
   cursor: pointer;
   height: 2.5rem;
   margin: 0 0 0 1rem;
@@ -241,38 +204,28 @@ exports[`<Toggle /> renders the MODE toggle in LIGHT mode 1`] = `
   width: 2.5rem;
 }
 
+.c0 svg,
+.c0 g {
+  fill: #A568A5;
+}
+
 .c0:hover {
-  background-color: #e8e8e8;
+  background-color: #EDB8ED;
 }
 
 .c0:hover svg,
 .c0:hover g {
-  fill: #ffffff;
+  fill: #6F256F;
 }
 
 .c0.active {
-  background-color: #e22a23;
-  border-color: #e22a23;
+  background-color: #A568A5;
+  border-color: #6F256F;
 }
 
 .c0.active svg,
 .c0.active g {
-  fill: #ffffff;
-}
-
-.c0.light {
-  background-color: #ffffff;
-  border-color: #aaaaaa;
-}
-
-.c0.light svg,
-.c0.light g {
-  fill: #cccccc;
-}
-
-.c0.light:hover svg,
-.c0.light:hover g {
-  fill: #cccccc;
+  fill: #F2E8F2;
 }
 
 <div>
@@ -281,7 +234,6 @@ exports[`<Toggle /> renders the MODE toggle in LIGHT mode 1`] = `
     onClick={[Function]}
   >
     <svg
-      fill="#707070"
       height="100%"
       viewBox="0 0 24 23"
       width="100%"

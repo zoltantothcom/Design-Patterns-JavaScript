@@ -44,6 +44,7 @@ describe('Layout', () => {
         remaining: [patterns[1]],
         current: patterns[0]
       },
+      intro: false,
       mode: 'light',
       js: 'es5'
     });
@@ -61,11 +62,15 @@ describe('Layout', () => {
     });
 
     it('has the correct title', () => {
-      expect(tree.find('Header').text()).toMatch('JavaScript Design Patterns');
+      expect(tree.find('header h1').text()).toMatch('Design Patterns');
     });
 
-    it('renders 3 links', () => {
-      expect(tree.find('a')).toHaveLength(3);
+    it('renders 1 link', () => {
+      expect(tree.find('header a')).toHaveLength(1);
+    });
+
+    it('renders 1 span', () => {
+      expect(tree.find('header span')).toHaveLength(1);
     });
 
     it('renders 2 toggle buttons', () => {
@@ -82,6 +87,7 @@ describe('Layout', () => {
         remaining: [patterns[1]],
         current: patterns[0]
       },
+      intro: false,
       mode: 'dark',
       js: 'es5'
     });
@@ -99,11 +105,15 @@ describe('Layout', () => {
     });
 
     it('has the correct title', () => {
-      expect(tree.find('Header').text()).toMatch('JavaScript Design Patterns');
+      expect(tree.find('header h1').text()).toMatch('Design Patterns');
     });
 
-    it('renders 3 links', () => {
-      expect(tree.find('a')).toHaveLength(3);
+    it('renders 1 link', () => {
+      expect(tree.find('header a')).toHaveLength(1);
+    });
+
+    it('renders 1 span', () => {
+      expect(tree.find('header span')).toHaveLength(1);
     });
 
     it('renders 2 toggle buttons', () => {

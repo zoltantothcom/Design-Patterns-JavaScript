@@ -4,7 +4,8 @@ import {
   getMode,
   getJS,
   getCurrent,
-  getAnswers
+  getAnswers,
+  getIntro
 } from '../../src/selectors';
 
 describe('Selectors', () => {
@@ -14,6 +15,7 @@ describe('Selectors', () => {
     state = {
       mode: 'dark',
       js: 'es6',
+      intro: true,
       patterns: [0, 1, 2, 3, 4, 5, 6],
       progress: {
         answers: [0, 1, 2],
@@ -45,5 +47,9 @@ describe('Selectors', () => {
 
   it('should get the JS version', () => {
     expect(getJS(state)).toBe('es6');
+  });
+
+  it('should get the intro value', () => {
+    expect(getIntro(state)).toBe(true);
   });
 });

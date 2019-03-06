@@ -8,8 +8,8 @@ exports[`Global style renders with a DARK theme 1`] = `
   >
     
     
-/* sc-component-id: sc-global-2479929527 */
-body{background:#222222;font-family:'Karla',sans-serif;margin:0;padding:0;} #root{max-width:640px;margin:auto;}
+/* sc-component-id: sc-global-3505832014 */
+body{background:#222222;font-family:'Karla',sans-serif;margin:0;padding:0;} #root{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;max-width:640px;margin:auto;padding:0 1rem;} @media (min-width:769px){#root{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;padding:0;}}
   </style>
 </head>
 `;
@@ -22,8 +22,8 @@ exports[`Global style renders with a LIGHT theme 1`] = `
   >
     
     
-/* sc-component-id: sc-global-2479929527 */
-body{background:#f4f4f4;font-family:'Karla',sans-serif;margin:0;padding:0;} #root{max-width:640px;margin:auto;}
+/* sc-component-id: sc-global-3505832014 */
+body{background:#FFFFFF;font-family:'Karla',sans-serif;margin:0;padding:0;} #root{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;max-width:640px;margin:auto;padding:0 1rem;} @media (min-width:769px){#root{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;padding:0;}}
   </style>
 </head>
 `;

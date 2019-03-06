@@ -1,8 +1,16 @@
+import {
+  SUBMIT,
+  TOGGLE,
+  TOGGLE_JS,
+  TOGGLE_MODE,
+  START,
+  RESTART
+} from '../static/constants/actions';
 import { randomFromRange } from '../helpers/randomFromRange';
 
 const rootReducer = (state, action) => {
   switch (action.type) {
-  case 'SUBMIT':
+  case SUBMIT:
     const { recentlyAnswered, remainingPatterns, currentIndex } = action.payload;
 
     const current = remainingPatterns.length ? remainingPatterns[currentIndex] : null;
@@ -15,13 +23,15 @@ const rootReducer = (state, action) => {
         current
       }
     };
-  case 'TOGGLE':
+  case TOGGLE:
     return state;
-  case 'TOGGLE_JS':
+  case TOGGLE_JS:
     return { ...state, js: action.payload };
-  case 'TOGGLE_MODE':
+  case TOGGLE_MODE:
     return { ...state, mode: action.payload };
-  case 'RESTART':
+  case START:
+    return { ...state, intro: false };
+  case RESTART:
     return {
       ...state,
       progress: {

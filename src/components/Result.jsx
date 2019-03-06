@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getAnswers } from '../selectors';
 
 const StyledResult = styled.p`
-  color: ${props => props.theme.buttonBorderHover};
+  color: ${props => props.theme.text};
   margin: 3rem 0;
   text-align: center;
 `;

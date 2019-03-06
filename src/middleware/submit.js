@@ -1,7 +1,8 @@
+import { SUBMIT } from '../static/constants/actions';
 import { randomFromRange } from '../helpers/randomFromRange';
 
 export const submitMiddleware = ({ getState }) => next => action => {
-  if (action.type === 'SUBMIT') {
+  if (action.type === SUBMIT) {
     const { progress } = getState();
 
     // remove code fields - not necessary in progress.answers

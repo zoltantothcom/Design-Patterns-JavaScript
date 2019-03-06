@@ -20,5 +20,5 @@ after_success:
 deploy:
   provider: surge
   project: ./build
-  domain: https://javascript-design-patterns.surge.sh
+  domain: https://design-patterns-javascript.surge.sh
   skip_cleanup: true

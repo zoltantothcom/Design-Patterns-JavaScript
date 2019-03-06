@@ -8,6 +8,7 @@ import ButtonContainer, {
   ButtonContainer as NotConnectedButtonContainer
 } from '../../src/components/ButtonContainer';
 import { answers } from '../../src/store';
+import { SUBMIT } from '../../src/static/constants/actions';
 
 describe('<ButtonContainer /> connected', () => {
   const mockStore = configureMockStore();
@@ -33,7 +34,7 @@ describe('<ButtonContainer /> connected', () => {
       .simulate('click');
 
     const actions = store.getActions();
-    expect(actions).toMatchObject([{ type: 'SUBMIT' }]);
+    expect(actions).toMatchObject([{ type: SUBMIT }]);
   });
 });
 

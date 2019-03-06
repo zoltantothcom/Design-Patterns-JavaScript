@@ -1,5 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import { submitMiddleware } from '../../src/middleware/submit';
+import { SUBMIT } from '../../src/static/constants/actions';
 
 const next = jest.fn();
 const mockStore = configureMockStore();
@@ -36,7 +37,7 @@ describe('Submit middleware', () => {
         current: patterns[0]
       }
     });
-    const action = { type: 'SUBMIT', payload: 'abc123' };
+    const action = { type: SUBMIT, payload: 'abc123' };
 
     submitMiddleware(store)(next)(action);
 
@@ -64,7 +65,7 @@ describe('Submit middleware', () => {
           }
         ]
       },
-      type: 'SUBMIT'
+      type: SUBMIT
     });
   });
 

@@ -2,21 +2,21 @@
 
 exports[`About page renders with a DARK theme 1`] = `
 .c0 {
-  color: #c4c4c4;
+  color: #C8C8C8;
 }
 
 .c0 a {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 a:hover {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid transparent;
 }
 
 .c1 {
-  color: #ffffff;
+  color: #888888;
   margin-top: 2rem;
 }
 
@@ -29,7 +29,7 @@ exports[`About page renders with a DARK theme 1`] = `
     The Game
   </h3>
   <p>
-    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
+    Design Patterns - get familiar with the design patterns implemented in JavaScript, test yourself (or someone else) or simply for fun. Enjoy!
   </p>
   <h3
     className="c1"
@@ -71,21 +71,21 @@ exports[`About page renders with a DARK theme 1`] = `
 
 exports[`About page renders with a LIGHT theme 1`] = `
 .c0 {
-  color: #aaaaaa;
+  color: #6F256F;
 }
 
 .c0 a {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 a:hover {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid transparent;
 }
 
 .c1 {
-  color: #ffffff;
+  color: #6F256F;
   margin-top: 2rem;
 }
 
@@ -98,7 +98,7 @@ exports[`About page renders with a LIGHT theme 1`] = `
     The Game
   </h3>
   <p>
-    JavaScript Design Patterns - get familiar with the design patterns, test yourself (or someone else) or simply for fun. Enjoy!
+    Design Patterns - get familiar with the design patterns implemented in JavaScript, test yourself (or someone else) or simply for fun. Enjoy!
   </p>
   <h3
     className="c1"

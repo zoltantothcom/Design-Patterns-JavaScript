@@ -1,25 +1,37 @@
 import reducer from '../../src/reducers';
+import {
+  SUBMIT,
+  TOGGLE,
+  TOGGLE_JS,
+  TOGGLE_MODE,
+  START,
+  RESTART
+} from '../../src/static/constants/actions';
 
 const answers = [
   {
     name: 'Template',
     type: 'behavioral',
-    codeES5: 'Code ES5',
-    codeES6: 'Code ES6',
-    answered: false,
-    correct: null,
-    answerId: null,
+    answered: true,
+    correct: true,
+    answerId: 'ba2ca6b0-0c86-4573-baf0-60f33ce6e947',
     uuid: 'ba2ca6b0-0c86-4573-baf0-60f33ce6e947'
   },
   {
     name: 'Visitor',
     type: 'behavioral',
-    codeES5: 'Code ES5',
-    codeES6: 'Code ES6',
     answered: false,
     correct: null,
     answerId: null,
     uuid: 'eb9427c5-0167-4d65-a99b-a5ffadf5fd46'
+  },
+  {
+    name: 'Singleton',
+    type: 'creational',
+    answered: false,
+    correct: null,
+    answerId: null,
+    uuid: 'slearknbqarlnbqasOLdnv'
   }
 ];
 
@@ -27,6 +39,7 @@ const initialState = {
   js: 'es5',
   mode: 'dark',
   patterns: answers,
+  intro: true,
   progress: {
     answers: [],
     remaining: answers,
@@ -41,7 +54,7 @@ describe('Reducers', () => {
 
   it('should return unchanged state on toggle', () => {
     const action = {
-      type: 'TOGGLE',
+      type: TOGGLE,
       payload: null
     };
 
@@ -52,7 +65,7 @@ describe('Reducers', () => {
 
   it('should toggle JS', () => {
     const action = {
-      type: 'TOGGLE_JS',
+      type: TOGGLE_JS,
       payload: 'es6'
     };
 
@@ -64,7 +77,7 @@ describe('Reducers', () => {
 
   it('should toggle MODE', () => {
     const action = {
-      type: 'TOGGLE_MODE',
+      type: TOGGLE_MODE,
       payload: 'light'
     };
 
@@ -74,12 +87,23 @@ describe('Reducers', () => {
     });
   });
 
-  xit('should handle SUBMIT', () => {
+  it('should toggle INTRO', () => {
     const action = {
-      type: 'SUBMIT',
+      type: START
+    };
+
+    expect(reducer(initialState, action)).toEqual({
+      ...initialState,
+      intro: false
+    });
+  });
+
+  it('should handle SUBMIT', () => {
+    const action = {
+      type: SUBMIT,
       payload: {
-        currentIndex: 0,
-        remainingPatterns: answers[1],
+        currentIndex: 1,
+        remainingPatterns: [answers[1], answers[2]],
         recentlyAnswered: answers[0]
       }
     };
@@ -87,9 +111,44 @@ describe('Reducers', () => {
     expect(reducer(initialState, action)).toMatchObject({
       ...initialState,
       progress: {
-        remaining: [answers[1]],
+        remaining: [answers[1], answers[2]],
         answers: [answers[0]],
-        current: answers[1]
+        current: answers[2]
+      }
+    });
+  });
+
+  it('should handle the _last_ SUBMIT', () => {
+    const action = {
+      type: SUBMIT,
+      payload: {
+        currentIndex: null,
+        remainingPatterns: [],
+        recentlyAnswered: answers[2]
+      }
+    };
+
+    expect(reducer(initialState, action)).toMatchObject({
+      ...initialState,
+      progress: {
+        remaining: [],
+        answers: [answers[2]],
+        current: null
+      }
+    });
+  });
+
+  it('should handle RESTART', () => {
+    const action = {
+      type: RESTART,
+      payload: null
+    };
+
+    expect(reducer(initialState, action)).toMatchObject({
+      ...initialState,
+      progress: {
+        remaining: answers,
+        answers: []
       }
     });
   });

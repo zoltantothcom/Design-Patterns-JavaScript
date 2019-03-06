@@ -17,7 +17,7 @@ const StyledPercentage = styled.h1`
   width: 10rem;
 `;
 
-const Percentage = ({ answers }) => {
+export const Percentage = ({ answers }) => {
   let level = 'red';
   let correct = 0;
 

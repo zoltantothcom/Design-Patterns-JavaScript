@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Step = styled.span`
-  background: ${props => (props.nature ? props.theme[props.nature] : props.theme.lightGrey)};
+  background: ${props => (props.nature ? props.theme[props.nature] : props.theme.ALTO)};
   display: flex;
   height: 2px;
   width: 3.75%;
@@ -28,9 +28,9 @@ export const ProgressBar = props => {
         let nature;
 
         if (answered && correct) {
-          nature = 'success';
+          nature = 'ATLANTIS';
         } else {
-          nature = 'error';
+          nature = 'CRIMSON';
         }
 
         return <Step key={uuid} nature={nature} />;

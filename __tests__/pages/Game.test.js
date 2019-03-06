@@ -9,6 +9,7 @@ import { themeDark } from '../../src/styles/themes/theme.dark';
 import styleLight from '../../src/styles/hljs/hljs.light';
 import styleDark from '../../src/styles/hljs/hljs.dark';
 import Game from '../../src/pages/Game';
+import { START, RESTART } from '../../src/static/constants/actions';
 
 const patterns = [
   {
@@ -42,6 +43,7 @@ const store = mockStore({
     remaining: [patterns[1]],
     current: patterns[0]
   },
+  intro: false,
   mode: 'light',
   js: 'es5'
 });
@@ -114,6 +116,41 @@ describe('Game page - GAME - DARK style', () => {
   });
 });
 
+describe('Game page - INTRO', () => {
+  let tree;
+  const store = mockStore({
+    patterns: patterns,
+    progress: {
+      answers: patterns,
+      remaining: [],
+      current: null
+    },
+    intro: true,
+    mode: 'light',
+    js: 'es5'
+  });
+
+  beforeEach(() => {
+    tree = mount(
+      <Provider store={store}>
+        <ThemeProvider theme={themeLight}>
+          <Game style={styleLight} />
+        </ThemeProvider>
+      </Provider>
+    );
+  });
+
+  it('renders a <Button /> component', () => {
+    expect(tree.find('Button')).toMatchSnapshot();
+  });
+
+  it('reacts to button click', () => {
+    tree.find('button').simulate('click');
+    const actions = store.getActions();
+    expect(actions).toMatchObject([{ type: START }]);
+  });
+});
+
 describe('Game page - RESULTS', () => {
   let tree;
   const patterns = [
@@ -146,6 +183,7 @@ describe('Game page - RESULTS', () => {
       remaining: [],
       current: null
     },
+    intro: false,
     mode: 'light',
     js: 'es5'
   });
@@ -179,6 +217,6 @@ describe('Game page - RESULTS', () => {
   it('reacts to button click', () => {
     tree.find('button').simulate('click');
     const actions = store.getActions();
-    expect(actions).toMatchObject([{ type: 'RESTART' }]);
+    expect(actions).toMatchObject([{ type: RESTART }]);
   });
 });
