@@ -887,7 +887,7 @@ exports[`Game page - INTRO renders a <Button /> component 1`] = `
 
 <Button
   id="start"
-  label="Start"
+  label="Start Game"
   onClick={[Function]}
 >
   <styled.button
@@ -963,7 +963,7 @@ exports[`Game page - INTRO renders a <Button /> component 1`] = `
         onClick={[Function]}
       >
         <span>
-          Start
+          Start Game
         </span>
       </button>
     </StyledComponent>
@@ -1071,7 +1071,7 @@ exports[`Game page - RESULTS renders a <Restart /> component 1`] = `null`;
 
 exports[`Game page - RESULTS renders a <Result /> component 1`] = `
 .c0 {
-  color: #0A000A;
+  color: #6F256F;
   margin: 3rem 0;
   text-align: center;
 }

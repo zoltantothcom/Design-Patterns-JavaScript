@@ -14,7 +14,6 @@ export const WILD_SAND = '#F5F5F5';
 export const WHITE = '#FFFFFF';
 
 // light theme
-export const DIESEL = '#0A000A';
 export const PLUM = '#6F256F';
 export const BOUQUET = '#A568A5';
 export const ORCHID = '#EDB8ED';

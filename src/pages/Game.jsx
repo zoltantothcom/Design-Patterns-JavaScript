@@ -12,6 +12,19 @@ import Result from '../components/Result';
 import Percentage from '../components/Percentage';
 import Button from '../components/Button';
 
+const Intro = styled.div`
+  border: 1px solid ${props => props.theme.border};
+  border-radius: 4px;
+  color: ${props => props.theme.text};
+  margin: 2rem 0;
+  padding: 2rem 3rem;
+`;
+
+const StartButtonContainer = styled.div`
+  margin: 3rem auto 1rem;
+  /* text-align: center; */
+`;
+
 const Restart = styled.div`
   margin: 3rem 0;
   text-align: center;
@@ -45,7 +58,19 @@ const Game = ({ intro, current, answers, style, onStart, onRestart }) => {
 
   return (
     <Fragment>
-      {intro && <Button label="Start" id="start" onClick={onStart} />}
+      {intro && (
+        <Intro>
+          <p>
+            Each question contains a code snippet and four answer choices.
+            <br />
+            Look carefully at the code and choose the one correct answer.
+          </p>
+          <p>After answering all 23 questions you'll be shown your results.</p>
+          <StartButtonContainer>
+            <Button label="Start Game" id="start" onClick={onStart} />
+          </StartButtonContainer>
+        </Intro>
+      )}
 
       {!intro && current && (
         <Fragment>
