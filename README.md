@@ -6,7 +6,7 @@ Design Patterns - a game to get familiar with the design patterns implemented in
 
 ### :zap: [PLAY HERE](http://design-patterns-javascript.surge.sh/)
 
-<img src="https://raw.githubusercontent.com/zoltantothcom/Design-Patterns-JavaScript/master/static/screenshot.png?sanitize=true&raw=true" alt="Design Patterns - game results screenshot" />
+[<img src="https://raw.githubusercontent.com/zoltantothcom/Design-Patterns-JavaScript/master/static/screenshot.png?sanitize=true&raw=true" alt="Design Patterns - game results screenshot" />](http://design-patterns-javascript.surge.sh/)
 
 - [About](#about)
 - [How To Run Locally](#how-to-run-locally)
