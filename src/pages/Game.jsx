@@ -2,8 +2,9 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import { start } from '../actions/start';
 import { restart } from '../actions/restart';
-import { getCurrent, getAnswers } from '../selectors';
+import { getIntro, getCurrent, getAnswers } from '../selectors';
 import ButtonContainer from '../components/ButtonContainer';
 import ProgressBar from '../components/ProgressBar';
 import Code from '../components/Code';
@@ -35,7 +36,7 @@ const ShareContainer = styled.p`
   text-align: center;
 `;
 
-const Game = ({ current, answers, style, onRestart }) => {
+const Game = ({ intro, current, answers, style, onStart, onRestart }) => {
   let correct;
 
   if (!current) {
@@ -44,13 +45,17 @@ const Game = ({ current, answers, style, onRestart }) => {
 
   return (
     <Fragment>
-      {current ? (
+      {intro && <Button label="Start" id="start" onClick={onStart} />}
+
+      {!intro && current && (
         <Fragment>
           <ProgressBar />
           <Code style={style} />
           <ButtonContainer />
         </Fragment>
-      ) : (
+      )}
+
+      {!intro && !current && (
         <Fragment>
           <Result />
           <Percentage />
@@ -82,17 +87,21 @@ const Game = ({ current, answers, style, onRestart }) => {
 
 Game.propTypes = {
   style: PropTypes.object.isRequired,
+  onStart: PropTypes.func.isRequired,
   onRestart: PropTypes.func.isRequired,
   answers: PropTypes.array.isRequired,
+  intro: PropTypes.bool.isRequired,
   current: PropTypes.object
 };
 
 export default connect(
   state => ({
+    intro: getIntro(state),
     current: getCurrent(state),
     answers: getAnswers(state)
   }),
   {
+    onStart: () => start(),
     onRestart: () => restart()
   }
 )(Game);

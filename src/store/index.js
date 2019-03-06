@@ -21,6 +21,7 @@ export const initialProgress = {
 const initialState = {
   js: 'es5',
   mode: 'dark',
+  intro: true,
   patterns: answers,
   progress: initialProgress
 };
