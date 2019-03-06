@@ -4,6 +4,7 @@ import {
   TOGGLE,
   TOGGLE_JS,
   TOGGLE_MODE,
+  START,
   RESTART
 } from '../../src/static/constants/actions';
 
@@ -38,6 +39,7 @@ const initialState = {
   js: 'es5',
   mode: 'dark',
   patterns: answers,
+  intro: true,
   progress: {
     answers: [],
     remaining: answers,
@@ -82,6 +84,17 @@ describe('Reducers', () => {
     expect(reducer(initialState, action)).toEqual({
       ...initialState,
       mode: 'light'
+    });
+  });
+
+  it('should toggle INTRO', () => {
+    const action = {
+      type: START
+    };
+
+    expect(reducer(initialState, action)).toEqual({
+      ...initialState,
+      intro: false
     });
   });
 

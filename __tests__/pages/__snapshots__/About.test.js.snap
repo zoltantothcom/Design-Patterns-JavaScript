@@ -2,7 +2,7 @@
 
 exports[`About page renders with a DARK theme 1`] = `
 .c0 {
-  color: #F5F5F5;
+  color: #C8C8C8;
 }
 
 .c0 a {
@@ -71,7 +71,7 @@ exports[`About page renders with a DARK theme 1`] = `
 
 exports[`About page renders with a LIGHT theme 1`] = `
 .c0 {
-  color: #0A000A;
+  color: #6F256F;
 }
 
 .c0 a {

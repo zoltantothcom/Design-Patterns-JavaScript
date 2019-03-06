@@ -37,5 +37,7 @@ export const themeLight = {
 
   // text and header
   header: C.PLUM,
-  text: C.DIESEL
+  text: C.PLUM,
+
+  border: C.PRIM
 };

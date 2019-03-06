@@ -858,6 +858,119 @@ exports[`Game page - GAME - LIGHT style renders a <ProgressBar /> component 1`] 
 </ProgressBar>
 `;
 
+exports[`Game page - INTRO renders a <Button /> component 1`] = `
+.c0 {
+  background-color: #F2E8F2;
+  border: 1px solid #EDB8ED;
+  border-radius: 4px;
+  cursor: pointer;
+  font: 400 1rem 'Karla','sans-serif';
+  height: 48px;
+  max-width: 240px;
+  outline: none;
+  padding: 0 1.5rem;
+  width: 37.5%;
+}
+
+.c0 span {
+  color: #6F256F;
+}
+
+.c0:hover {
+  background-color: #6F256F;
+  border-color: #6F256F;
+}
+
+.c0:hover span {
+  color: #FFFFFF;
+}
+
+<Button
+  id="start"
+  label="Start Game"
+  onClick={[Function]}
+>
+  <styled.button
+    id="start"
+    onClick={[Function]}
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  background-color: ",
+              [Function],
+              ";
+  border: 1px solid ",
+              [Function],
+              ";
+  border-radius: 4px;
+  cursor: pointer;
+  font: 400 1rem 'Karla', 'sans-serif';
+  height: 48px;
+  max-width: 240px;
+  outline: none;
+  padding: 0 1.5rem;
+  width: 37.5%;
+
+  & span {
+    color: ",
+              [Function],
+              ";
+  }
+
+  &:hover {
+    background-color: ",
+              [Function],
+              ";
+    border-color: ",
+              [Function],
+              ";
+
+    & span {
+      color: ",
+              [Function],
+              ";
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      id="start"
+      onClick={[Function]}
+    >
+      <button
+        className="c0"
+        id="start"
+        onClick={[Function]}
+      >
+        <span>
+          Start Game
+        </span>
+      </button>
+    </StyledComponent>
+  </styled.button>
+</Button>
+`;
+
 exports[`Game page - RESULTS renders a <Percentage /> component 1`] = `
 .c0 {
   border: 4px solid red;
@@ -958,7 +1071,7 @@ exports[`Game page - RESULTS renders a <Restart /> component 1`] = `null`;
 
 exports[`Game page - RESULTS renders a <Result /> component 1`] = `
 .c0 {
-  color: #0A000A;
+  color: #6F256F;
   margin: 3rem 0;
   text-align: center;
 }

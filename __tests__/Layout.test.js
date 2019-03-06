@@ -44,6 +44,7 @@ describe('Layout', () => {
         remaining: [patterns[1]],
         current: patterns[0]
       },
+      intro: false,
       mode: 'light',
       js: 'es5'
     });
@@ -86,6 +87,7 @@ describe('Layout', () => {
         remaining: [patterns[1]],
         current: patterns[0]
       },
+      intro: false,
       mode: 'dark',
       js: 'es5'
     });

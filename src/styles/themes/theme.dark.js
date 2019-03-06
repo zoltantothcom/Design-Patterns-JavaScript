@@ -37,5 +37,7 @@ export const themeDark = {
 
   // text and header
   header: C.GRAY,
-  text: C.WILD_SAND
+  text: C.SILVER,
+
+  border: C.TUNDORA
 };

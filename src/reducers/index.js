@@ -1,4 +1,11 @@
-import { SUBMIT, TOGGLE, TOGGLE_JS, TOGGLE_MODE, RESTART } from '../static/constants/actions';
+import {
+  SUBMIT,
+  TOGGLE,
+  TOGGLE_JS,
+  TOGGLE_MODE,
+  START,
+  RESTART
+} from '../static/constants/actions';
 import { randomFromRange } from '../helpers/randomFromRange';
 
 const rootReducer = (state, action) => {
@@ -22,6 +29,8 @@ const rootReducer = (state, action) => {
     return { ...state, js: action.payload };
   case TOGGLE_MODE:
     return { ...state, mode: action.payload };
+  case START:
+    return { ...state, intro: false };
   case RESTART:
     return {
       ...state,

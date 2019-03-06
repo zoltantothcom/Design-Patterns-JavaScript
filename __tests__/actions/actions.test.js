@@ -1,3 +1,4 @@
+import { start } from '../../src/actions/start';
 import { restart } from '../../src/actions/restart';
 import { submitAnswer } from '../../src/actions/submitAnswer';
 import { toggle, toggleJS, toggleMode } from '../../src/actions/toggle';
@@ -6,10 +7,17 @@ import {
   TOGGLE,
   TOGGLE_JS,
   TOGGLE_MODE,
+  START,
   RESTART
 } from '../../src/static/constants/actions';
 
 describe('Action Creators', () => {
+  it('should dispatch START action', () => {
+    expect(start('start')).toEqual({
+      type: START,
+      payload: 'start'
+    });
+  });
   it('should dispatch RESTART action', () => {
     expect(restart('restart')).toEqual({
       type: RESTART,
