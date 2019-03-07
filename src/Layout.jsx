@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { connect } from 'react-redux';
 import styleLight from './styles/hljs/hljs.light';
@@ -32,9 +32,12 @@ const Layout = props => {
         <GlobalStyle mode={mode} />
         <Header />
 
-        <Route exact path="/" render={() => <Game style={style} />} />
-        <Route path="/patterns/:pattern" component={Patterns} />
-        <Route path="/about" component={About} />
+        <Switch>
+          <Route exact path="/" render={() => <Game style={style} />} />
+          <Route path="/patterns" component={Patterns} />
+          <Route path="/about" component={About} />
+          <Redirect to="/" />
+        </Switch>
       </React.Fragment>
     </ThemeProvider>
   );
