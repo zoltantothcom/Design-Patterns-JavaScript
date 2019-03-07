@@ -3,7 +3,25 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { patterns } from '../static/patterns';
 
-const StyledPatterns = styled.div``;
+const StyledPatterns = styled.div`
+  color: ${props => props.theme.text};
+
+  a {
+    border-bottom: 1px solid transparent;
+    color: ${props => props.theme.CRIMSON};
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 1px solid ${props => props.theme.CRIMSON};
+    }
+  }
+
+  h1,
+  h2 {
+    color: ${props => props.theme.header};
+    margin-top: 2.5rem;
+  }
+`;
 
 const PatternsList = () => {
   const lister = patternType => (

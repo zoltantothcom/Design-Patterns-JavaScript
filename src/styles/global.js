@@ -12,11 +12,11 @@ const GlobalStyle = createGlobalStyle`
     justify-content: start;
     max-width: 640px;
     margin: auto;
-    padding: 0 1rem;
+    padding: 0 1rem 3rem;
 
     @media (min-width: 769px) {
       justify-content: space-between;
-      padding: 0;
+      padding: 0 0 3rem;
     }
   }
 `;
