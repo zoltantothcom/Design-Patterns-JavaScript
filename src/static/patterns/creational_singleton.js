@@ -4,22 +4,24 @@ const SINGLETON = {
   type: 'creational',
   hint: 'restricts object creation for a class to only one instance',
   codeES5: `function Person() {
-if (typeof Person.instance === 'object') return Person.instance;
+  if (typeof Person.instance === 'object') return Person.instance;
 
-Person.instance = this;
+  Person.instance = this;
 
-return this;
+  return this;
 }
 
 module.exports = Person;`,
   codeES6: `class Person {
-constructor() {
-  if (typeof Person.instance === 'object') {
-    return Person.instance;
+  constructor() {
+    if (typeof Person.instance === 'object') {
+      return Person.instance;
+    }
+
+    Person.instance = this;
+
+    return this;
   }
-  Person.instance = this;
-  return this;
-}
 }
 
 export default Person;`

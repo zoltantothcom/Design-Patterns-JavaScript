@@ -4,125 +4,126 @@ const CHAIN_OF_RESPONSIBILITY = {
   type: 'behavioral',
   hint: 'delegates commands to a chain of processing objects',
   codeES5: `function ShoppingCart() {
-this.products = [];
+  this.products = [];
 
-this.addProduct = function(p) {
-  this.products.push(p);
-};
+  this.addProduct = function(p) {
+    this.products.push(p);
+  };
 }
 
 function Discount() {
-this.calc = function(products) {
-  var ndiscount = new NumberDiscount();
-  var pdiscount = new PriceDiscount();
-  var none = new NoneDiscount();
+  this.calc = function(products) {
+    var ndiscount = new NumberDiscount();
+    var pdiscount = new PriceDiscount();
+    var none = new NoneDiscount();
 
-  ndiscount.setNext(pdiscount);
-  pdiscount.setNext(none);
+    ndiscount.setNext(pdiscount);
+    pdiscount.setNext(none);
 
-  return ndiscount.exec(products);
-};
+    return ndiscount.exec(products);
+  };
 }
 
 function NumberDiscount() {
-this.next = null;
-this.setNext = function(fn) {
-  this.next = fn;
-};
+  this.next = null;
+  this.setNext = function(fn) {
+    this.next = fn;
+  };
 
-this.exec = function(products) {
-  var result = 0;
-  if (products.length > 3) result = 0.05;
+  this.exec = function(products) {
+    var result = 0;
+    if (products.length > 3) result = 0.05;
 
-  return result + this.next.exec(products);
-};
+    return result + this.next.exec(products);
+  };
 }
 
 function PriceDiscount() {
-this.next = null;
-this.setNext = function(fn) {
-  this.next = fn;
-};
-this.exec = function(products) {
-  var result = 0;
-  var total = products.reduce(function(a, b) {
-    return a + b;
-  });
+  this.next = null;
+  this.setNext = function(fn) {
+    this.next = fn;
+  };
+  this.exec = function(products) {
+    var result = 0;
+    var total = products.reduce(function(a, b) {
+      return a + b;
+    });
 
-  if (total >= 500) result = 0.1;
+    if (total >= 500) result = 0.1;
 
-  return result + this.next.exec(products);
-};
+    return result + this.next.exec(products);
+  };
 }
 
 function NoneDiscount() {
-this.exec = function() {
-  return 0;
-};
+  this.exec = function() {
+    return 0;
+  };
 }
 
 module.exports = [ShoppingCart, Discount];`,
   codeES6: `class ShoppingCart {
-constructor() {
-  this.products = [];
-}
+  constructor() {
+    this.products = [];
+  }
 
-addProduct(p) {
-  this.products.push(p);
-}
+  addProduct(p) {
+    this.products.push(p);
+  }
 }
 
 class Discount {
-calc(products) {
-  let ndiscount = new NumberDiscount();
-  let pdiscount = new PriceDiscount();
-  let none = new NoneDiscount();
-  ndiscount.setNext(pdiscount);
-  pdiscount.setNext(none);
-  return ndiscount.exec(products);
-}
+  calc(products) {
+    let ndiscount = new NumberDiscount();
+    let pdiscount = new PriceDiscount();
+    let none = new NoneDiscount();
+    ndiscount.setNext(pdiscount);
+    pdiscount.setNext(none);
+
+    return ndiscount.exec(products);
+  }
 }
 
 class NumberDiscount {
-constructor() {
-  this.next = null;
-}
+  constructor() {
+    this.next = null;
+  }
 
-setNext(fn) {
-  this.next = fn;
-}
+  setNext(fn) {
+    this.next = fn;
+  }
 
-exec(products) {
-  let result = 0;
-  if (products.length > 3) result = 0.05;
+  exec(products) {
+    let result = 0;
+    if (products.length > 3) result = 0.05;
 
-  return result + this.next.exec(products);
-}
+    return result + this.next.exec(products);
+  }
 }
 
 class PriceDiscount {
-constructor() {
-  this.next = null;
-}
+  constructor() {
+    this.next = null;
+  }
 
-setNext(fn) {
-  this.next = fn;
-}
+  setNext(fn) {
+    this.next = fn;
+  }
 
-exec(products) {
-  let result = 0;
-  let total = products.reduce((a, b) => a + b);
+  exec(products) {
+    let result = 0;
+    let total = products.reduce((a, b) => a + b);
 
-  if (total >= 500) result = 0.1;
+    if (total >= 500) result = 0.1;
 
-  return result + this.next.exec(products);
-}
+    return result + this.next.exec(products);
+  }
 }
 
 class NoneDiscount {
-exec() {
-  return 0;
-}
+  exec() {
+    return 0;
+  }
 }
 
 export { ShoppingCart, Discount };`
