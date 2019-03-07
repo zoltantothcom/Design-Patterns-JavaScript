@@ -72,7 +72,7 @@ const Header = props => {
     <StyledHeader>
       <StyledLinkContainer>
         {paths.map(({ path, page }) =>
-          pathname === path ? (
+          pathname === path || (path === '/patterns' && pathname.includes(path)) ? (
             <StyledRouterSpan key={page}>{page}</StyledRouterSpan>
           ) : (
             <StyledRouterLink key={page} to={path}>
