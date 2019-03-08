@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`REFERENCE - Pattern component renders the individual pattern (Singleton) details in DARK mode 1`] = `
+.c0 h2,
+.c0 h3 {
+  margin-top: 2.5rem;
+}
+
+.c2 {
+  display: block;
+  margin-bottom: 8px;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+.c3 {
+  text-transform: capitalize;
+}
+
+.c1 {
+  border-bottom: 1px solid;
+  display: inline-block;
+  margin-top: 2rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  border-bottom: 1px solid transparent;
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1"
+    href="/patterns"
+    onClick={[Function]}
+  >
+    ← Back to Patterns List
+  </a>
+  <h2>
+    Singleton
+  </h2>
+  <p>
+    <span
+      className="c2"
+    >
+      Type:
+    </span>
+    <span
+      className="c3"
+    >
+      creational
+       pattern
+    </span>
+  </p>
+  <p>
+    <span
+      className="c2"
+    >
+      Description:
+    </span>
+    This pattern restricts object creation for a class to only one instance.
+  </p>
+  <h3>
+    ES5
+  </h3>
+  <pre
+    style={
+      Object {
+        "background": "#282828",
+        "border": "1px solid #555",
+        "color": "#ebdbb2",
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "1em",
+      }
+    }
+  >
+    <code>
+      <span
+        style={
+          Object {
+            "color": "#8ec07c",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#fb4934",
+            }
+          }
+        >
+          function
+        </span>
+         
+        <span
+          style={
+            Object {
+              "color": "#83a598",
+            }
+          }
+        >
+          Person
+        </span>
+        (
+        <span
+          style={
+            Object {
+              "color": "#fabd2f",
+            }
+          }
+        />
+        ) 
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        if
+      </span>
+       (
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        typeof
+      </span>
+       Person.instance === 
+      <span
+        style={
+          Object {
+            "color": "#b8bb26",
+          }
+        }
+      >
+        'object'
+      </span>
+      ) 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       Person.instance;
+
+  Person.instance = 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+}
+
+
+      <span
+        style={
+          Object {
+            "color": "#83a598",
+          }
+        }
+      >
+        module
+      </span>
+      .exports = Person;
+    </code>
+  </pre>
+  <h3>
+    ES6
+  </h3>
+  <pre
+    style={
+      Object {
+        "background": "#282828",
+        "border": "1px solid #555",
+        "color": "#ebdbb2",
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "1em",
+      }
+    }
+  >
+    <code>
+      <span
+        style={
+          Object {
+            "color": "#8ec07c",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#fb4934",
+            }
+          }
+        >
+          class
+        </span>
+         
+        <span
+          style={
+            Object {
+              "color": "#83a598",
+            }
+          }
+        >
+          Person
+        </span>
+         
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        constructor
+      </span>
+      () {
+    
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        if
+      </span>
+       (
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        typeof
+      </span>
+       Person.instance === 
+      <span
+        style={
+          Object {
+            "color": "#b8bb26",
+          }
+        }
+      >
+        'object'
+      </span>
+      ) {
+      
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       Person.instance;
+    }
+
+    Person.instance = 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+
+    
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+  }
+}
+
+
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        export
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        default
+      </span>
+       Person;
+    </code>
+  </pre>
+</div>
+`;

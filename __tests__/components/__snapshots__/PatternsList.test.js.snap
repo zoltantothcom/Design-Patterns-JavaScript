@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`REFERENCE - Patterns List renders all the patterns 1`] = `
+.c0 a {
+  border-bottom: 1px solid transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:hover {
+  border-bottom: 1px solid;
+}
+
+.c0 h2,
+.c0 h3 {
+  margin-top: 2.5rem;
+}
+
+<div
+  className="c0"
+>
+  <h2>
+    Design Patterns
+  </h2>
+  <p>
+    In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design.
+  </p>
+  <h3>
+    Creational Design Patterns
+  </h3>
+  <p>
+    These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
+  </p>
+  <ul>
+    <li>
+      <a
+        href="/patterns/abstract_factory"
+        onClick={[Function]}
+      >
+        Abstract Factory
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/builder"
+        onClick={[Function]}
+      >
+        Builder
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/factory"
+        onClick={[Function]}
+      >
+        Factory
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/prototype"
+        onClick={[Function]}
+      >
+        Prototype
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/singleton"
+        onClick={[Function]}
+      >
+        Singleton
+      </a>
+    </li>
+  </ul>
+  <h3>
+    Structural Design Patterns
+  </h3>
+  <p>
+    These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality.
+  </p>
+  <ul>
+    <li>
+      <a
+        href="/patterns/adapter"
+        onClick={[Function]}
+      >
+        Adapter
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/bridge"
+        onClick={[Function]}
+      >
+        Bridge
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/composite"
+        onClick={[Function]}
+      >
+        Composite
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/decorator"
+        onClick={[Function]}
+      >
+        Decorator
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/facade"
+        onClick={[Function]}
+      >
+        Facade
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/flyweight"
+        onClick={[Function]}
+      >
+        Flyweight
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/proxy"
+        onClick={[Function]}
+      >
+        Proxy
+      </a>
+    </li>
+  </ul>
+  <h3>
+    Behavioral Design Patterns
+  </h3>
+  <p>
+    These design patterns are all about Class's objects communication. Behavioral patterns are those patterns that are most specifically concerned with communication between objects.
+  </p>
+  <ul>
+    <li>
+      <a
+        href="/patterns/chain_of_responsibility"
+        onClick={[Function]}
+      >
+        Chain of Responsibility
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/command"
+        onClick={[Function]}
+      >
+        Command
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/interpteter"
+        onClick={[Function]}
+      >
+        Interpreter
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/iterator"
+        onClick={[Function]}
+      >
+        Iterator
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/mediator"
+        onClick={[Function]}
+      >
+        Mediator
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/memento"
+        onClick={[Function]}
+      >
+        Memento
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/observer"
+        onClick={[Function]}
+      >
+        Observer
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/state"
+        onClick={[Function]}
+      >
+        State
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/strategy"
+        onClick={[Function]}
+      >
+        Strategy
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/template"
+        onClick={[Function]}
+      >
+        Template
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/visitor"
+        onClick={[Function]}
+      >
+        Visitor
+      </a>
+    </li>
+  </ul>
+</div>
+`;
