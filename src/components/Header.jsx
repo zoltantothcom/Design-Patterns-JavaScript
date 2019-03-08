@@ -59,12 +59,12 @@ const Header = props => {
       page: 'Game'
     },
     {
-      path: '/about',
-      page: 'About'
+      path: '/patterns',
+      page: 'Pattern Reference'
     },
     {
-      path: '/patterns',
-      page: 'Patterns'
+      path: '/about',
+      page: 'About'
     }
   ];
 

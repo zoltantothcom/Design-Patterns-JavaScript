@@ -19,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
       padding: 0 0 3rem;
     }
   }
+
+  .fixed {
+    height: 375px
+  }
 `;
 
 export default GlobalStyle;

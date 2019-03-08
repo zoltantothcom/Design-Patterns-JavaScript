@@ -16,8 +16,8 @@ const StyledPatterns = styled.div`
     }
   }
 
-  h1,
-  h2 {
+  h2,
+  h3 {
     color: ${props => props.theme.header};
     margin-top: 2.5rem;
   }
@@ -40,14 +40,14 @@ const PatternsList = () => {
 
   return (
     <StyledPatterns>
-      <h1>DESIGN PATTERNS</h1>
+      <h2>Design Patterns</h2>
 
       <p>
         In software engineering, a design pattern is a general repeatable solution to a commonly
         occurring problem in software design.
       </p>
 
-      <h2>Creational Design Patterns</h2>
+      <h3>Creational Design Patterns</h3>
       <p>
         These design patterns are all about class instantiation. This pattern can be further divided
         into class-creation patterns and object-creational patterns. While class-creation patterns
@@ -56,7 +56,7 @@ const PatternsList = () => {
       </p>
       {lister('creational')}
 
-      <h2>Structural Design Patterns</h2>
+      <h3>Structural Design Patterns</h3>
       <p>
         These design patterns are all about Class and Object composition. Structural class-creation
         patterns use inheritance to compose interfaces. Structural object-patterns define ways to
@@ -64,7 +64,7 @@ const PatternsList = () => {
       </p>
       {lister('structural')}
 
-      <h2>Behavioral Design Patterns</h2>
+      <h3>Behavioral Design Patterns</h3>
       <p>
         These design patterns are all about Class's objects communication. Behavioral patterns are
         those patterns that are most specifically concerned with communication between objects.
