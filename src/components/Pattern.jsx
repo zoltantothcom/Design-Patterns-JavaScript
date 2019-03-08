@@ -23,9 +23,17 @@ const StyledPattern = styled.div`
   }
 `;
 
-const Memo = styled.span`
-  color: ${props => props.theme.ATLANTIS};
+const SubHeader = styled.span`
+  background-color: ${props => props.theme.titleBackground};
+  color: ${props => props.theme.header};
   display: block;
+  margin-bottom: 8px;
+  padding: 4px;
+  text-transform: uppercase;
+`;
+
+const Type = styled.span`
+  text-transform: capitalize;
 `;
 
 const StyledLink = styled(Link)`
@@ -40,7 +48,6 @@ const StyledLink = styled(Link)`
   }
 `;
 
-// const Pattern = ({ match, mode }) => {
 class Pattern extends React.Component {
   componentDidMount() {
     this.props.reset();
@@ -62,11 +69,11 @@ class Pattern extends React.Component {
           <React.Fragment>
             <h2>{pattern.name}</h2>
             <p>
-              <Memo>Type:</Memo>
-              {pattern.type} pattern
+              <SubHeader>Type:</SubHeader>
+              <Type>{pattern.type} pattern</Type>
             </p>
             <p>
-              <Memo>Description:</Memo>
+              <SubHeader>Description:</SubHeader>
               {`This pattern ${pattern.hint}.`}
             </p>
 
