@@ -5,8 +5,7 @@ const styles = {
     overflowX: 'auto',
     padding: '1em',
     background: '#282828',
-    color: '#ebdbb2',
-    height: 375
+    color: '#ebdbb2'
   },
   'hljs-subst': {
     color: '#ebdbb2'

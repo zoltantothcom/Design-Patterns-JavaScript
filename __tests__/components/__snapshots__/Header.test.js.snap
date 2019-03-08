@@ -147,6 +147,15 @@ exports[`<Header /> component renders with DARK theme 1`] = `
         Game
       </span>
       <a
+        aria-current={null}
+        className="c3"
+        href="/patterns"
+        onClick={[Function]}
+      >
+        Pattern Reference
+      </a>
+      <a
+        aria-current={null}
         className="c3"
         href="/about"
         onClick={[Function]}
@@ -369,6 +378,15 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
         Game
       </span>
       <a
+        aria-current={null}
+        className="c3"
+        href="/patterns"
+        onClick={[Function]}
+      >
+        Pattern Reference
+      </a>
+      <a
+        aria-current={null}
         className="c3"
         href="/about"
         onClick={[Function]}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { connect } from 'react-redux';
 import styleLight from './styles/hljs/hljs.light';
@@ -12,6 +12,7 @@ import { themeLight } from './styles/themes/theme.light';
 import { themeDark } from './styles/themes/theme.dark';
 import Game from './pages/Game';
 import About from './pages/About';
+import Patterns from './pages/Patterns';
 import { getMode } from './selectors';
 
 const Layout = props => {
@@ -31,8 +32,12 @@ const Layout = props => {
         <GlobalStyle mode={mode} />
         <Header />
 
-        <Route exact path="/" render={() => <Game style={style} />} />
-        <Route path="/about" component={About} />
+        <Switch>
+          <Route exact path="/" render={() => <Game style={style} />} />
+          <Route path="/patterns" component={Patterns} />
+          <Route path="/about" component={About} />
+          <Redirect to="/" />
+        </Switch>
       </React.Fragment>
     </ThemeProvider>
   );

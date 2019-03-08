@@ -2,13 +2,13 @@
 
 exports[`<Code /> component renders ES5 code in LIGHT mode 1`] = `
 <pre
+  className="fixed"
   style={
     Object {
       "background": "#fafafa",
       "border": "1px solid #d8d8d8",
       "color": "#383a42",
       "display": "block",
-      "height": 375,
       "overflowX": "auto",
       "padding": "1em",
     }
@@ -22,13 +22,13 @@ exports[`<Code /> component renders ES5 code in LIGHT mode 1`] = `
 
 exports[`<Code /> component renders ES6 code in DARK mode 1`] = `
 <pre
+  className="fixed"
   style={
     Object {
       "background": "#282828",
       "border": "1px solid #555",
       "color": "#ebdbb2",
       "display": "block",
-      "height": 375,
       "overflowX": "auto",
       "padding": "1em",
     }

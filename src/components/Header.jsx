@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Route, withRouter, Link } from 'react-router-dom';
+import { Route, withRouter, NavLink as Link } from 'react-router-dom';
 import Toggle from './Toggle';
 import Title from './Title';
 
@@ -59,6 +59,10 @@ const Header = props => {
       page: 'Game'
     },
     {
+      path: '/patterns',
+      page: 'Pattern Reference'
+    },
+    {
       path: '/about',
       page: 'About'
     }
@@ -68,7 +72,7 @@ const Header = props => {
     <StyledHeader>
       <StyledLinkContainer>
         {paths.map(({ path, page }) =>
-          pathname === path ? (
+          pathname === path || (path === '/patterns' && pathname.includes(path)) ? (
             <StyledRouterSpan key={page}>{page}</StyledRouterSpan>
           ) : (
             <StyledRouterLink key={page} to={path}>

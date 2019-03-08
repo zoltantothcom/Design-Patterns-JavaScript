@@ -13,13 +13,13 @@ const Code = props => {
   return (
     <Fragment>
       {js === 'es5' && (
-        <SyntaxHighlighter language="javascript" style={style}>
+        <SyntaxHighlighter language="javascript" style={style} className="fixed">
           {current.codeES5}
         </SyntaxHighlighter>
       )}
 
       {js === 'es6' && (
-        <SyntaxHighlighter language="javascript" style={style}>
+        <SyntaxHighlighter language="javascript" style={style} className="fixed">
           {current.codeES6}
         </SyntaxHighlighter>
       )}

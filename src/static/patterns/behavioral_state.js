@@ -4,72 +4,72 @@ const STATE = {
   type: 'behavioral',
   hint: 'allows an object to alter its behavior when its internal state changes',
   codeES5: `function Order() {
-this.pattern = new WaitingForPayment();
+  this.pattern = new WaitingForPayment();
 
-this.nextPattern = function() {
-  this.pattern = this.pattern.next();
-};
+  this.nextPattern = function() {
+    this.pattern = this.pattern.next();
+  };
 }
 
 function WaitingForPayment() {
-this.name = 'waitingForPayment';
-this.next = function() {
-  return new Shipping();
-};
+  this.name = 'waitingForPayment';
+  this.next = function() {
+    return new Shipping();
+  };
 }
 
 function Shipping() {
-this.name = 'shipping';
-this.next = function() {
-  return new Delivered();
-};
+  this.name = 'shipping';
+  this.next = function() {
+    return new Delivered();
+  };
 }
 
 function Delivered() {
-this.name = 'delivered';
-this.next = function() {
-  return this;
-};
+  this.name = 'delivered';
+  this.next = function() {
+    return this;
+  };
 }
 
 module.exports = Order;`,
   codeES6: `class OrderStatus {
-constructor(name, nextStatus) {
-  this.name = name;
-  this.nextStatus = nextStatus;
-}
+  constructor(name, nextStatus) {
+    this.name = name;
+    this.nextStatus = nextStatus;
+  }
 
-next() {
-  return new this.nextStatus();
-}
+  next() {
+    return new this.nextStatus();
+  }
 }
 
 class WaitingForPayment extends OrderStatus {
-constructor() {
-  super('waitingForPayment', Shipping);
-}
+  constructor() {
+    super('waitingForPayment', Shipping);
+  }
 }
 
 class Shipping extends OrderStatus {
-constructor() {
-  super('shipping', Delivered);
-}
+  constructor() {
+    super('shipping', Delivered);
+  }
 }
 
 class Delivered extends OrderStatus {
-constructor() {
-  super('delivered', Delivered);
-}
+  constructor() {
+    super('delivered', Delivered);
+  }
 }
 
 class Order {
-constructor() {
-  this.pattern = new WaitingForPayment();
-}
+  constructor() {
+    this.pattern = new WaitingForPayment();
+  }
 
-nextPattern() {
-  this.pattern = this.pattern.next();
-}
+  nextPattern() {
+    this.pattern = this.pattern.next();
+  }
 }
 
 export default Order;`

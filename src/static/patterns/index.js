@@ -22,7 +22,7 @@ import STRATEGY from './behavioral_strategy';
 import TEMPLATE from './behavioral_template';
 import VISITOR from './behavioral_visitor';
 
-const patterns = [
+export const patterns = [
   ABSTRACT_FACTORY,
   BUILDER,
   FACTORY,
@@ -50,9 +50,10 @@ const patterns = [
   VISITOR
 ];
 
-for (let i = patterns.length - 1; i > 0; i--) {
+const mixed = [...patterns];
+for (let i = mixed.length - 1; i > 0; i--) {
   const rand = Math.floor(Math.random() * (i + 1));
-  [patterns[i], patterns[rand]] = [patterns[rand], patterns[i]];
+  [mixed[i], mixed[rand]] = [mixed[rand], mixed[i]];
 }
 
-export default patterns;
+export default mixed;

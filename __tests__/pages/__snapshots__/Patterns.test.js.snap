@@ -1,0 +1,605 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Patterns page renders the Patterns list 1`] = `
+.c0 a {
+  border-bottom: 1px solid transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:hover {
+  border-bottom: 1px solid;
+}
+
+.c0 h2,
+.c0 h3 {
+  margin-top: 2.5rem;
+}
+
+<div
+  className="c0"
+>
+  <h2>
+    Design Patterns
+  </h2>
+  <p>
+    In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design.
+  </p>
+  <h3>
+    Creational Design Patterns
+  </h3>
+  <p>
+    These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
+  </p>
+  <ul>
+    <li>
+      <a
+        href="/patterns/abstract_factory"
+        onClick={[Function]}
+      >
+        Abstract Factory
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/builder"
+        onClick={[Function]}
+      >
+        Builder
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/factory"
+        onClick={[Function]}
+      >
+        Factory
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/prototype"
+        onClick={[Function]}
+      >
+        Prototype
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/singleton"
+        onClick={[Function]}
+      >
+        Singleton
+      </a>
+    </li>
+  </ul>
+  <h3>
+    Structural Design Patterns
+  </h3>
+  <p>
+    These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality.
+  </p>
+  <ul>
+    <li>
+      <a
+        href="/patterns/adapter"
+        onClick={[Function]}
+      >
+        Adapter
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/bridge"
+        onClick={[Function]}
+      >
+        Bridge
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/composite"
+        onClick={[Function]}
+      >
+        Composite
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/decorator"
+        onClick={[Function]}
+      >
+        Decorator
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/facade"
+        onClick={[Function]}
+      >
+        Facade
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/flyweight"
+        onClick={[Function]}
+      >
+        Flyweight
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/proxy"
+        onClick={[Function]}
+      >
+        Proxy
+      </a>
+    </li>
+  </ul>
+  <h3>
+    Behavioral Design Patterns
+  </h3>
+  <p>
+    These design patterns are all about Class's objects communication. Behavioral patterns are those patterns that are most specifically concerned with communication between objects.
+  </p>
+  <ul>
+    <li>
+      <a
+        href="/patterns/chain_of_responsibility"
+        onClick={[Function]}
+      >
+        Chain of Responsibility
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/command"
+        onClick={[Function]}
+      >
+        Command
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/interpteter"
+        onClick={[Function]}
+      >
+        Interpreter
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/iterator"
+        onClick={[Function]}
+      >
+        Iterator
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/mediator"
+        onClick={[Function]}
+      >
+        Mediator
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/memento"
+        onClick={[Function]}
+      >
+        Memento
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/observer"
+        onClick={[Function]}
+      >
+        Observer
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/state"
+        onClick={[Function]}
+      >
+        State
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/strategy"
+        onClick={[Function]}
+      >
+        Strategy
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/template"
+        onClick={[Function]}
+      >
+        Template
+      </a>
+    </li>
+    <li>
+      <a
+        href="/patterns/visitor"
+        onClick={[Function]}
+      >
+        Visitor
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Patterns page renders the individual Pattern (Singleton) info 1`] = `
+.c0 h2,
+.c0 h3 {
+  margin-top: 2.5rem;
+}
+
+.c2 {
+  display: block;
+  margin-bottom: 8px;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+.c3 {
+  text-transform: capitalize;
+}
+
+.c1 {
+  border-bottom: 1px solid;
+  display: inline-block;
+  margin-top: 2rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  border-bottom: 1px solid transparent;
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1"
+    href="/patterns"
+    onClick={[Function]}
+  >
+    ← Back to Patterns List
+  </a>
+  <h2>
+    Singleton
+  </h2>
+  <p>
+    <span
+      className="c2"
+    >
+      Type:
+    </span>
+    <span
+      className="c3"
+    >
+      creational
+       pattern
+    </span>
+  </p>
+  <p>
+    <span
+      className="c2"
+    >
+      Description:
+    </span>
+    This pattern restricts object creation for a class to only one instance.
+  </p>
+  <h3>
+    ES5
+  </h3>
+  <pre
+    style={
+      Object {
+        "background": "#282828",
+        "border": "1px solid #555",
+        "color": "#ebdbb2",
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "1em",
+      }
+    }
+  >
+    <code>
+      <span
+        style={
+          Object {
+            "color": "#8ec07c",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#fb4934",
+            }
+          }
+        >
+          function
+        </span>
+         
+        <span
+          style={
+            Object {
+              "color": "#83a598",
+            }
+          }
+        >
+          Person
+        </span>
+        (
+        <span
+          style={
+            Object {
+              "color": "#fabd2f",
+            }
+          }
+        />
+        ) 
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        if
+      </span>
+       (
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        typeof
+      </span>
+       Person.instance === 
+      <span
+        style={
+          Object {
+            "color": "#b8bb26",
+          }
+        }
+      >
+        'object'
+      </span>
+      ) 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       Person.instance;
+
+  Person.instance = 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+}
+
+
+      <span
+        style={
+          Object {
+            "color": "#83a598",
+          }
+        }
+      >
+        module
+      </span>
+      .exports = Person;
+    </code>
+  </pre>
+  <h3>
+    ES6
+  </h3>
+  <pre
+    style={
+      Object {
+        "background": "#282828",
+        "border": "1px solid #555",
+        "color": "#ebdbb2",
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "1em",
+      }
+    }
+  >
+    <code>
+      <span
+        style={
+          Object {
+            "color": "#8ec07c",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#fb4934",
+            }
+          }
+        >
+          class
+        </span>
+         
+        <span
+          style={
+            Object {
+              "color": "#83a598",
+            }
+          }
+        >
+          Person
+        </span>
+         
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        constructor
+      </span>
+      () {
+    
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        if
+      </span>
+       (
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        typeof
+      </span>
+       Person.instance === 
+      <span
+        style={
+          Object {
+            "color": "#b8bb26",
+          }
+        }
+      >
+        'object'
+      </span>
+      ) {
+      
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       Person.instance;
+    }
+
+    Person.instance = 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+
+    
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+  }
+}
+
+
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        export
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        default
+      </span>
+       Person;
+    </code>
+  </pre>
+</div>
+`;
