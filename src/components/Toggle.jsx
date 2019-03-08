@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { toggle } from '../actions/toggle';
@@ -50,7 +49,7 @@ export const Toggle = props => {
   if (control === 'mode' && mode === 'light') isActive = 'active';
 
   return (
-    <StyledToggle onClick={() => onToggle(control)} className={classnames(isActive)}>
+    <StyledToggle onClick={() => onToggle(control)} className={isActive}>
       <SVG control={control} />
     </StyledToggle>
   );
