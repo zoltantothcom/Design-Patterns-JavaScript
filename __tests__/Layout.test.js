@@ -65,8 +65,8 @@ describe('Layout', () => {
       expect(tree.find('header h1').text()).toMatch('Design Patterns');
     });
 
-    it('renders 1 link', () => {
-      expect(tree.find('header a')).toHaveLength(1);
+    it('renders 2 links', () => {
+      expect(tree.find('header a')).toHaveLength(2);
     });
 
     it('renders 1 span', () => {
@@ -108,8 +108,8 @@ describe('Layout', () => {
       expect(tree.find('header h1').text()).toMatch('Design Patterns');
     });
 
-    it('renders 1 link', () => {
-      expect(tree.find('header a')).toHaveLength(1);
+    it('renders 2 links', () => {
+      expect(tree.find('header a')).toHaveLength(2);
     });
 
     it('renders 1 span', () => {
