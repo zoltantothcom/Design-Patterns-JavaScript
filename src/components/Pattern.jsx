@@ -8,6 +8,7 @@ import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
 import styleLight from '../styles/hljs/hljs.light';
 import styleDark from '../styles/hljs/hljs.dark';
 import { patterns } from '../static/patterns';
+import { restart } from '../actions/restart';
 import { getMode } from '../selectors';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
@@ -39,50 +40,63 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Pattern = ({ match, mode }) => {
-  const {
-    params: { id }
-  } = match;
+// const Pattern = ({ match, mode }) => {
+class Pattern extends React.Component {
+  componentDidMount() {
+    this.props.reset();
+  }
 
-  const pattern = patterns.filter(item => item.id === id)[0];
+  render() {
+    const {
+      params: { id }
+    } = this.props.match;
 
-  const style = mode === 'dark' ? styleDark : styleLight;
+    const pattern = patterns.filter(item => item.id === id)[0];
 
-  return (
-    <StyledPattern>
-      <StyledLink to="/patterns">&larr; Back to Patterns List</StyledLink>
-      {pattern && (
-        <React.Fragment>
-          <h2>{pattern.name}</h2>
-          <p>
-            <Memo>Type:</Memo>
-            {pattern.type} pattern
-          </p>
-          <p>
-            <Memo>Description:</Memo>
-            {`This pattern ${pattern.hint}.`}
-          </p>
+    const style = this.props.mode === 'dark' ? styleDark : styleLight;
 
-          <h3>ES5</h3>
-          <SyntaxHighlighter language="javascript" style={style}>
-            {pattern.codeES5}
-          </SyntaxHighlighter>
+    return (
+      <StyledPattern>
+        <StyledLink to="/patterns">&larr; Back to Patterns List</StyledLink>
+        {pattern && (
+          <React.Fragment>
+            <h2>{pattern.name}</h2>
+            <p>
+              <Memo>Type:</Memo>
+              {pattern.type} pattern
+            </p>
+            <p>
+              <Memo>Description:</Memo>
+              {`This pattern ${pattern.hint}.`}
+            </p>
 
-          <h3>ES6</h3>
-          <SyntaxHighlighter language="javascript" style={style}>
-            {pattern.codeES6}
-          </SyntaxHighlighter>
-        </React.Fragment>
-      )}
-    </StyledPattern>
-  );
-};
+            <h3>ES5</h3>
+            <SyntaxHighlighter language="javascript" style={style}>
+              {pattern.codeES5}
+            </SyntaxHighlighter>
+
+            <h3>ES6</h3>
+            <SyntaxHighlighter language="javascript" style={style}>
+              {pattern.codeES6}
+            </SyntaxHighlighter>
+          </React.Fragment>
+        )}
+      </StyledPattern>
+    );
+  }
+}
 
 Pattern.propTypes = {
   match: PropTypes.object.isRequired,
-  mode: PropTypes.string.isRequired
+  mode: PropTypes.string.isRequired,
+  reset: PropTypes.func.isRequired
 };
 
-export default connect(state => ({
-  mode: getMode(state)
-}))(Pattern);
+export default connect(
+  state => ({
+    mode: getMode(state)
+  }),
+  {
+    reset: () => restart()
+  }
+)(Pattern);
