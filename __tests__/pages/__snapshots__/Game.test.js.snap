@@ -23,7 +23,6 @@ exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
         "border": "1px solid #555",
         "color": "#ebdbb2",
         "display": "block",
-        "height": 375,
         "overflowX": "auto",
         "padding": "1em",
       },
@@ -165,6 +164,7 @@ exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
   }
 >
   <SyntaxHighlighter
+    className="fixed"
     language="javascript"
     style={
       Object {
@@ -173,7 +173,6 @@ exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
           "border": "1px solid #555",
           "color": "#ebdbb2",
           "display": "block",
-          "height": 375,
           "overflowX": "auto",
           "padding": "1em",
         },
@@ -315,13 +314,13 @@ exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
     }
   >
     <pre
+      className="fixed"
       style={
         Object {
           "background": "#282828",
           "border": "1px solid #555",
           "color": "#ebdbb2",
           "display": "block",
-          "height": 375,
           "overflowX": "auto",
           "padding": "1em",
         }
@@ -481,7 +480,6 @@ exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
         "border": "1px solid #d8d8d8",
         "color": "#383a42",
         "display": "block",
-        "height": 375,
         "overflowX": "auto",
         "padding": "1em",
       },
@@ -594,6 +592,7 @@ exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
   }
 >
   <SyntaxHighlighter
+    className="fixed"
     language="javascript"
     style={
       Object {
@@ -602,7 +601,6 @@ exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
           "border": "1px solid #d8d8d8",
           "color": "#383a42",
           "display": "block",
-          "height": 375,
           "overflowX": "auto",
           "padding": "1em",
         },
@@ -715,13 +713,13 @@ exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
     }
   >
     <pre
+      className="fixed"
       style={
         Object {
           "background": "#fafafa",
           "border": "1px solid #d8d8d8",
           "color": "#383a42",
           "display": "block",
-          "height": 375,
           "overflowX": "auto",
           "padding": "1em",
         }
