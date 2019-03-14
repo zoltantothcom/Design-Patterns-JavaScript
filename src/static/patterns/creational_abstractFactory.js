@@ -2,7 +2,10 @@ const ABSTRACT_FACTORY = {
   id: 'abstract_factory',
   name: 'Abstract Factory',
   type: 'creational',
-  hint: 'groups object factories that have a common theme',
+  hint: 'Creates an instance of several families of classes',
+  description: `Rather than building a concrete object, it’s building a family of
+    related or dependent objects without specifying concrete class.`,
+  use: `system should be independent of how what it is producing is structured or represented`,
   codeES5: `function droidProducer(kind) {
   if (kind === 'battle') return battleDroidPattern;
   return pilotDroidPattern;

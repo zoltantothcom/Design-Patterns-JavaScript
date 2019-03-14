@@ -2,7 +2,10 @@ const BUILDER = {
   id: 'builder',
   name: 'Builder',
   type: 'creational',
-  hint: 'constructs complex objects by separating construction and representation',
+  hint: 'Separates object construction from its representation',
+  description: `Separate how object is created from its representation,
+    so the same process of creation can generate different representations.`,
+  use: `algorithm of creation is independent of the parts of the object`,
   codeES5: `function Request() {
   this.url = '';
   this.method = '';
