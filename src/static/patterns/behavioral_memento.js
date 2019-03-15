@@ -2,7 +2,10 @@ const MEMENTO = {
   id: 'memento',
   name: 'Memento',
   type: 'behavioral',
-  hint: 'provides the ability to restore an object to its previous state',
+  hint: "Capture and restore an object's internal state",
+  definition: `Without violating encapsulation, capture and externalize an object's internal state
+    so that the object can be restored to this state later.`,
+  when: 'you need to take a snapshot of an object',
   codeES5: `function Pattern(value) {
   this.value = value;
 }

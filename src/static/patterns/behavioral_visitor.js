@@ -2,8 +2,11 @@ const VISITOR = {
   id: 'visitor',
   name: 'Visitor',
   type: 'behavioral',
-  hint:
-    'separates an algorithm from an object structure by moving the hierarchy of methods into one object',
+  hint: 'Defines a new operation to a class without change',
+  definition: `Represent an operation to be performed on the elements of an object structure.
+    Visitor lets you define a new operation without changing the classes of the elements on which it operates.`,
+  when: `an object structure includes many classes and you want to perform an operations
+    on the elements of that structure that depend on their classes`,
   codeES5: `function bonusPattern(employee) {
   if (employee instanceof Manager) employee.bonus = employee.salary * 2;
   if (employee instanceof Developer) employee.bonus = employee.salary;

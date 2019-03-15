@@ -2,7 +2,11 @@ const INTERPRETER = {
   id: 'interpteter',
   name: 'Interpreter',
   type: 'behavioral',
-  hint: 'implements a specialized language',
+  hint: 'A way to include language elements in a program',
+  definition: `Given a language, define a representation for its grammar along with an interpreter that
+    uses the representation to interpret sentences in the language.`,
+  when:
+    'you want to interpret given language and you can represent statements as an abstract syntax trees',
   codeES5: `function Sum(left, right) {
   this.left = left;
   this.right = right;

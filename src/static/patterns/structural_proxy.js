@@ -2,8 +2,9 @@ const PROXY = {
   id: 'proxy',
   name: 'Proxy',
   type: 'structural',
-  hint:
-    'provides a placeholder for another object to control access, reduce cost, and reduce complexity',
+  hint: 'An object representing another object',
+  definition: `Provide a surrogate or placeholder for another object to control access to it.`,
+  when: ``,
   codeES5: `function Car() {
   this.drive = function() {
     return 'driving';

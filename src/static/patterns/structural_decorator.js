@@ -2,7 +2,10 @@ const DECORATOR = {
   id: 'decorator',
   name: 'Decorator',
   type: 'structural',
-  hint: 'dynamically adds/overrides behaviour in an existing method of an object',
+  hint: 'Add responsibilities to objects dynamically',
+  definition: `Attach additional responsibilities to an object dynamically.
+    Decorators provide a flexible alternative to subclassing for extending functionality.`,
+  when: `you want to add extensions to an object in runtime without affecting other objects`,
   codeES5: `function Pasta() {
   this.price = 0;
 }

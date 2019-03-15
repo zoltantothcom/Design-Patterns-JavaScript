@@ -2,7 +2,10 @@ const FACADE = {
   id: 'facade',
   name: 'Facade',
   type: 'structural',
-  hint: 'provides a simplified interface to a large body of code',
+  hint: 'A single class that represents an entire subsystem',
+  definition: `Provide a unified interface to a set of interfaces in a subsystem.
+    Facade defines a higher-level interface that makes the subsystem easier to use.`,
+  when: `you want to provide a simple interface to a complex subsystem`,
   codeES5: `var shopPattern = {
   calc: function(price) {
     price = discount(price);

@@ -2,7 +2,10 @@ const BRIDGE = {
   id: 'bridge',
   name: 'Bridge',
   type: 'structural',
-  hint: 'decouples an abstraction from its implementation so that the two can vary independently',
+  hint: 'Separates an object’s interface from its implementation',
+  definition: `Decouple an abstraction from its implementation so that the two can vary independently.`,
+  when: `you want to avoid binding between abstraction and its implementation if, for example,
+    each of them must be selected in runtime`,
   codeES5: `function EpsonPrinter(ink) {
   this.ink = ink();
 }

@@ -2,7 +2,10 @@ const OBSERVER = {
   id: 'observer',
   name: 'Observer',
   type: 'behavioral',
-  hint: 'is a publish/subscribe pattern which allows a number of observer objects to see an event',
+  hint: 'A way of notifying change to a number of classes',
+  definition: `Define a one-to-many dependency between objects so that when one object changes state,
+    all its dependents are notified and updated automatically.`,
+  when: 'a change to one object requires changing others',
   codeES5: `function Product() {
   this.price = 0;
   this.actions = [];

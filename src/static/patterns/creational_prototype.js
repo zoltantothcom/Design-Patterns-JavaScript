@@ -2,7 +2,10 @@ const PROTOTYPE = {
   id: 'prototype',
   name: 'Prototype',
   type: 'creational',
-  hint: 'creates objects by cloning an existing object',
+  hint: 'A fully initialized instance to be copied or cloned',
+  definition: `Specify the kind of objects to create using a prototypical instance,
+    and create new objects by copying this prototype.`,
+  when: 'classes to instantiate are available only in runtime',
   codeES5: `function Sheep(name, weight) {
   this.name = name;
   this.weight = weight;

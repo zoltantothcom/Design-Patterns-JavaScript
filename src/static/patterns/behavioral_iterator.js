@@ -2,8 +2,10 @@ const ITERATOR = {
   id: 'iterator',
   name: 'Iterator',
   type: 'behavioral',
-  hint:
-    'accesses the elements of an object sequentially without exposing its underlying representation',
+  hint: 'Sequentially access the elements of a collection',
+  definition: `Provide a way to access the elements of an aggregate object sequentially
+    without exposing its underlying representation.`,
+  when: "you want to access object's content without knowing how it is internally represented",
   codeES5: `function Pattern(el) {
   this.index = 0;
   this.elements = el;

@@ -2,8 +2,11 @@ const MEDIATOR = {
   id: 'mediator',
   name: 'Mediator',
   type: 'behavioral',
-  hint:
-    'allows loose coupling between classes by being the only class that has detailed knowledge of their methods',
+  hint: 'Defines simplified communication between classes',
+  definition: `Define an object that encapsulates how a set of objects interact.
+    Mediator promotes loose coupling by keeping objects from referring to each other explicitly,
+    and it lets you vary their interaction independently.`,
+  when: 'a set of objects communicate in structured but complex ways',
   codeES5: `function TrafficTower() {
   this.airplanes = [];
 }
