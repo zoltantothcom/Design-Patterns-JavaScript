@@ -2,7 +2,9 @@ const FLYWEIGHT = {
   id: 'flyweight',
   name: 'Flyweight',
   type: 'structural',
-  hint: 'reduces the cost of creating and manipulating a large number of similar objects',
+  hint: 'A fine-grained instance used for efficient sharing',
+  definition: `Use sharing to support large numbers of fine-grained objects efficiently.`,
+  when: `an application uses a lot of small objects and their storing is expensive or their identity is not important`,
   codeES5: `function Color(name) {
   this.name = name;
 }

@@ -2,7 +2,11 @@ const COMMAND = {
   id: 'command',
   name: 'Command',
   type: 'behavioral',
-  hint: 'creates objects which encapsulate actions and parameters',
+  hint: 'Encapsulate a command request as an object',
+  definition: `Encapsulate a request as an object, thereby letting you parameterize clients with different requests,
+    queue or log requests, and support undoable operations.`,
+  when:
+    'you have a queue of requests to handle or you want to log them. Also when you want to have an «undo» action',
   codeES5: `function Cockpit(instruction) {
   this.instruction = instruction;
 }

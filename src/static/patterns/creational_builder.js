@@ -3,9 +3,9 @@ const BUILDER = {
   name: 'Builder',
   type: 'creational',
   hint: 'Separates object construction from its representation',
-  description: `Separate how object is created from its representation,
-    so the same process of creation can generate different representations.`,
-  use: `algorithm of creation is independent of the parts of the object`,
+  definition: `Separate the construction of a complex object from its representation
+    so that the same construction process can create different representations.`,
+  when: 'algorithm of creation is independent of the parts of the object',
   codeES5: `function Request() {
   this.url = '';
   this.method = '';

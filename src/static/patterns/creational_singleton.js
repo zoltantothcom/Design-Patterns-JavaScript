@@ -3,8 +3,8 @@ const SINGLETON = {
   name: 'Singleton',
   type: 'creational',
   hint: 'A class of which only a single instance can exist',
-  description: `Ensures that a class has only one instance and gives global access to it.`,
-  use: `there must by only one instance of a class`,
+  definition: 'Ensure a class has only one instance and provide a global point of access to it.',
+  when: 'there must by only one instance of a class',
   codeES5: `function Person() {
   if (typeof Person.instance === 'object') return Person.instance;
 

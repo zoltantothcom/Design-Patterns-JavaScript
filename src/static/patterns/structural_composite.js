@@ -2,7 +2,10 @@ const COMPOSITE = {
   id: 'composite',
   name: 'Composite',
   type: 'structural',
-  hint: 'composes zero-or-more similar objects so that they can be manipulated as one object',
+  hint: 'A tree structure of simple and composite objects',
+  definition: `Compose objects into tree structures to represent part-whole hierarchies.
+    Composite lets clients treat individual objects and compositions of objects uniformly.`,
+  when: `you want to represent hierarchies of objects`,
   codeES5: `function EquipmentPattern(name) {
   this.equipments = [];
   this.name = name;

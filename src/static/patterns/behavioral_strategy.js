@@ -2,7 +2,11 @@ const STRATEGY = {
   id: 'strategy',
   name: 'Strategy',
   type: 'behavioral',
-  hint: 'allows one of a family of algorithms to be selected on-the-fly at runtime',
+  hint: 'Encapsulates an algorithm inside a class',
+  definition: `Define a family of algorithms, encapsulate each one, and make them interchangeable.
+    Strategy lets the algorithm vary independently from clients that use it.`,
+  when: `you have many classes that differ in their behaviour.
+    Strategies allow to configure a class with one of many behaviours`,
   codeES5: `function ShoppingCart(discount) {
   this.discount = discount;
   this.amount = 0;

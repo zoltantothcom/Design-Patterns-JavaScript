@@ -2,8 +2,10 @@ const TEMPLATE = {
   id: 'template',
   name: 'Template',
   type: 'behavioral',
-  hint:
-    'defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior',
+  hint: 'Defer the exact steps of an algorithm to a subclass',
+  definition: `Define the skeleton of an algorithm in an operation, deferring some steps to subclasses.
+    Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.`,
+  when: `you have to define steps of the algorithm once and let subclasses to implement its behaviour`,
   codeES5: `function Tax() {}
 
 Tax.prototype.calc = function(value) {

@@ -2,8 +2,10 @@ const ADAPTER = {
   id: 'adapter',
   name: 'Adapter',
   type: 'structural',
-  hint: `allows classes with incompatible interfaces to work together by wrapping
-  its own interface around that of an already existing class`,
+  hint: `Match interfaces of different classes`,
+  definition: `Convert the interface of a class into another interface clients expect.
+    Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.`,
+  when: `you want to use existing class but its interface does not match the one you need`,
   codeES5: `function Soldier(lvl) {
   this.lvl = lvl;
 }
