@@ -73,9 +73,15 @@ class Pattern extends React.Component {
               <Type>{pattern.type} pattern</Type>
             </p>
             <p>
-              <SubHeader>Description:</SubHeader>
-              {`This pattern ${pattern.hint}.`}
+              <SubHeader>Definition:</SubHeader>
+              {pattern.definition}
             </p>
+            {pattern.when && (
+              <p>
+                <SubHeader>Use when&hellip;</SubHeader>
+                &hellip;{pattern.when}.
+              </p>
+            )}
 
             <h3>ES5</h3>
             <SyntaxHighlighter language="javascript" style={style}>
