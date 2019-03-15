@@ -59,9 +59,19 @@ exports[`REFERENCE - Pattern component renders the individual pattern (Singleton
     <span
       className="c2"
     >
-      Description:
+      Definition:
     </span>
-    This pattern restricts object creation for a class to only one instance.
+    Ensure a class has only one instance and provide a global point of access to it.
+  </p>
+  <p>
+    <span
+      className="c2"
+    >
+      Use when…
+    </span>
+    …
+    there must by only one instance of a class
+    .
   </p>
   <h3>
     ES5
