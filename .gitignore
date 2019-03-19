@@ -6,6 +6,11 @@
 # testing
 /coverage
 
+/cypress/fixtures
+/cypress/plugins
+/cypress/support
+/cypress/integration/examples
+
 # production
 /build
 
