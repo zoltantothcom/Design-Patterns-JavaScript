@@ -39,6 +39,7 @@ exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
 <div>
   <button
     className="c0"
+    data-cy="js"
     onClick={[Function]}
   >
     <svg
@@ -105,6 +106,7 @@ exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
 <div>
   <button
     className="c0"
+    data-cy="js"
     onClick={[Function]}
   >
     <svg
@@ -171,6 +173,7 @@ exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
 <div>
   <button
     className="c0"
+    data-cy="mode"
     onClick={[Function]}
   >
     <svg
@@ -231,6 +234,7 @@ exports[`<Toggle /> renders the MODE toggle in LIGHT mode 1`] = `
 <div>
   <button
     className="c0"
+    data-cy="mode"
     onClick={[Function]}
   >
     <svg

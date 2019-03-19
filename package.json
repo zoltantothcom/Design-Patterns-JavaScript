@@ -35,7 +35,8 @@
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/__tests__/config/",
-      "<rootDir>/__tests__/helpers/"
+      "<rootDir>/__tests__/helpers/",
+      "<rootDir>/cypress/"
     ]
   },
   "devDependencies": {

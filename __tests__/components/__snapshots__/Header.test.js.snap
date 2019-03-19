@@ -168,6 +168,7 @@ exports[`<Header /> component renders with DARK theme 1`] = `
     >
       <button
         className="c5"
+        data-cy="js"
         onClick={[Function]}
       >
         <svg
@@ -194,6 +195,7 @@ exports[`<Header /> component renders with DARK theme 1`] = `
       </button>
       <button
         className="c5"
+        data-cy="mode"
         onClick={[Function]}
       >
         <svg
@@ -399,6 +401,7 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
     >
       <button
         className="c5"
+        data-cy="js"
         onClick={[Function]}
       >
         <svg
@@ -425,6 +428,7 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
       </button>
       <button
         className="c5"
+        data-cy="mode"
         onClick={[Function]}
       >
         <svg
