@@ -15,12 +15,15 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "start:ci": "npm start & wait-on http://localhost:8080",
     "format": "prettier --write \"src/**/*.js\"",
     "stats": "webpack-bundle-analyzer stats/stats.json",
     "build": "webpack --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook"
   },
@@ -34,7 +37,8 @@
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/__tests__/config/",
-      "<rootDir>/__tests__/helpers/"
+      "<rootDir>/__tests__/helpers/",
+      "<rootDir>/cypress/"
     ]
   },
   "devDependencies": {
@@ -55,6 +59,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.3",
+    "cypress": "^3.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
     "enzyme-to-json": "^3.3.5",
@@ -70,6 +75,7 @@
     "redux-mock-store": "^1.5.3",
     "storybook-addon-styled-component-theme": "^1.1.1",
     "surge": "^0.20.1",
+    "wait-on": "^3.2.0",
     "webpack": "^4.29.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.2.1",

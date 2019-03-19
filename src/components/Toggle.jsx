@@ -49,7 +49,7 @@ export const Toggle = props => {
   if (control === 'mode' && mode === 'light') isActive = 'active';
 
   return (
-    <StyledToggle onClick={() => onToggle(control)} className={isActive}>
+    <StyledToggle onClick={() => onToggle(control)} className={isActive} data-cy={control}>
       <SVG control={control} />
     </StyledToggle>
   );
