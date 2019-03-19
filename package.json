@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "start:ci": "npm start & wait-on http://localhost:8080",
     "format": "prettier --write \"src/**/*.js\"",
     "stats": "webpack-bundle-analyzer stats/stats.json",
     "build": "webpack --mode production",

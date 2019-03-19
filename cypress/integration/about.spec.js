@@ -1,7 +1,7 @@
 /* globals context, cy */
 context('About', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8081/about');
+    cy.visit('http://localhost:8080/about');
   });
 
   describe('Header', () => {
