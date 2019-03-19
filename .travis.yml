@@ -10,6 +10,7 @@ script:
   - yarn build
   - yarn test
   - yarn test:coverage
+  - yarn cypress:run
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
