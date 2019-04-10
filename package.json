@@ -77,7 +77,7 @@
     "surge": "^0.20.3",
     "wait-on": "^3.2.0",
     "webpack": "^4.29.6",
-    "webpack-bundle-analyzer": "^3.2.0",
+    "webpack-bundle-analyzer": "^3.3.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.0"
   }
