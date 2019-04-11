@@ -73,7 +73,7 @@
     "prettier": "1.16.4",
     "react-test-renderer": "^16.8.6",
     "redux-mock-store": "^1.5.3",
-    "storybook-addon-styled-component-theme": "1.1.1",
+    "storybook-addon-styled-component-theme": "1.2.1",
     "surge": "^0.20.3",
     "wait-on": "^3.2.0",
     "webpack": "^4.29.6",
