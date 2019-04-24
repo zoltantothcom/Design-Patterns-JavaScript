@@ -25,7 +25,7 @@ const SubHeading = styled.h2`
 
 export const Title = () => (
   <TitleContainer>
-    <Heading>Design Patterns</Heading>
+    <Heading>Design Patterns Game</Heading>
     <SubHeading>implemented in JavaScript</SubHeading>
   </TitleContainer>
 );

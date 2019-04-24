@@ -29,7 +29,7 @@ exports[`<Title /> component renders with a DARK theme 1`] = `
   <h1
     className="c1"
   >
-    Design Patterns
+    Design Patterns Game
   </h1>
   <h2
     className="c2"
@@ -68,7 +68,7 @@ exports[`<Title /> component renders with a LIGHT theme 1`] = `
   <h1
     className="c1"
   >
-    Design Patterns
+    Design Patterns Game
   </h1>
   <h2
     className="c2"
