@@ -19,5 +19,5 @@ after_success:
 deploy:
   provider: surge
   project: ./build
-  domain: https://designpatternsgame.com
+  domain: http://designpatternsgame.com
   skip_cleanup: true
