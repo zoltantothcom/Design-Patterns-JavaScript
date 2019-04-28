@@ -83,14 +83,14 @@ class Pattern extends React.Component {
               </p>
             )}
 
-            <h3>ES5</h3>
-            <SyntaxHighlighter language="javascript" style={style}>
-              {pattern.codeES5}
-            </SyntaxHighlighter>
-
             <h3>ES6</h3>
             <SyntaxHighlighter language="javascript" style={style}>
               {pattern.codeES6}
+            </SyntaxHighlighter>
+
+            <h3>ES5</h3>
+            <SyntaxHighlighter language="javascript" style={style}>
+              {pattern.codeES5}
             </SyntaxHighlighter>
           </React.Fragment>
         )}

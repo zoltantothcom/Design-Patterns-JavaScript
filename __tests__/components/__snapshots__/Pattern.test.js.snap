@@ -74,149 +74,6 @@ exports[`REFERENCE - Pattern component renders the individual pattern (Singleton
     .
   </p>
   <h3>
-    ES5
-  </h3>
-  <pre
-    style={
-      Object {
-        "background": "#282828",
-        "border": "1px solid #555",
-        "color": "#ebdbb2",
-        "display": "block",
-        "overflowX": "auto",
-        "padding": "1em",
-      }
-    }
-  >
-    <code>
-      <span
-        style={
-          Object {
-            "color": "#8ec07c",
-          }
-        }
-      >
-        <span
-          style={
-            Object {
-              "color": "#fb4934",
-            }
-          }
-        >
-          function
-        </span>
-         
-        <span
-          style={
-            Object {
-              "color": "#83a598",
-            }
-          }
-        >
-          Person
-        </span>
-        (
-        <span
-          style={
-            Object {
-              "color": "#fabd2f",
-            }
-          }
-        />
-        ) 
-      </span>
-      {
-  
-      <span
-        style={
-          Object {
-            "color": "#fb4934",
-          }
-        }
-      >
-        if
-      </span>
-       (
-      <span
-        style={
-          Object {
-            "color": "#fb4934",
-          }
-        }
-      >
-        typeof
-      </span>
-       Person.instance === 
-      <span
-        style={
-          Object {
-            "color": "#b8bb26",
-          }
-        }
-      >
-        'object'
-      </span>
-      ) 
-      <span
-        style={
-          Object {
-            "color": "#fb4934",
-          }
-        }
-      >
-        return
-      </span>
-       Person.instance;
-
-  Person.instance = 
-      <span
-        style={
-          Object {
-            "color": "#fb4934",
-          }
-        }
-      >
-        this
-      </span>
-      ;
-
-  
-      <span
-        style={
-          Object {
-            "color": "#fb4934",
-          }
-        }
-      >
-        return
-      </span>
-       
-      <span
-        style={
-          Object {
-            "color": "#fb4934",
-          }
-        }
-      >
-        this
-      </span>
-      ;
-}
-
-
-      <span
-        style={
-          Object {
-            "color": "#83a598",
-          }
-        }
-      >
-        module
-      </span>
-      .exports = Person;
-    </code>
-  </pre>
-  <h3>
     ES6
   </h3>
   <pre
@@ -373,6 +230,149 @@ exports[`REFERENCE - Pattern component renders the individual pattern (Singleton
         default
       </span>
        Person;
+    </code>
+  </pre>
+  <h3>
+    ES5
+  </h3>
+  <pre
+    style={
+      Object {
+        "background": "#282828",
+        "border": "1px solid #555",
+        "color": "#ebdbb2",
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "1em",
+      }
+    }
+  >
+    <code>
+      <span
+        style={
+          Object {
+            "color": "#8ec07c",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "color": "#fb4934",
+            }
+          }
+        >
+          function
+        </span>
+         
+        <span
+          style={
+            Object {
+              "color": "#83a598",
+            }
+          }
+        >
+          Person
+        </span>
+        (
+        <span
+          style={
+            Object {
+              "color": "#fabd2f",
+            }
+          }
+        />
+        ) 
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        if
+      </span>
+       (
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        typeof
+      </span>
+       Person.instance === 
+      <span
+        style={
+          Object {
+            "color": "#b8bb26",
+          }
+        }
+      >
+        'object'
+      </span>
+      ) 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       Person.instance;
+
+  Person.instance = 
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+
+  
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        return
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#fb4934",
+          }
+        }
+      >
+        this
+      </span>
+      ;
+}
+
+
+      <span
+        style={
+          Object {
+            "color": "#83a598",
+          }
+        }
+      >
+        module
+      </span>
+      .exports = Person;
     </code>
   </pre>
 </div>
