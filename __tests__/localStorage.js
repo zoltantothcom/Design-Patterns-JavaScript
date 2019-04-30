@@ -20,7 +20,7 @@ describe('LocalStorage utilities', () => {
   });
 
   it('should not throw exceptions if localStorage is undefined', () => {
-    delete window.localStorage;
+    Reflect.deleteProperty(window, 'localStorage');
 
     expect(saveState(data)).toBeUndefined();
     expect(loadState()).toBeUndefined();
