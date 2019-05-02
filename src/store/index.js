@@ -14,7 +14,7 @@ import {
 import { shuffle } from '../helpers/shuffleArray';
 
 const patternsWithUuids = patterns.map(pattern => ({ ...pattern, uuid: uuid() }));
-const answers = patternsWithUuids.map(current => {
+export const answers = patternsWithUuids.map(current => {
   // get 3 random patterns in addition to correct one
   const allOtherAnswers = patternsWithUuids.filter(pattern => pattern.uuid !== current.uuid);
   const additional = shuffle(allOtherAnswers).slice(0, 3);
