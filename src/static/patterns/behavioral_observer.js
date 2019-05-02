@@ -83,13 +83,13 @@ class fees {
   }
 }
 
-class proft {
+class profit {
   update(product) {
     product.price = product.price * 2;
   }
 }
 
-export { Product, fees, proft };`
+export { Product, fees, profit };`
 };
 
 export default OBSERVER;
