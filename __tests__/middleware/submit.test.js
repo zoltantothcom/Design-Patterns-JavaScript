@@ -12,7 +12,14 @@ const patterns = [
     codeES5: 'Code ES5',
     codeES6: 'Code ES6',
     answered: false,
-    correct: null
+    correct: null,
+    variants: [{
+      uuid: 'abc234',
+      name: 'SIngleton'
+    }, {
+      uuid: 'abc123',
+      name: 'Prototype'
+    }]
   },
 
   {
@@ -22,7 +29,14 @@ const patterns = [
     codeES5: 'Code ES5',
     codeES6: 'Code ES6',
     answered: false,
-    correct: null
+    correct: null,
+    variants: [{
+      uuid: 'abc234',
+      name: 'SIngleton'
+    }, {
+      uuid: 'abc123',
+      name: 'Prototype'
+    }]
   }
 ];
 
@@ -47,7 +61,8 @@ describe('Submit middleware', () => {
           correct: true,
           name: 'Prototype',
           type: 'creational',
-          uuid: 'abc123'
+          uuid: 'abc123',
+          variantUuid: 'abc123'
         },
         remainingPatterns: [
           {
@@ -57,7 +72,14 @@ describe('Submit middleware', () => {
             correct: null,
             name: 'Singleton',
             type: 'creational',
-            uuid: 'abc234'
+            uuid: 'abc234',
+            variants: [{
+              uuid: 'abc234',
+              name: 'SIngleton'
+            }, {
+              uuid: 'abc123',
+              name: 'Prototype'
+            }]
           }
         ]
       },

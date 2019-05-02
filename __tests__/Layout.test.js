@@ -18,7 +18,14 @@ const patterns = [
     codeES5: 'Code ES5 - Prototype',
     codeES6: 'Code ES6 - Prototype',
     answered: false,
-    correct: null
+    correct: null,
+    variants: [{
+      uuid: 'abc234',
+      name: 'SIngleton'
+    }, {
+      uuid: 'abc123',
+      name: 'Prototype'
+    }]
   },
 
   {
@@ -28,7 +35,14 @@ const patterns = [
     codeES5: 'Code ES5 - Singleton',
     codeES6: 'Code ES6 - Singleton',
     answered: false,
-    correct: null
+    correct: null,
+    variants: [{
+      uuid: 'abc234',
+      name: 'SIngleton'
+    }, {
+      uuid: 'abc123',
+      name: 'Prototype'
+    }]
   }
 ];
 
