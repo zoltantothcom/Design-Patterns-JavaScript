@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  background-color: ${props => props.buttonBackground ? props.buttonBackground : props.theme.buttonBackground};
+  background-color: ${props => props.buttonBackground || props.theme.buttonBackground};
   border: 1px solid ${props => props.theme.buttonBorder};
   border-radius: 4px;
   cursor: pointer;
@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   }
 
   &:hover {
-    background-color: ${props => props.buttonBackgroundHover ? props.buttonBackgroundHover : props.theme.buttonBackgroundHover};
+    background-color: ${props => props.buttonBackgroundHover || props.theme.buttonBackgroundHover};
     border-color: ${props => props.theme.buttonBorderHover};
 
     & span {
