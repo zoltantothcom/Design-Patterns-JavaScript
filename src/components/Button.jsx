@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  background-color: ${props => props.theme.buttonBackground};
+  background-color: ${props => props.buttonBackground ? props.buttonBackground : props.theme.buttonBackground};
   border: 1px solid ${props => props.theme.buttonBorder};
   border-radius: 4px;
   cursor: pointer;
@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   }
 
   &:hover {
-    background-color: ${props => props.theme.buttonBackgroundHover};
+    background-color: ${props => props.buttonBackgroundHover ? props.buttonBackgroundHover : props.theme.buttonBackgroundHover};
     border-color: ${props => props.theme.buttonBorderHover};
 
     & span {
@@ -28,8 +28,13 @@ const StyledButton = styled.button`
   }
 `;
 
-export const Button = ({ id, label, onClick = () => {}, theme = {} }) => (
-  <StyledButton id={id} onClick={onClick} theme={theme}>
+export const Button = ({ id, label, onClick = () => {}, buttonBackground, buttonBackgroundHover }) => (
+  <StyledButton
+    id={id}
+    onClick={onClick}
+    buttonBackground={buttonBackground}
+    buttonBackgroundHover={buttonBackgroundHover}
+  >
     {label && <span>{label}</span>}
   </StyledButton>
 );
@@ -38,9 +43,8 @@ Button.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  theme: PropTypes.shape({
-    buttonBackground: PropTypes.string
-  })
+  buttonBackground: PropTypes.string,
+  buttonBackgroundHover: PropTypes.string
 };
 
 export default Button;

@@ -41,7 +41,8 @@ const Code = ({ answers, uuid, patterns, js, style }) => {
                 id={uuid}
                 key={uuid}
                 label={name}
-                theme={{ buttonBackground: ATLANTIS }}
+                buttonBackground={ATLANTIS}
+                buttonBackgroundHover={ATLANTIS}
               />
             );
           }
@@ -52,7 +53,8 @@ const Code = ({ answers, uuid, patterns, js, style }) => {
                 id={uuid}
                 key={uuid}
                 label={name}
-                theme={{ buttonBackground: CRIMSON }}
+                buttonBackground={CRIMSON}
+                buttonBackgroundHover={CRIMSON}
               />
             );
           }
