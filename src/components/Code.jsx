@@ -7,25 +7,21 @@ import { getJS, getCurrent } from '../selectors';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
-const Code = props => {
-  const { js, current, style } = props;
+export const Code = ({ js, current, style }) => (
+  <Fragment>
+    {js === 'es5' && (
+      <SyntaxHighlighter language="javascript" style={style} className="fixed">
+        {current.codeES5}
+      </SyntaxHighlighter>
+    )}
 
-  return (
-    <Fragment>
-      {js === 'es5' && (
-        <SyntaxHighlighter language="javascript" style={style} className="fixed">
-          {current.codeES5}
-        </SyntaxHighlighter>
-      )}
-
-      {js === 'es6' && (
-        <SyntaxHighlighter language="javascript" style={style} className="fixed">
-          {current.codeES6}
-        </SyntaxHighlighter>
-      )}
-    </Fragment>
-  );
-};
+    {js === 'es6' && (
+      <SyntaxHighlighter language="javascript" style={style} className="fixed">
+        {current.codeES6}
+      </SyntaxHighlighter>
+    )}
+  </Fragment>
+);
 
 Code.propTypes = {
   js: PropTypes.string.isRequired,
