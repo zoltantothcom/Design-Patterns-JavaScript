@@ -25,15 +25,15 @@ describe('REFERENCE - Pattern component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  xit('renders the individual pattern (Singleton) details in LIGHT mode', () => {
+  it('renders the individual pattern (Prototype) details in LIGHT mode', () => {
     const store = mockStore({
       mode: 'light'
     });
     const tree = renderer
       .create(
-        <MemoryRouter initialEntries={['/patterns/singleton']}>
+        <MemoryRouter initialEntries={['/patterns/prototype']}>
           <Provider store={store}>
-            <Pattern match={{ params: { id: 'singleton' } }} />
+            <Pattern match={{ params: { id: 'prototype' } }} />
           </Provider>
         </MemoryRouter>
       )

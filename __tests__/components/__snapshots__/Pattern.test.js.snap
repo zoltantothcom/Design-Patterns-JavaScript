@@ -1,5 +1,378 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`REFERENCE - Pattern component renders the individual pattern (Prototype) details in LIGHT mode 1`] = `
+.c0 h2,
+.c0 h3 {
+  margin-top: 2.5rem;
+}
+
+.c2 {
+  display: block;
+  margin-bottom: 8px;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+.c3 {
+  text-transform: capitalize;
+}
+
+.c1 {
+  border-bottom: 1px solid;
+  display: inline-block;
+  margin-top: 2rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  border-bottom: 1px solid transparent;
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1"
+    href="/patterns"
+    onClick={[Function]}
+  >
+    ← Back to Patterns List
+  </a>
+  <h2>
+    Prototype
+  </h2>
+  <p>
+    <span
+      className="c2"
+    >
+      Type:
+    </span>
+    <span
+      className="c3"
+    >
+      creational
+       pattern
+    </span>
+  </p>
+  <p>
+    <span
+      className="c2"
+    >
+      Definition:
+    </span>
+    Specify the kind of objects to create using a prototypical instance,
+    and create new objects by copying this prototype.
+  </p>
+  <p>
+    <span
+      className="c2"
+    >
+      Use when…
+    </span>
+    …
+    classes to instantiate are available only in runtime
+    .
+  </p>
+  <h3>
+    ES6
+  </h3>
+  <pre
+    style={
+      Object {
+        "background": "#fafafa",
+        "border": "1px solid #d8d8d8",
+        "color": "#383a42",
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "1em",
+      }
+    }
+  >
+    <code>
+      <span
+        className="hljs-class"
+        style={Object {}}
+      >
+        <span
+          style={
+            Object {
+              "color": "#a626a4",
+            }
+          }
+        >
+          class
+        </span>
+         
+        <span
+          style={
+            Object {
+              "color": "#4078f2",
+            }
+          }
+        >
+          Sheep
+        </span>
+         
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        constructor
+      </span>
+      (name, weight) {
+    
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .name = name;
+    
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .weight = weight;
+  }
+
+  clone() {
+    
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        return
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        new
+      </span>
+       Sheep(
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .name, 
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .weight);
+  }
+}
+
+
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        export
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        default
+      </span>
+       Sheep;
+    </code>
+  </pre>
+  <h3>
+    ES5
+  </h3>
+  <pre
+    style={
+      Object {
+        "background": "#fafafa",
+        "border": "1px solid #d8d8d8",
+        "color": "#383a42",
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "1em",
+      }
+    }
+  >
+    <code>
+      <span
+        className="hljs-function"
+        style={Object {}}
+      >
+        <span
+          style={
+            Object {
+              "color": "#a626a4",
+            }
+          }
+        >
+          function
+        </span>
+         
+        <span
+          style={
+            Object {
+              "color": "#4078f2",
+            }
+          }
+        >
+          Sheep
+        </span>
+        (
+        <span
+          className="hljs-params"
+          style={Object {}}
+        >
+          name, weight
+        </span>
+        ) 
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .name = name;
+  
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .weight = weight;
+}
+
+Sheep.prototype.clone = 
+      <span
+        className="hljs-function"
+        style={Object {}}
+      >
+        <span
+          style={
+            Object {
+              "color": "#a626a4",
+            }
+          }
+        >
+          function
+        </span>
+        (
+        <span
+          className="hljs-params"
+          style={Object {}}
+        />
+        ) 
+      </span>
+      {
+  
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        return
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        new
+      </span>
+       Sheep(
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .name, 
+      <span
+        style={
+          Object {
+            "color": "#a626a4",
+          }
+        }
+      >
+        this
+      </span>
+      .weight);
+};
+
+
+      <span
+        style={
+          Object {
+            "color": "#c18401",
+          }
+        }
+      >
+        module
+      </span>
+      .exports = Sheep;
+    </code>
+  </pre>
+</div>
+`;
+
 exports[`REFERENCE - Pattern component renders the individual pattern (Singleton) details in DARK mode 1`] = `
 .c0 h2,
 .c0 h3 {
