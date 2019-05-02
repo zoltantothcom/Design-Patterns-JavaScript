@@ -40,13 +40,13 @@ var fees = {
   }
 };
 
-var proft = {
+var profit = {
   update: function(product) {
     product.price = product.price * 2;
   }
 };
 
-module.exports = [Product, fees, proft];`,
+module.exports = [Product, fees, profit];`,
   codeES6: `class Product {
   constructor() {
     this.price = 0;
