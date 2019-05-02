@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Button from './Button';
 import { submitAnswer } from '../actions/submitAnswer';
-import { getCurrent, getPatterns } from '../selectors';
-import { shuffle } from '../helpers/shuffleArray';
+import { getCurrent } from '../selectors';
 
 const StyledButtonContainer = styled.div`
   align-content: space-around;
@@ -16,34 +15,22 @@ const StyledButtonContainer = styled.div`
   margin: 1rem 0 2rem;
 `;
 
-export const ButtonContainer = props => {
-  const { current, patterns, onSubmitAnswer } = props;
-
-  // get 3 random patterns in addition to correct one
-  const allOtherAnswers = patterns.filter(pattern => pattern.uuid !== current.uuid);
-  const additional = shuffle(allOtherAnswers).slice(0, 3);
-  // shuffle the 4 answers
-  const variants = shuffle([current, ...additional]);
-
-  return (
-    <StyledButtonContainer>
-      {variants.map(({ uuid, name }) => (
-        <Button label={name} id={uuid} key={uuid} onClick={() => onSubmitAnswer(uuid)} />
-      ))}
-    </StyledButtonContainer>
-  );
-};
+export const ButtonContainer = ({ current, onSubmitAnswer }) => (
+  <StyledButtonContainer>
+    {current.variants.map(({ uuid, name }) => (
+      <Button label={name} id={uuid} key={uuid} onClick={() => onSubmitAnswer(uuid)} />
+    ))}
+  </StyledButtonContainer>
+);
 
 ButtonContainer.propTypes = {
-  patterns: PropTypes.array.isRequired,
   current: PropTypes.object.isRequired,
   onSubmitAnswer: PropTypes.func.isRequired
 };
 
 export default connect(
   state => ({
-    current: getCurrent(state),
-    patterns: getPatterns(state)
+    current: getCurrent(state)
   }),
   {
     onSubmitAnswer: id => submitAnswer(id)
