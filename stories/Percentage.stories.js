@@ -8,7 +8,6 @@ const initialArray = (n, isAnswered, isCorrect) => {
   return arr.map((x, i) => {
     return {
       patternId: null,
-      answerId: null,
       answered: isAnswered,
       correct: isCorrect,
       uuid: i

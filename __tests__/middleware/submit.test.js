@@ -12,7 +12,6 @@ const patterns = [
     codeES5: 'Code ES5',
     codeES6: 'Code ES6',
     answered: false,
-    answerId: null,
     correct: null
   },
 
@@ -23,7 +22,6 @@ const patterns = [
     codeES5: 'Code ES5',
     codeES6: 'Code ES6',
     answered: false,
-    answerId: null,
     correct: null
   }
 ];
@@ -45,7 +43,6 @@ describe('Submit middleware', () => {
       payload: {
         currentIndex: 0,
         recentlyAnswered: {
-          answerId: 'abc123',
           answered: true,
           correct: true,
           name: 'Prototype',
@@ -54,7 +51,6 @@ describe('Submit middleware', () => {
         },
         remainingPatterns: [
           {
-            answerId: null,
             answered: false,
             codeES5: 'Code ES5',
             codeES6: 'Code ES6',

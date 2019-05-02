@@ -18,7 +18,6 @@ const patterns = [
     codeES5: 'Code ES5 - Prototype',
     codeES6: 'Code ES6 - Prototype',
     answered: false,
-    answerId: null,
     correct: null
   },
 
@@ -29,7 +28,6 @@ const patterns = [
     codeES5: 'Code ES5 - Singleton',
     codeES6: 'Code ES6 - Singleton',
     answered: false,
-    answerId: null,
     correct: null
   }
 ];

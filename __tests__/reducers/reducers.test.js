@@ -14,7 +14,6 @@ const answers = [
     type: 'behavioral',
     answered: true,
     correct: true,
-    answerId: 'ba2ca6b0-0c86-4573-baf0-60f33ce6e947',
     uuid: 'ba2ca6b0-0c86-4573-baf0-60f33ce6e947'
   },
   {
@@ -22,7 +21,6 @@ const answers = [
     type: 'behavioral',
     answered: false,
     correct: null,
-    answerId: null,
     uuid: 'eb9427c5-0167-4d65-a99b-a5ffadf5fd46'
   },
   {
@@ -30,7 +28,6 @@ const answers = [
     type: 'creational',
     answered: false,
     correct: null,
-    answerId: null,
     uuid: 'slearknbqarlnbqasOLdnv'
   }
 ];

@@ -4,7 +4,6 @@ exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
 <Code
   current={
     Object {
-      "answerId": null,
       "answered": false,
       "codeES5": "Code ES5 - Prototype",
       "codeES6": "Code ES6 - Prototype",
@@ -364,7 +363,6 @@ exports[`Game page - GAME - DARK style renders a <ProgressBar /> component 1`] =
   remaining={
     Array [
       Object {
-        "answerId": null,
         "answered": false,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",
@@ -461,7 +459,6 @@ exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
 <Code
   current={
     Object {
-      "answerId": null,
       "answered": false,
       "codeES5": "Code ES5 - Prototype",
       "codeES6": "Code ES6 - Prototype",
@@ -763,7 +760,6 @@ exports[`Game page - GAME - LIGHT style renders a <ProgressBar /> component 1`] 
   remaining={
     Array [
       Object {
-        "answerId": null,
         "answered": false,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",
@@ -987,7 +983,6 @@ exports[`Game page - RESULTS renders a <Percentage /> component 1`] = `
   answers={
     Array [
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Prototype",
         "codeES6": "Code ES6 - Prototype",
@@ -997,7 +992,6 @@ exports[`Game page - RESULTS renders a <Percentage /> component 1`] = `
         "uuid": "abc123",
       },
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",
@@ -1078,7 +1072,6 @@ exports[`Game page - RESULTS renders a <Result /> component 1`] = `
   answers={
     Array [
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Prototype",
         "codeES6": "Code ES6 - Prototype",
@@ -1088,7 +1081,6 @@ exports[`Game page - RESULTS renders a <Result /> component 1`] = `
         "uuid": "abc123",
       },
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",

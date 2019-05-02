@@ -16,7 +16,6 @@ export const answers = patterns.map(pattern => ({
   ...pattern,
   answered: false,
   correct: null,
-  answerId: null,
   uuid: uuid()
 }));
 

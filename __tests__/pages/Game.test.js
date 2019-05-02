@@ -19,7 +19,6 @@ const patterns = [
     codeES5: 'Code ES5 - Prototype',
     codeES6: 'Code ES6 - Prototype',
     answered: false,
-    answerId: null,
     correct: null
   },
 
@@ -30,7 +29,6 @@ const patterns = [
     codeES5: 'Code ES5 - Singleton',
     codeES6: 'Code ES6 - Singleton',
     answered: false,
-    answerId: null,
     correct: null
   }
 ];
@@ -161,7 +159,6 @@ describe('Game page - RESULTS', () => {
       codeES5: 'Code ES5 - Prototype',
       codeES6: 'Code ES6 - Prototype',
       answered: true,
-      answerId: 'abc123',
       correct: true
     },
 
@@ -172,7 +169,6 @@ describe('Game page - RESULTS', () => {
       codeES5: 'Code ES5 - Singleton',
       codeES6: 'Code ES6 - Singleton',
       answered: true,
-      answerId: 'abc123',
       correct: false
     }
   ];
