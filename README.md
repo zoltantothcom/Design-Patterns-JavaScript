@@ -1,8 +1,8 @@
-# Design Patterns _(implemented in JavaScript)_
+# Design Patterns Game
 
 [![Build Status](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript.svg?branch=master)](https://travis-ci.org/zoltantothcom/Design-Patterns-JavaScript) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/Design-Patterns-JavaScript/badge.svg?branch=master)](https://coveralls.io/github/zoltantothcom/Design-Patterns-JavaScript?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f4e97b771504e23b0b414d2cbc69506)](https://www.codacy.com/app/zoltantothcom/Design-Patterns-JavaScript) [![Greenkeeper badge](https://badges.greenkeeper.io/zoltantothcom/Design-Patterns-JavaScript.svg)](https://greenkeeper.io/)
 
-Design Patterns - a game to get familiar with the design patterns implemented in JavaScript, test your knowledge or simply for fun.
+Design Patterns - a quick game to test your familiarity with the 'Gang of Four' design patterns implemented in JavaScript.
 
 ### :zap: [PLAY HERE](http://designpatternsgame.com/)
 
@@ -94,7 +94,7 @@ yarn test:coverage
 
 ## Inspiration and Credits
 
-- Inpired by the very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
+- Inspired by the very well-known [JavaScript Guessing Game](https://javascript-game.firebaseapp.com/)
 
 - Code samples impudently taken from the awesome compilation of [Design Patterns JS](https://github.com/fbeline/Design-Patterns-JS)
 
