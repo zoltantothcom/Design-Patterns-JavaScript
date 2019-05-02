@@ -14,6 +14,7 @@ export const submitMiddleware = ({ getState }) => next => action => {
 
     const recentlyAnswered = {
       ...filtered,
+      variantUuid: action.payload,
       answered: true,
       correct: action.payload === progress.current.uuid
     };

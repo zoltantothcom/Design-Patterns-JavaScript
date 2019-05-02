@@ -28,20 +28,19 @@ const StyledButton = styled.button`
   }
 `;
 
-export const Button = props => {
-  const { id, label, onClick } = props;
-
-  return (
-    <StyledButton id={id} onClick={onClick}>
-      {label && <span>{label}</span>}
-    </StyledButton>
-  );
-};
+export const Button = ({ id, label, onClick = () => {}, theme = {} }) => (
+  <StyledButton id={id} onClick={onClick} theme={theme}>
+    {label && <span>{label}</span>}
+  </StyledButton>
+);
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  theme: PropTypes.shape({
+    buttonBackground: PropTypes.string
+  })
 };
 
 export default Button;
