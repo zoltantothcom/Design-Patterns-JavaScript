@@ -11323,10 +11323,10 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-storybook-addon-styled-component-theme@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/storybook-addon-styled-component-theme/-/storybook-addon-styled-component-theme-1.2.1.tgz#f21ae416db31b40882cb9c29e4b6240cbb2e3b63"
-  integrity sha512-oL3UlKG9fWwZ8AS+bPWp3u4ubeNnygTwojmnZLbZpSA55+PEhadS/X3Fgcuf2/rCIq907KFVAu49mjLMRp26Rg==
+storybook-addon-styled-component-theme@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/storybook-addon-styled-component-theme/-/storybook-addon-styled-component-theme-1.2.2.tgz#d352c23b7e0a231d5d6afa966a4e350ec00453d4"
+  integrity sha512-TRi1RBLvBuq3niko0OnvwxaxgQimJwxyIH5KLXFeZWHIyh7NrEP3ZB6pJhjnmvQ1xxAzkKpudLyGzBLNsU+rRw==
   dependencies:
     immutable "^3.8.2"
     recompose "^0.27.1"
