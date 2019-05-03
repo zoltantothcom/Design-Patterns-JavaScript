@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
 import { getJS, getCurrent } from '../selectors';
+import CodePreTag from './CodePreTag';
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 
@@ -13,13 +14,13 @@ const Code = props => {
   return (
     <Fragment>
       {js === 'es5' && (
-        <SyntaxHighlighter language="javascript" style={style} className="fixed">
+        <SyntaxHighlighter language="javascript" style={style} className="fixed" PreTag={CodePreTag}>
           {current.codeES5}
         </SyntaxHighlighter>
       )}
 
       {js === 'es6' && (
-        <SyntaxHighlighter language="javascript" style={style} className="fixed">
+        <SyntaxHighlighter language="javascript" style={style} className="fixed" PreTag={CodePreTag}>
           {current.codeES6}
         </SyntaxHighlighter>
       )}
