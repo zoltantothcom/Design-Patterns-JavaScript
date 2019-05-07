@@ -4,7 +4,6 @@ exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
 <Code
   current={
     Object {
-      "answerId": null,
       "answered": false,
       "codeES5": "Code ES5 - Prototype",
       "codeES6": "Code ES6 - Prototype",
@@ -12,6 +11,16 @@ exports[`Game page - GAME - DARK style renders a <Code /> component 1`] = `
       "name": "Prototype",
       "type": "creational",
       "uuid": "abc123",
+      "variants": Array [
+        Object {
+          "name": "SIngleton",
+          "uuid": "abc234",
+        },
+        Object {
+          "name": "Prototype",
+          "uuid": "abc123",
+        },
+      ],
     }
   }
   dispatch={[Function]}
@@ -364,7 +373,6 @@ exports[`Game page - GAME - DARK style renders a <ProgressBar /> component 1`] =
   remaining={
     Array [
       Object {
-        "answerId": null,
         "answered": false,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",
@@ -372,6 +380,16 @@ exports[`Game page - GAME - DARK style renders a <ProgressBar /> component 1`] =
         "name": "SIngleton",
         "type": "creational",
         "uuid": "abc234",
+        "variants": Array [
+          Object {
+            "name": "SIngleton",
+            "uuid": "abc234",
+          },
+          Object {
+            "name": "Prototype",
+            "uuid": "abc123",
+          },
+        ],
       },
     ]
   }
@@ -461,7 +479,6 @@ exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
 <Code
   current={
     Object {
-      "answerId": null,
       "answered": false,
       "codeES5": "Code ES5 - Prototype",
       "codeES6": "Code ES6 - Prototype",
@@ -469,6 +486,16 @@ exports[`Game page - GAME - LIGHT style renders a <Code /> component 1`] = `
       "name": "Prototype",
       "type": "creational",
       "uuid": "abc123",
+      "variants": Array [
+        Object {
+          "name": "SIngleton",
+          "uuid": "abc234",
+        },
+        Object {
+          "name": "Prototype",
+          "uuid": "abc123",
+        },
+      ],
     }
   }
   dispatch={[Function]}
@@ -763,7 +790,6 @@ exports[`Game page - GAME - LIGHT style renders a <ProgressBar /> component 1`] 
   remaining={
     Array [
       Object {
-        "answerId": null,
         "answered": false,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",
@@ -771,6 +797,16 @@ exports[`Game page - GAME - LIGHT style renders a <ProgressBar /> component 1`] 
         "name": "SIngleton",
         "type": "creational",
         "uuid": "abc234",
+        "variants": Array [
+          Object {
+            "name": "SIngleton",
+            "uuid": "abc234",
+          },
+          Object {
+            "name": "Prototype",
+            "uuid": "abc123",
+          },
+        ],
       },
     ]
   }
@@ -987,7 +1023,6 @@ exports[`Game page - RESULTS renders a <Percentage /> component 1`] = `
   answers={
     Array [
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Prototype",
         "codeES6": "Code ES6 - Prototype",
@@ -995,9 +1030,19 @@ exports[`Game page - RESULTS renders a <Percentage /> component 1`] = `
         "name": "Prototype",
         "type": "creational",
         "uuid": "abc123",
+        "variantUuid": "abc123",
+        "variants": Array [
+          Object {
+            "name": "SIngleton",
+            "uuid": "abc234",
+          },
+          Object {
+            "name": "Prototype",
+            "uuid": "abc123",
+          },
+        ],
       },
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",
@@ -1005,6 +1050,17 @@ exports[`Game page - RESULTS renders a <Percentage /> component 1`] = `
         "name": "SIngleton",
         "type": "creational",
         "uuid": "abc234",
+        "variantUuid": "abc123",
+        "variants": Array [
+          Object {
+            "name": "SIngleton",
+            "uuid": "abc234",
+          },
+          Object {
+            "name": "Prototype",
+            "uuid": "abc123",
+          },
+        ],
       },
     ]
   }
@@ -1078,7 +1134,6 @@ exports[`Game page - RESULTS renders a <Result /> component 1`] = `
   answers={
     Array [
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Prototype",
         "codeES6": "Code ES6 - Prototype",
@@ -1086,9 +1141,19 @@ exports[`Game page - RESULTS renders a <Result /> component 1`] = `
         "name": "Prototype",
         "type": "creational",
         "uuid": "abc123",
+        "variantUuid": "abc123",
+        "variants": Array [
+          Object {
+            "name": "SIngleton",
+            "uuid": "abc234",
+          },
+          Object {
+            "name": "Prototype",
+            "uuid": "abc123",
+          },
+        ],
       },
       Object {
-        "answerId": "abc123",
         "answered": true,
         "codeES5": "Code ES5 - Singleton",
         "codeES6": "Code ES6 - Singleton",
@@ -1096,6 +1161,17 @@ exports[`Game page - RESULTS renders a <Result /> component 1`] = `
         "name": "SIngleton",
         "type": "creational",
         "uuid": "abc234",
+        "variantUuid": "abc123",
+        "variants": Array [
+          Object {
+            "name": "SIngleton",
+            "uuid": "abc234",
+          },
+          Object {
+            "name": "Prototype",
+            "uuid": "abc123",
+          },
+        ],
       },
     ]
   }

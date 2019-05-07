@@ -10,6 +10,7 @@ import ProgressBar from '../components/ProgressBar';
 import Code from '../components/Code';
 import Result from '../components/Result';
 import Percentage from '../components/Percentage';
+import IncorrectAnswers from '../components/IncorrectAnswers';
 import Button from '../components/Button';
 
 const Intro = styled.div`
@@ -87,6 +88,7 @@ const Game = ({ intro, current, answers, style, onStart, onRestart }) => {
           <Restart>
             <Button label="Try Again" id="try_again" onClick={onRestart} />
           </Restart>
+          <IncorrectAnswers style={style} />
           <ShareContainer>
             <TwitterButton
               className="twitter-share-button"

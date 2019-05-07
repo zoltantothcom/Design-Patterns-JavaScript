@@ -19,8 +19,14 @@ const patterns = [
     codeES5: 'Code ES5 - Prototype',
     codeES6: 'Code ES6 - Prototype',
     answered: false,
-    answerId: null,
-    correct: null
+    correct: null,
+    variants: [{
+      uuid: 'abc234',
+      name: 'SIngleton'
+    }, {
+      uuid: 'abc123',
+      name: 'Prototype'
+    }]
   },
 
   {
@@ -30,8 +36,14 @@ const patterns = [
     codeES5: 'Code ES5 - Singleton',
     codeES6: 'Code ES6 - Singleton',
     answered: false,
-    answerId: null,
-    correct: null
+    correct: null,
+    variants: [{
+      uuid: 'abc234',
+      name: 'SIngleton'
+    }, {
+      uuid: 'abc123',
+      name: 'Prototype'
+    }]
   }
 ];
 
@@ -161,8 +173,15 @@ describe('Game page - RESULTS', () => {
       codeES5: 'Code ES5 - Prototype',
       codeES6: 'Code ES6 - Prototype',
       answered: true,
-      answerId: 'abc123',
-      correct: true
+      correct: true,
+      variantUuid: 'abc123',
+      variants: [{
+        uuid: 'abc234',
+        name: 'SIngleton'
+      }, {
+        uuid: 'abc123',
+        name: 'Prototype'
+      }]
     },
 
     {
@@ -172,8 +191,15 @@ describe('Game page - RESULTS', () => {
       codeES5: 'Code ES5 - Singleton',
       codeES6: 'Code ES6 - Singleton',
       answered: true,
-      answerId: 'abc123',
-      correct: false
+      correct: false,
+      variantUuid: 'abc123',
+      variants: [{
+        uuid: 'abc234',
+        name: 'SIngleton'
+      }, {
+        uuid: 'abc123',
+        name: 'Prototype'
+      }]
     }
   ];
   const store = mockStore({
@@ -215,7 +241,10 @@ describe('Game page - RESULTS', () => {
   });
 
   it('reacts to button click', () => {
-    tree.find('button').simulate('click');
+    // button restart and 2 button with incorrect answers
+    expect(tree.find('button')).toHaveLength(3);
+    // button restart
+    tree.find('button#try_again').simulate('click');
     const actions = store.getActions();
     expect(actions).toMatchObject([{ type: RESTART }]);
   });
