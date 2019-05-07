@@ -1,7 +1,6 @@
 {
-  "name": "javascript-patterns",
-  "version": "0.1.0",
-  "private": true,
+  "name": "design-patterns-game",
+  "version": "1.0.0",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
