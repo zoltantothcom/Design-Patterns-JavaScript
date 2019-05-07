@@ -16,6 +16,11 @@ exports[`Patterns page renders the Patterns list 1`] = `
   margin-top: 2.5rem;
 }
 
+.c0 h3 {
+  border-bottom: 1px solid;
+  padding-bottom: 1rem;
+}
+
 <div
   className="c0"
 >

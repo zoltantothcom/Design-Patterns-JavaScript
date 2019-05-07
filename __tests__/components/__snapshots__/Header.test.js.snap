@@ -53,7 +53,7 @@ exports[`<Header /> component renders with DARK theme 1`] = `
 }
 
 .c8 {
-  font: 400 0.925rem 'Karla',sans-serif;
+  font: 400 0.875rem 'Karla',sans-serif;
   color: #C8C8C8;
   margin: 0.75rem 0 0;
 }
@@ -226,7 +226,7 @@ exports[`<Header /> component renders with DARK theme 1`] = `
       <h2
         className="c8"
       >
-        implemented in JavaScript
+        “Gang of Four” patterns in JavaScript
       </h2>
     </div>
   </header>
@@ -286,7 +286,7 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
 }
 
 .c8 {
-  font: 400 0.925rem 'Karla',sans-serif;
+  font: 400 0.875rem 'Karla',sans-serif;
   color: #6F256F;
   margin: 0.75rem 0 0;
 }
@@ -459,7 +459,7 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
       <h2
         className="c8"
       >
-        implemented in JavaScript
+        “Gang of Four” patterns in JavaScript
       </h2>
     </div>
   </header>
