@@ -84,14 +84,12 @@ describe('<CodePreTag /> component', () => {
     // Initially the scroll position must be at the top
     expect($container.scrollTop).toBe(0);
 
-    $container.scrollTop = 100;
-
     // Test that the scroll position is updated correctly
+    $container.scrollTop = 100;
     expect($container.scrollTop).toBe(100);
 
-    container.setProps({ children: shortCodeToRender });
-
     // Test that the scroll position is reset after changing its children
+    container.setProps({ children: shortCodeToRender });
     expect($container.scrollTop).toBe(0);
   });
 });
