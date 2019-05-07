@@ -4,10 +4,10 @@ exports[`<CodePreTag /> component renders children properly 1`] = `
 <pre>
   <code>
     
-      function foo() {
-        return 'bar';
-      }
-    
+  function foo() {
+    return 'bar';
+  }
+
   </code>
 </pre>
 `;

@@ -53,8 +53,6 @@ describe('<ProgressBar /> component', () => {
 
   it('has styled-component rendered classes', () => {
     const tree = renderer.create(result).toJSON();
-    // console.log(tree);
-
     expect(tree.children[0].props.className).toBeDefined();
   });
 
