@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CodePreTag /> component renders children properly 1`] = `
+<pre>
+  <code>
+    function foo() {
+            return 'bar';
+          }
+  </code>
+</pre>
+`;
