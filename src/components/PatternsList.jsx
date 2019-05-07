@@ -21,6 +21,12 @@ const StyledPatterns = styled.div`
     color: ${props => props.theme.header};
     margin-top: 2.5rem;
   }
+
+  h3 {
+    border-bottom: 1px solid ${props => props.theme.text};
+    color: ${props => props.theme.header};
+    padding-bottom: 1rem;
+  }
 `;
 
 const PatternsList = () => {

@@ -36,7 +36,7 @@ export const themeDark = {
   toggleActiveBorder: C.SILVER,
 
   // text and header
-  header: C.GRAY,
+  header: C.WILD_SAND,
   text: C.SILVER,
 
   border: C.TUNDORA
