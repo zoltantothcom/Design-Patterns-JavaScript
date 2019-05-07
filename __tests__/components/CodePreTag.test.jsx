@@ -6,14 +6,15 @@ import CodePreTag from '../../src/components/CodePreTag';
 
 describe('<CodePreTag /> component', () => {
   it('renders children properly', () => {
+    const codeToRender = `
+      function foo() {
+        return 'bar';
+      }
+    `;
     const tree = renderer
       .create(
         <CodePreTag>
-          <code>
-            {`function foo() {
-            return 'bar';
-          }`}
-          </code>
+          <code>{codeToRender}</code>
         </CodePreTag>
       )
       .toJSON();
