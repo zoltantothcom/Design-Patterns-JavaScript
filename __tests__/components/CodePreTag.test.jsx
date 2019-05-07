@@ -1,5 +1,4 @@
 import React from 'react';
-import TestUtils from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import 'jest-styled-components';
