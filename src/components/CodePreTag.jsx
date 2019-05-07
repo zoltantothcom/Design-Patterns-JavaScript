@@ -5,8 +5,9 @@ const CodePreTag = ({ children, ...restProps }) => {
   const syntaxHighlighterEl = useRef(null);
 
   useEffect(() => {
-    if (syntaxHighlighterEl.current && syntaxHighlighterEl.current.scroll) {
-      syntaxHighlighterEl.current.scroll(0, 0);
+    if (syntaxHighlighterEl.current) {
+      syntaxHighlighterEl.current.scrollTop = 0;
+      syntaxHighlighterEl.current.scrollLeft = 0;
     }
   }, [children]);
 
