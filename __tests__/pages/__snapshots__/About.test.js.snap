@@ -16,7 +16,7 @@ exports[`About page renders with a DARK theme 1`] = `
 }
 
 .c1 {
-  color: #888888;
+  color: #F5F5F5;
   margin-top: 2rem;
 }
 

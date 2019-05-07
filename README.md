@@ -4,7 +4,7 @@
 
 Design Patterns - a quick game to test your familiarity with the 'Gang of Four' design patterns implemented in JS.
 
-### :zap: [PLAY HERE](http://designpatternsgame.com/)
+### :zap: [PLAY HERE](https://designpatternsgame.com/)
 
 ![Design Patterns - game results screenshot](/static/screenshot.png?sanitize=true&raw=true)
 
