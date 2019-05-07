@@ -18,7 +18,7 @@ const Heading = styled.h1`
 `;
 
 const SubHeading = styled.h2`
-  font: 400 0.925rem 'Karla', sans-serif;
+  font: 400 0.875rem 'Karla', sans-serif;
   color: ${props => props.theme.link};
   margin: 0.75rem 0 0;
 `;
@@ -26,7 +26,7 @@ const SubHeading = styled.h2`
 export const Title = () => (
   <TitleContainer>
     <Heading>Design Patterns Game</Heading>
-    <SubHeading>implemented in JavaScript</SubHeading>
+    <SubHeading>&ldquo;Gang of Four&rdquo; patterns in JavaScript</SubHeading>
   </TitleContainer>
 );
 
