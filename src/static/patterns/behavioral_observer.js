@@ -40,13 +40,13 @@ var fees = {
   }
 };
 
-var proft = {
+var profit = {
   update: function(product) {
     product.price = product.price * 2;
   }
 };
 
-module.exports = [Product, fees, proft];`,
+module.exports = [Product, fees, profit];`,
   codeES6: `class Product {
   constructor() {
     this.price = 0;
@@ -83,13 +83,13 @@ class fees {
   }
 }
 
-class proft {
+class profit {
   update(product) {
     product.price = product.price * 2;
   }
 }
 
-export { Product, fees, proft };`
+export { Product, fees, profit };`
 };
 
 export default OBSERVER;

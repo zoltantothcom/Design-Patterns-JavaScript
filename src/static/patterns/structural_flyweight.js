@@ -29,7 +29,7 @@ module.exports = colorCreator;`,
 }
 
 class colorCreator {
-  constructor(name) {
+  constructor() {
     this.colors = {};
   }
 
