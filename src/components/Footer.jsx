@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ICON_TWITTER, ICON_FACEBOOK } from '../static/icons';
+import { ICON_TWITTER, ICON_FACEBOOK, ICON_LINKEDIN } from '../static/icons';
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -11,7 +11,7 @@ const FooterContainer = styled.footer`
     border: 1px solid ${props => props.theme.buttonBackground};
     border-radius: 50%;
     display: inline-flex;
-    margin: 1rem;
+    margin: 0.75rem;
     padding: 0.5rem;
 
     :hover svg,
@@ -36,6 +36,12 @@ const Footer = () => (
     </a>
     <a href="https://www.facebook.com/sharer.php?u=https://designpatternsgame.com/" target="_blank">
       {ICON_FACEBOOK}
+    </a>
+    <a
+      href="https://www.linkedin.com/shareArticle?mini=true&url=https://designpatternsgame.com&title=Design%20Patterns%20Game&summary=A%20game%20to%20test%20your%20familiarity%20with%20the%20Gang%20of%20Four%20design%20patterns%20implemented%20in%20JavaScript."
+      target="_blank"
+    >
+      {ICON_LINKEDIN}
     </a>
   </FooterContainer>
 );
