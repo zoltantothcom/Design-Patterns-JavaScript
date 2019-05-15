@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
@@ -22,7 +22,6 @@ const Intro = styled.div`
 
 const StartButtonContainer = styled.div`
   margin: 3rem auto 1rem;
-  /* text-align: center; */
 `;
 
 const Restart = styled.div`
@@ -30,9 +29,9 @@ const Restart = styled.div`
   text-align: center;
 `;
 
-const TwitterButton = styled.a`
-  background: #1da1f2;
-  color: #ffffff;
+const GitHubButton = styled.a`
+  background: #e9ecef;
+  color: #495057;
   padding: 6px 12px;
   border-radius: 4px;
   margin: 0 8px;
@@ -40,75 +39,54 @@ const TwitterButton = styled.a`
   font-size: 0.8rem;
 `;
 
-const GitHubButton = styled(TwitterButton)`
-  background: #e9ecef;
-  color: #495057;
-`;
-
 const ShareContainer = styled.p`
   text-align: center;
 `;
 
-const Game = ({ intro, current, answers, style, onStart, onRestart }) => {
-  let correct;
+const Game = ({ intro, current, answers, style, onStart, onRestart }) => (
+  <>
+    {intro && (
+      <Intro>
+        <p>
+          Each question contains a code snippet and four answer choices.
+          <br />
+          Look carefully at the code and choose the one correct answer.
+        </p>
+        <p>After answering all 23 questions you'll be shown your results.</p>
+        <StartButtonContainer>
+          <Button label="Start Game" id="start" onClick={onStart} />
+        </StartButtonContainer>
+      </Intro>
+    )}
 
-  if (!current) {
-    correct = answers.filter(item => item.correct).length;
-  }
+    {!intro && current && (
+      <>
+        <ProgressBar />
+        <Code style={style} />
+        <ButtonContainer />
+      </>
+    )}
 
-  return (
-    <Fragment>
-      {intro && (
-        <Intro>
-          <p>
-            Each question contains a code snippet and four answer choices.
-            <br />
-            Look carefully at the code and choose the one correct answer.
-          </p>
-          <p>After answering all 23 questions you'll be shown your results.</p>
-          <StartButtonContainer>
-            <Button label="Start Game" id="start" onClick={onStart} />
-          </StartButtonContainer>
-        </Intro>
-      )}
-
-      {!intro && current && (
-        <Fragment>
-          <ProgressBar />
-          <Code style={style} />
-          <ButtonContainer />
-        </Fragment>
-      )}
-
-      {!intro && !current && (
-        <Fragment>
-          <Result />
-          <Percentage />
-          <Restart>
-            <Button label="Try Again" id="try_again" onClick={onRestart} />
-          </Restart>
-          <ShareContainer>
-            <TwitterButton
-              className="twitter-share-button"
-              data-dnt="true"
-              href={`https://twitter.com/intent/tweet?text=I%20scored%20${correct}%20out%20of%2023%20in%20JavaScript%20Design%20Patterns%20game!&url=http://designpatternsgame.com`}
-            >
-              Tweet Your Score
-            </TwitterButton>
-
-            <GitHubButton
-              href="https://github.com/zoltantothcom/Design-Patterns-JavaScript"
-              aria-label="Star zoltantothcom/Design-Patterns-JavaScript on GitHub"
-              target="_blank"
-            >
-              Star on GitHub
-            </GitHubButton>
-          </ShareContainer>
-        </Fragment>
-      )}
-    </Fragment>
-  );
-};
+    {!intro && !current && (
+      <>
+        <Result />
+        <Percentage />
+        <Restart>
+          <Button label="Try Again" id="try_again" onClick={onRestart} />
+        </Restart>
+        <ShareContainer>
+          <GitHubButton
+            href="https://github.com/zoltantothcom/Design-Patterns-JavaScript"
+            aria-label="Star zoltantothcom/Design-Patterns-JavaScript on GitHub"
+            target="_blank"
+          >
+            Star on GitHub
+          </GitHubButton>
+        </ShareContainer>
+      </>
+    )}
+  </>
+);
 
 Game.propTypes = {
   style: PropTypes.object.isRequired,
