@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ICON_TWITTER, ICON_FACEBOOK, ICON_LINKEDIN } from '../static/icons';
+import { ICON_TWITTER, ICON_FACEBOOK, ICON_LINKEDIN, ICON_REDDIT } from '../static/icons';
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -42,6 +42,12 @@ const Footer = () => (
       target="_blank"
     >
       {ICON_LINKEDIN}
+    </a>
+    <a
+      href="https://reddit.com/submit?url=https://designpatternsgame.com&title=Design%20Patterns%20Game"
+      target="_blank"
+    >
+      {ICON_REDDIT}
     </a>
   </FooterContainer>
 );
