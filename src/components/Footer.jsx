@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ICON_TWITTER, ICON_FACEBOOK, ICON_LINKEDIN, ICON_REDDIT } from '../static/icons';
+import {
+  ICON_TWITTER,
+  ICON_FACEBOOK,
+  ICON_LINKEDIN,
+  ICON_REDDIT,
+  ICON_GITHUB
+} from '../static/icons';
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -48,6 +54,9 @@ const Footer = () => (
       target="_blank"
     >
       {ICON_REDDIT}
+    </a>
+    <a href="https://github.com/zoltantothcom/Design-Patterns-JavaScript" target="_blank">
+      {ICON_GITHUB}
     </a>
   </FooterContainer>
 );
