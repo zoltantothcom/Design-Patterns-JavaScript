@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import styleLight from './styles/hljs/hljs.light';
 import styleDark from './styles/hljs/hljs.dark';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import GlobalStyle from './styles/global';
 import { themeCommon } from './styles/themes/theme.common';
 import { themeLight } from './styles/themes/theme.light';
@@ -38,6 +39,8 @@ const Layout = props => {
           <Route path="/about" component={About} />
           <Redirect to="/" />
         </Switch>
+
+        <Footer />
       </React.Fragment>
     </ThemeProvider>
   );
