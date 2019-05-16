@@ -130,7 +130,7 @@ exports[`<Header /> component renders with DARK theme 1`] = `
 
 @media (min-width:769px) {
   .c5 {
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 
@@ -379,7 +379,7 @@ exports[`<Header /> component renders with LIGHT theme 1`] = `
 
 @media (min-width:769px) {
   .c5 {
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 

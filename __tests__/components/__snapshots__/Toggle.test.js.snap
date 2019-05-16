@@ -39,7 +39,7 @@ exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
 
 @media (min-width:769px) {
   .c0 {
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 
@@ -113,7 +113,7 @@ exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
 
 @media (min-width:769px) {
   .c0 {
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 
@@ -187,7 +187,7 @@ exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
 
 @media (min-width:769px) {
   .c0 {
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 
@@ -255,7 +255,7 @@ exports[`<Toggle /> renders the MODE toggle in LIGHT mode 1`] = `
 
 @media (min-width:769px) {
   .c0 {
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 
