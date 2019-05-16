@@ -23,6 +23,13 @@ const StyledLinkContainer = styled.div`
 
 const StyledSettingsContainer = styled.div`
   display: inline-flex;
+  margin: 1rem 0;
+  width: 100%;
+
+  @media (min-width: 541px) {
+    margin: 0;
+    width: auto;
+  }
 `;
 
 const linkStyle = css`

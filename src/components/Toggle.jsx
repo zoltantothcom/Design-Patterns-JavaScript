@@ -12,9 +12,14 @@ const StyledToggle = styled.button`
   border-radius: 50%;
   cursor: pointer;
   height: 2.5rem;
-  margin: 0 0 0 1rem;
+  margin: 0.5rem 1.5rem 0 0;
   outline: 0;
   width: 2.5rem;
+  z-index: 10;
+
+  @media (min-width: 769px) {
+    margin: 0.5rem 0 0 1.5rem;
+  }
 
   & svg,
   & g {
