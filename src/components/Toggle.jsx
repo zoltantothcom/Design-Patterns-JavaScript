@@ -18,7 +18,7 @@ const StyledToggle = styled.button`
   z-index: 10;
 
   @media (min-width: 769px) {
-    margin: 0.5rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 
   & svg,
