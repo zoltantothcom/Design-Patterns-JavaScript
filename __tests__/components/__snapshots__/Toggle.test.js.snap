@@ -7,9 +7,10 @@ exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
   border-radius: 50%;
   cursor: pointer;
   height: 2.5rem;
-  margin: 0 0 0 1rem;
+  margin: 0.5rem 1.5rem 0 0;
   outline: 0;
   width: 2.5rem;
+  z-index: 10;
 }
 
 .c0 svg,
@@ -34,6 +35,12 @@ exports[`<Toggle /> renders JS toggle in DARK more 1`] = `
 .c0.active svg,
 .c0.active g {
   fill: #F2E8F2;
+}
+
+@media (min-width:769px) {
+  .c0 {
+    margin: 0 0 0 1.5rem;
+  }
 }
 
 <div>
@@ -74,9 +81,10 @@ exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
   border-radius: 50%;
   cursor: pointer;
   height: 2.5rem;
-  margin: 0 0 0 1rem;
+  margin: 0.5rem 1.5rem 0 0;
   outline: 0;
   width: 2.5rem;
+  z-index: 10;
 }
 
 .c0 svg,
@@ -101,6 +109,12 @@ exports[`<Toggle /> renders JS toggle in LIGHT more 1`] = `
 .c0.active svg,
 .c0.active g {
   fill: #F2E8F2;
+}
+
+@media (min-width:769px) {
+  .c0 {
+    margin: 0 0 0 1.5rem;
+  }
 }
 
 <div>
@@ -141,9 +155,10 @@ exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
   border-radius: 50%;
   cursor: pointer;
   height: 2.5rem;
-  margin: 0 0 0 1rem;
+  margin: 0.5rem 1.5rem 0 0;
   outline: 0;
   width: 2.5rem;
+  z-index: 10;
 }
 
 .c0 svg,
@@ -168,6 +183,12 @@ exports[`<Toggle /> renders the MODE toggle in DARK mode 1`] = `
 .c0.active svg,
 .c0.active g {
   fill: #F2E8F2;
+}
+
+@media (min-width:769px) {
+  .c0 {
+    margin: 0 0 0 1.5rem;
+  }
 }
 
 <div>
@@ -202,9 +223,10 @@ exports[`<Toggle /> renders the MODE toggle in LIGHT mode 1`] = `
   border-radius: 50%;
   cursor: pointer;
   height: 2.5rem;
-  margin: 0 0 0 1rem;
+  margin: 0.5rem 1.5rem 0 0;
   outline: 0;
   width: 2.5rem;
+  z-index: 10;
 }
 
 .c0 svg,
@@ -229,6 +251,12 @@ exports[`<Toggle /> renders the MODE toggle in LIGHT mode 1`] = `
 .c0.active svg,
 .c0.active g {
   fill: #F2E8F2;
+}
+
+@media (min-width:769px) {
+  .c0 {
+    margin: 0 0 0 1.5rem;
+  }
 }
 
 <div>
