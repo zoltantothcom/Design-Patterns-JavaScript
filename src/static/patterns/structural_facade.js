@@ -9,7 +9,7 @@ const FACADE = {
   codeES5: `var shopPattern = {
   calc: function(price) {
     price = discount(price);
-    price = fees(price);
+    price += fees(price);
     price += shipping();
 
     return price;
