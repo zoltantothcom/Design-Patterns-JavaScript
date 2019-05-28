@@ -73,7 +73,7 @@
     "react-test-renderer": "16.8.6",
     "redux-mock-store": "1.5.3",
     "storybook-addon-styled-component-theme": "1.2.3",
-    "surge": "0.20.4",
+    "surge": "0.21.0",
     "wait-on": "3.2.0",
     "webpack": "4.30.0",
     "webpack-bundle-analyzer": "3.3.2",
