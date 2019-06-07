@@ -6,7 +6,7 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-redux": "7.0.3",
-    "react-router-dom": "5.0.0",
+    "react-router-dom": "5.0.1",
     "react-syntax-highlighter": "^10.3.0",
     "redux": "4.0.1",
     "styled-components": "^4.2.1",
