@@ -1,5 +1,10 @@
 language: node_js
 
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
+
 branches:
   only:
     - master
