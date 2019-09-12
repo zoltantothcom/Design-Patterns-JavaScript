@@ -75,7 +75,7 @@
     "storybook-addon-styled-component-theme": "1.2.4",
     "wait-on": "3.3.0",
     "webpack": "^4.35.3",
-    "webpack-bundle-analyzer": "3.4.0",
+    "webpack-bundle-analyzer": "3.5.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1"
   }
