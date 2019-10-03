@@ -70,7 +70,7 @@
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.3",
     "prettier": "^1.17.1",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.10.2",
     "redux-mock-store": "1.5.3",
     "storybook-addon-styled-component-theme": "1.2.4",
     "wait-on": "3.3.0",
