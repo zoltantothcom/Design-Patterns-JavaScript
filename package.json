@@ -50,7 +50,7 @@
     "@storybook/addon-links": "^5.2.4",
     "@storybook/addon-storyshots": "^5.2.4",
     "@storybook/addons": "^5.2.4",
-    "@storybook/react": "^5.1.9",
+    "@storybook/react": "^5.2.4",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
