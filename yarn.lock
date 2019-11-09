@@ -11560,10 +11560,10 @@ store2@^2.7.1:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.7.1.tgz#22070b7dc04748a792fc6912a58ab99d3a21d788"
   integrity sha512-zzzP5ZY6QWumnAFV6kBRbS44pUMcpZBNER5DWUe1HETlaKXqLcCQxbNu6IHaKr1pUsjuhUGBdOy8sWKmMkL6pQ==
 
-storybook-addon-styled-component-theme@1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/storybook-addon-styled-component-theme/-/storybook-addon-styled-component-theme-1.2.4.tgz#b92c69e676e29e4ddba72aa0b2dfcbeea4f2b40f"
-  integrity sha512-OlE0zTKUDP0+KL3Qjsl43ca5V6Gu0s4FqPKTEFoSKRzzJPOqE7j4l3FZnJE+XyPYcxCjx2JcZaEbfkS6RhrvqA==
+storybook-addon-styled-component-theme@1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/storybook-addon-styled-component-theme/-/storybook-addon-styled-component-theme-1.2.5.tgz#d3a363a5b44cc4b2dea02c841d0dd9844963d884"
+  integrity sha512-TgTTdv+3366rhBhsiBvx4Xh+vxih7K1tjK5U1AoMQrGyG4pMpJ15bw4joL6YtFqUgDzyjKaJFN/9PcmWW4SXPQ==
   dependencies:
     immutable "^3.8.2"
     recompose "^0.27.1"
