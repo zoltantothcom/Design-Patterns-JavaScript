@@ -49,7 +49,7 @@
     "@storybook/addon-knobs": "^5.2.7",
     "@storybook/addon-links": "^5.2.7",
     "@storybook/addon-storyshots": "^5.2.7",
-    "@storybook/addons": "^5.1.9",
+    "@storybook/addons": "^5.2.7",
     "@storybook/react": "^5.1.9",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.9.0",
