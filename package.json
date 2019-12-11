@@ -71,7 +71,7 @@
     "jest-styled-components": "^6.3.3",
     "prettier": "^1.17.1",
     "react-test-renderer": "16.8.6",
-    "redux-mock-store": "1.5.3",
+    "redux-mock-store": "1.5.4",
     "storybook-addon-styled-component-theme": "1.2.5",
     "wait-on": "3.3.0",
     "webpack": "^4.35.3",
