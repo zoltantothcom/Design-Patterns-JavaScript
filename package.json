@@ -61,7 +61,7 @@
     "cypress": "3.6.1",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "3.4.3",
+    "enzyme-to-json": "3.4.4",
     "eslint": "^6.0.1",
     "eslint-config-react": "1.1.7",
     "eslint-loader": "3.0.3",
