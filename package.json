@@ -10,7 +10,7 @@
     "react-syntax-highlighter": "^10.3.5",
     "redux": "4.0.1",
     "styled-components": "^4.3.1",
-    "uuid": "3.3.3"
+    "uuid": "7.0.1"
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
